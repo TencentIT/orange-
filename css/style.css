@@ -2,6 +2,35 @@
 * @Author: Administrator
 * @Date:   2018-08-28 23:49:34
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-08-29 23:08:32
+* @Last Modified time: 2018-08-30 00:25:35
 */
 /*顶部区域*/
+.header_top{
+	width:1200px;
+	margin:0 auto;
+	border:1px solid red;
+	padding: 5px 0;
+}
+
+.header_top .collection{
+	/*height:16px;*/
+	float: left;
+}
+.header_top .collection em{
+	display: inline-block;
+	width:16px;
+	height: 16px;
+	/*border:1px solid red;*/
+	margin-right:5px;
+	line-height: 16px;
+	background: url(../images/indexhead_sprite.png) no-repeat -283px -62px;
+}
+.collection em{
+	background: url();
+}
+.header_top .top_menu ul{
+	float: right;
+}
+.header_top .top_menu li{
+	float: left;
+}
