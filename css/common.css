@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-08-28 23:14:51
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-08-30 00:01:01
+* @Last Modified time: 2018-08-31 00:29:20
 */
 root {display: block;}
 html, body, div, label, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, p, blockquote, th, td ,img,textarea{border: 0px;margin: 0px;outline: 0px;padding: 0px;}
@@ -35,6 +35,7 @@ html,body{
 	 height: 100%;
      width: 100%;
 }
+/*一些公共样式 写的多的重复代码 写在一个类名里面 然后直接调用*/
 .clearfix:after{
 	content:'';
 	display:block;
