@@ -24,7 +24,7 @@ blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 a{ color: #333}
 div {display: block;}
-a:hover{ color:#F90}
+a:hover{ color:#F90;cursor:pointer;}
 html,body{
     margin: 0;
     padding: 0;
@@ -41,3 +41,21 @@ html,body{
 	display:block;
 	clear:both;
 };
+/*.margin_auto{
+    margin:0 auto;
+}
+.border1px{
+    border:1px solid red;
+}
+.width1200{
+    width:1200px;
+}
+input{
+    border:0;
+}
+*/
+header iframe{
+    width:100%;
+    height:100px;
+}
+/******************购物车样式属性***********************/
