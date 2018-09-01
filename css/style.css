@@ -326,32 +326,44 @@ header .menu li a:hover{
 	background-size:cover;
 }
 /*轮播图左右两个按钮*/
-.slideBox .lunbo_imgs~div{
-	width: 70px;
-	height: 400px;
-	margin-top: 30px;
+.slideBox .lunbo_imgs~div a{
+	width: 30px;
+	height: 100px;
+	margin-top: 165px;
 	position:absolute;
 	/*top:156px;*/
 	background:#fff;
 	opacity:0.3;
 	filter:alpha(opacity=30);
-	border-radius:5px;
+	border-radius:10px;
 	top:0;
 	box-sizing:border-box;
 }
-.slideBox  .prev{
+.slideBox  .prev a{
 	left:0;
 }
-.slideBox  .prev a{
+.slideBox  div em{
+	width:20px;
+	height:20px;
+	display:inline-block;
+	/*border:1px solid red;*/
+	position: absolute;
+	top:40px;
+	
+}
+
+.slideBox  .prev a em{
+	left:4px;
 	background: url(../images/arrow-left.png) no-repeat;
+	
 	/*z-index:4;*/
 	
 	/*left:76px;*/
 }
-.slideBox  .next {
+.slideBox  .next a{
 	right:0;
 }
-.slideBox  .next a{
+.slideBox  .next a em{
 	background: url(../images/arrow-right.png) no-repeat;
-	/*right:76px;*/
+	left:12px;
 }
