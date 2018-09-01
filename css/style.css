@@ -165,7 +165,7 @@ li.new_user~li{
 /*头部菜单导航区域*/
 header .menu{
 	margin-top: 42px;
-	border-bottom:3px solid #ff7200;
+	/*border-bottom:3px solid #ff7200;*/
 }
 header .menu li{
 	float: left;
@@ -197,3 +197,161 @@ header .menu li a:hover{
 	color:#fff;
 }
 /******************index.html样式***********************/
+/*轮播图区域*/
+.slideBox{
+	width:100%;
+	height: 460px;
+	position: relative;	
+	top:-5px;
+	border-top:4px solid #EE6800;
+	/*background: pink;*/
+}
+.slideBox .bottom_ul{
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	top: 426px;
+	z-index:3;
+}
+.slideBox .bottom_ul ul{
+	
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+
+	background: #fff;
+	border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	opacity:0.8;
+	filter:alpha(opacity=80);	/*兼容低版本IE浏览器透明度属性设置*/
+	-moz-opacity:0.8;	/*火狐兼容*/
+	text-align: center;
+	padding:0 30px;
+	box-sizing: border-box;
+
+}
+.slideBox .bottom_ul ul li{
+	width: 20px;
+	height: 20px;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	margin-right:8px;
+	background: #000;
+	box-shadow:0 0 3px;
+	float: left;
+	margin-top:5px;
+	cursor:pointer;
+}
+.slideBox .bottom_ul ul li:hover{
+	background: #CC0000;
+}
+.slideBox .lunbo_imgs{
+	/*position: relative;*/
+	width: 100%;
+	/*border:1px solid green;*/
+	/*left:300px;*/
+	/*top:0;*/
+}
+/*轮播图片布局*/
+.slideBox .lunbo_imgs  ul {
+	width: 100%;
+	height:460px;
+	/*border:1px solid green;*/
+	/*position:relative;*/
+
+}
+.slideBox .lunbo_imgs li{
+	/*float: left;*/
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:460px;
+	/*line-height: 460px;*/
+	text-align:center;
+}
+.slideBox .lunbo_imgs li:nth-child(1){
+
+	background-color: #ffe382;
+}
+.slideBox .lunbo_imgs li:nth-child(3){
+	
+	background-color: #D591C0;
+}
+.slideBox .lunbo_imgs li:nth-child(4){
+	background-color: #F2D9E8;
+}
+.slideBox .lunbo_imgs li:nth-child(4){
+	background-color: #ED5634;
+}
+.slideBox .lunbo_imgs li a{
+	display: inline-block;
+	width:100%;
+	height:460px;
+	
+}
+.slideBox .lunbo_imgs li img{
+		height:460px;
+		
+}	
+.slideBox .lunbo_imgs .lunbo_img1{
+	width:780px;
+	background: url(../AD/ad-1.jpg) no-repeat;
+}
+.slideBox .lunbo_imgs .lunbo_img2{
+	min-width:100%;
+	background: url(../AD/ad-2.jpg) no-repeat;
+	background-position:center center;
+}
+
+.slideBox .lunbo_imgs .lunbo_img3{
+	width:780px;
+	background: url(../AD/ad-3.jpg) no-repeat;
+	background-size:cover;
+}
+.slideBox .lunbo_imgs .lunbo_img7{
+	width:556px;
+	height: 460px;
+	background: url(../AD/ad-7.jpg) no-repeat;
+	background-position: center;
+	/*background-size:contain;*/
+}
+.slideBox .lunbo_imgs .lunbo_img6{
+	width:700px;
+	/*height: 460px;*/
+	background: url(../AD/ad-6.jpg) no-repeat;
+	/*background-position: center;*/
+	background-size:cover;
+}
+/*轮播图左右两个按钮*/
+.slideBox .lunbo_imgs~div{
+	width: 70px;
+	height: 400px;
+	margin-top: 30px;
+	position:absolute;
+	/*top:156px;*/
+	background:#fff;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+	border-radius:5px;
+	top:0;
+	box-sizing:border-box;
+}
+.slideBox  .prev{
+	left:0;
+}
+.slideBox  .prev a{
+	background: url(../images/arrow-left.png) no-repeat;
+	/*z-index:4;*/
+	
+	/*left:76px;*/
+}
+.slideBox  .next {
+	right:0;
+}
+.slideBox  .next a{
+	background: url(../images/arrow-right.png) no-repeat;
+	/*right:76px;*/
+}
