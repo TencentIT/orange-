@@ -26,7 +26,7 @@ header iframe{
 
 /*顶部区域*/
 #topbox{
-
+	position: relative;
 }
 .header_top{
 	width:100%;
@@ -163,17 +163,38 @@ li.new_user~li{
     text-align:center;
 
 }
+
+
 /*头部菜单导航区域*/
 header .menu{
+
 	margin-top: 42px;
 	/*border-bottom:3px solid #ff7200;*/
+	/*position: relative;*/
+	height:40px;
 }
 header .menu li{
 	float: left;
 	height:40px;
+	box-sizing: border-box;
 }
 header .menu li:nth-child(4){
 	position: relative;
+}
+.menu .nav_bar_left_title{
+	float: left;
+	/*position: absolute;*/
+	top:-3px;
+}
+.menu .nav_bar_left_title a{
+	display:inline-block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #ff7200;
+	color:#fff;
+	font-size: 16px;
 }
 .hot_icon{
 	width: 29px;
@@ -368,3 +389,5 @@ header .menu li a:hover{
 	background: url(../images/arrow-right.png) no-repeat;
 	left:12px;
 }
+
+/*轮播图左侧边栏*/
