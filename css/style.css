@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-08-28 23:49:34
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-08-31 00:29:10
+* @Last Modified time: 2018-09-04 00:06:10
 */
 /******************公共样式 类***********************/
 .margin_auto{
@@ -184,12 +184,12 @@ header .menu li:nth-child(4){
 .menu .nav_bar_left_title{
 	float: left;
 	/*position: absolute;*/
-	top:-3px;
 }
-.menu .nav_bar_left_title a{
+.menu .nav_bar_left_title a.products{
 	display:inline-block;
 	width: 200px;
 	height: 40px;
+	font-size: 16px;
 	line-height: 40px;
 	text-align: center;
 	background: #ff7200;
@@ -204,19 +204,57 @@ header .menu li:nth-child(4){
 	top:-15px;
 	left:54px;
 }
-header .menu li a{
+header .menu li{
+	margin-right: 15px;
+}
+header .menu .nav li a{
 	font-size: 16px;
 	line-height: 40px;
-	padding:14px 16px 11px ;
+	text-align: center;
+	padding:0 15px;
+	display: inline-block;
+	box-sizing: border-box;
 }
-header .menu li a.first_li{
-	padding:14px 64px  11px 40px;
+
+header .menu .nav li a:hover{
 	background-color: #ff7200;
 	color:#fff;
+
 }
-header .menu li a:hover{
-	background-color: #ff7200;
+header .bottom_line{
+	width:100%;
+	border-bottom: 6px solid #FF7200;
+}
+.nav_bar_left_items{
+	width: 200px;
+	height: 460px;
+	background: #FF8C2F;
+}
+.nav_bar_left_items .menu_list li{
+	width: 198px;
+	height: 58px;
+	box-sizing: border-box;
+}
+.nav_bar_left_items li .menu_name{
+	
+	
+}
+.nav_bar_left_items li .menu_name a{
+	width: 196px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 16px;
 	color:#fff;
+}
+.nav_bar_left_items li .linkname{
+	height: 30px;
+}
+.nav_bar_left_items li .linkname a{
+	float: left;
+	display: inline-block;
+	font-size: 12px;
+	color:#fff;
+	padding:0 7px;
 }
 /******************index.html样式***********************/
 /*轮播图区域*/
@@ -225,7 +263,7 @@ header .menu li a:hover{
 	height: 460px;
 	position: relative;	
 	top:-5px;
-	border-top:4px solid #EE6800;
+	/*border-top:4px solid #EE6800;*/
 	/*background: pink;*/
 }
 .slideBox .bottom_ul{
