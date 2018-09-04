@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-08-28 23:49:34
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-04 00:06:10
+* @Last Modified time: 2018-09-05 00:01:22
 */
 /******************公共样式 类***********************/
 .margin_auto{
@@ -25,6 +25,14 @@ header.top_header iframe{
 /******************header.html样式***********************/
 
 /*顶部区域*/
+#main{
+	margin: 0 auto;
+	width:1200px;
+	border-right:1px solid red;
+	border-left:1px solid red;
+
+	/*position: relative;*/
+}
 #topbox{
 	position: relative;
 }
@@ -478,5 +486,66 @@ header.top_header>div.menu{
 	background: url(../images/arrow-right.png) no-repeat;
 	left:12px;
 }
-
-/*轮播图左侧边栏*/
+/*推荐产品*/
+.tj_products{
+	width: 1200px;	
+	height: 184px;	
+	margin-top: 20px;
+	border: 1px solid #ddd;
+}
+.tj_ul{
+	display:flex;
+	justify-content:flex-start;
+	padding:10px 0 10px;
+	height:170px;
+	float: left;
+	box-sizing: border-box;
+}
+.tj_first{
+	background: url(../images/recommend_bg_07.png) no-repeat;
+	width: 200px;	
+	height: 190px;	
+	float: left;
+	border:0;
+	/*display: inline-block;*/
+}
+.tj_products .tj_ul li{
+	width: 250px;	
+	border-right:1px solid #dddddd;
+	padding-right: 5px;
+	box-sizing: border-box;
+}
+.tj_products .tj_ul li img{
+	width: 110px;	
+	height: 150px;	
+}
+.tj-pro-detail{
+	float: right;
+	width: 117px;	
+	height: 128px;	
+}
+ .tj_ul a.tj-details{
+	display: inline-block;
+	font-size: 10px;
+	height:24px;
+	line-height:12px; 
+	overflow:hidden;
+    margin-bottom: 10px;
+ }
+ span.tj-price{
+ 	color:#FF0000;
+ 	padding-left: 5px;
+ 	font-size: 20px;
+ }
+ a.tj-buy{
+ 	display:inline-block;
+ 	text-align: center;
+ 	width: 90px;	
+ 	height: 28px;	
+ 	border:1px solid #ddd;
+ 	line-height: 28px;
+ 	background: linear-gradient(to bottom,#fefefe,#e8e8e8);
+ 	margin-left: 6px;
+ 	color:#666666;
+ 	margin-top: 19px;
+ }
