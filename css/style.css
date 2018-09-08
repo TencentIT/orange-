@@ -888,7 +888,7 @@ header.top_header>div.menu{
 }
 .floor-box .fl-porducts a.fl-a-img{
 	text-align: center;
-	display: block;
+	display: block; 
 }
 .floor-box .fl-porducts img{
 	width: 180px;
@@ -1003,3 +1003,6 @@ header.top_header>div.menu{
 	color:#F30;
 	padding:3px 4px;
 }
+
+
+
