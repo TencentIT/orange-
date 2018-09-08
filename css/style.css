@@ -24,9 +24,18 @@ header.top_header iframe{
 a{
 	font-size: 12px;
 }
+footer iframe{
+	width:100%;
+	min-height:470px;
+
+}
 /******************header.html样式***********************/
 
 /*顶部区域*/
+body{
+	overflow:scroll;
+	overflow-x:hidden;
+}
 #main{
 	margin: 0 auto;
 	width:1200px;
@@ -187,6 +196,7 @@ header .menu li{
 	float: left;
 	height:40px;
 	box-sizing: border-box;
+	    position: relative;
 }
 header .menu li:nth-child(4){
 	position: relative;
@@ -211,7 +221,7 @@ header .menu li:nth-child(4){
 	height: 17px;
 	background: url(../images/indexhead_sprite.png) no-repeat -272px -144px; 
 	position:absolute;
-	top:-15px;
+	top:-8px;
 	left:54px;
 }
 header .menu .nav_name li{
@@ -1003,13 +1013,187 @@ header.top_header>div.menu{
 	color:#F30;
 	padding:3px 4px;
 }
+/******************footer.html样式***********************/
+#footer .footer-ul{
+	display: flex;
+	justify-content: space-between;
+margin-top: 20px;
+
+}
+#line{
+	width:100%;
+	border:1px solid  #ddd;
+	margin-top: 20px;	
+}
+#footer .footer-imgs{
+	padding:20px 0	;
+}
+#footer .footer-ul li{
+	width: 300px;
+	height: 60px;
+	/*border:1px solid red;*/
+}
+#footer .footer-ul li .safe{
+    font-size: 24px;
+		color: #333;
+	font-weight: bold;
+	display: block;
+}
+#footer .footer-ul li a.footer-icon{
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+}
+#footer .footer-ul li span{
+	line-height: 34px;
+    height: 34px;
+    font-size: 16px;
+	color:#666;
+}
+#phone{
+	width: 100%;
+	margin:0 auto;
+	    background: #000;
+	    height: 70px;
+	    color:#fff;
+}
+#phone .phone-content{
+	width: 1200px;
+	margin:0 auto;
+	padding:10px 0;
+	height:50px;
+
+}
+#phone .icon-dianhua{
+	font-size: 40px;
+	float: left;
+}
+#phone .phone-content span.hot-phone{
+	font-size: 40px;
+	font-weight: bold;
+	float: left;
+	font-family: Impact;
+}
+#phone .phone-content  span.kf-hotline{
+	line-height: 48px;
+	height: 48px;
+	display: block;
+	float: left;
+	margin-left: 13px;
+}
+.footerbox{
+	height:255px;
+
+}
+.footerbox .footer-ul {
+	margin-top: 20px;
+	display: flex;
+	justify-content:space-between;
+	border-bottom: 1px solid black;
+	padding-bottom: 10px;
+}
+.footerbox .footer-ul li{
+	width: 140px;
+	height: 144px;
+	padding:0 50px;
+}
+.footerbox .footer-ul li h1{
+	font-weight: bold;
+	font-size: 18px; 
+	padding-bottom: 4px;
+
+}
+.footerbox .footer-ul li a{
+	display: block;
+	padding-bottom: 7px;
+}
+.footerbox .about-us {
+	margin: 15px  0; 
+}
+.footerbox .about-us  li{
+	float: left;
+	border-right:1px solid #ddd;
+	padding-right:5px;
+	padding-left:9px ;
+}
+ .footerbox .about-us  li:last-child{
+ 	border-right:0;
+ }
+
+.footerbox .about-us  li:first-child{
+	padding-left: 0;
+}
+.footer-box{
+	height:470px;
+}
+/*右侧菜单栏购物车区域*/
+.fixedBox{
+	position: fixed;
+	width:5px;
+	height:100%;
+	background: #333;
+	top:0;
+	right:0;
+}
+.fixedBox .flxedBoxList{
+	width: 45px;
+	height: 556px;
+	position: relative;
+	margin-top: 120px;
+	right:40px;
+	/*border:1px solid red;*/
+	background: #333;
+	padding:10px 0;
+	border-radius:5px 0 0 5px;
+	-webkit-border-radius:5px 0 0 5px;
+	-moz-border-radius:5px 0 0 5px;
+	-o-border-radius:5px 0 0 5px;
+	border-left:3px solid #F90;
+}
+.fixedBox .flxedBoxList li{
+	width: 45px;
+	margin-bottom: 5px;
+}
 
 
+.fixedBox .flxedBoxList li a.fixedBox-a{
+	color:#fff;
+	display: block;
+	/*width: */
+	text-align: center;
+	padding: 10px 1px 1px 1px;
 
+}
+.fixedBox .flxedBoxList li:hover{
+	background: rgb(202, 8, 88);
+}
+.fixedBox .flxedBoxList li a em{
+	display: block;
+	width: 40px;
+	height: 30px;
+	margin:0 auto;
+	font-size: 30px;
+}
+.fixedBox .flxedBoxList li a {
+	position: relative;
+}
+.fixedBox .flxedBoxList li a em.gwc:after{
+	content:'0';
+	font-size: 12px;
+	display: block;
+	height:15px;
+	line-height: 15px;
+	background: #FF0000;
+	position: absolute;
+	top:0px;
+	right:0px;
+	padding:1px 2px;
+	font-weight: bold;	
 
-
-
-
-
+}
+.fixedBox .flxedBoxList li span{
+	font-size: 14px;
+	padding:0 5px;
+}
 
 
