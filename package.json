@@ -1,0 +1,25 @@
+{
+  "name": "orange-",
+  "version": "1.0.0",
+  "description": "orangeWeb",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TencentIT/orange-.git"
+  },
+  "keywords": [
+    "orange"
+  ],
+  "author": "DEMO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TencentIT/orange-/issues"
+  },
+  "homepage": "https://github.com/TencentIT/orange-#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
