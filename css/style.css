@@ -1195,5 +1195,52 @@ margin-top: 20px;
 	font-size: 14px;
 	padding:0 5px;
 }
+/******************Login.html***********************/
+#login-box{
+	margin-top: 20px;
+}
+#login-box a.logo{
+	display:block;
+	text-align: center;
+	margin-bottom: 20px;	
+}
+#login-box a.logo img{
+	width: 322px;
+	height: 90px;
+}
+#login-box .form-box{
+	width: 600px;
+	height: 549px;
+	border:3px solid #F60;
+	margin: 0 auto;
+	position: relative;
+}
+#login-box .title_name{
+	height:73px;
+	text-align: center;
+	overflow:hidden;
+	border-bottom: 3px solid #F60;
+}
+#login-box .title_name span{
+	display: inline-block;
+	width:156px;
+	height: 156px;
+	line-height:73px;
+	font-size: 30px;
+	color:#fff; 
+	border-radius: 50%;
+	background: #F60;
+}
+#login-box .form-box~div{
+	position: absolute;
+}
+#login-box .form-box .left-pic{
+	width:506px;
+	height: 562px;
+	background: url(../images/bg_name_03.png) no-repeat ;
+
+}
+#login-box .form-box .right-pic{
 
 
+}
