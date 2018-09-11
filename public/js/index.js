@@ -99,5 +99,21 @@
   		parent.innerHTML = html;
   	// console.log(4,parent)
 
-
+  	// 猜你喜欢
+  	 html=``
+  	 parent = document.querySelector("#main>.cnxh-box>.cnxh-pros>.cnxh-ul")
+  		for(p of res.slice(13,21)){
+  			var {pic,title,price,sell} = p; 
+  			html += ` <li>
+          <a href="#" class="cnxh-a"><img src="${pic}" alt=""></a>
+          <a href="#" class="cnxh-detail">${title}</a>
+          <div class="cnxh-div">
+            <span class="price"><i>￥</i>${price.toFixed(2)}</span>
+            <span class="sell">销量<i>${sell.toFixed(2)}</i>件</span>
+          </div>
+        </li>`;
+  		}
+  	
+  		console.log(5,parent)
+  		parent.innerHTML = html;
 })();
