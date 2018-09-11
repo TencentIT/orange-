@@ -877,7 +877,7 @@ header.top_header>div.menu{
 }
 .floor-box .fl-lbt-ul img{
 	width: 400px;
-	height: 470px;
+	height: 520px;
 }
 /*.floor-box .fl-porducts{
 	width: 800px;
@@ -887,7 +887,7 @@ header.top_header>div.menu{
 }*/
 .floor-box .fl-porducts .fl-pro-ul li{
 	width: 200px;
-	height: 235px;
+	height: 260px;
 	/*border:1px solid red;*/
 	float: left;
 	padding:5px;
@@ -904,12 +904,13 @@ header.top_header>div.menu{
 	width: 180px;
 	height: 160px;
 	transition: all .5s linear;
+	    margin-bottom: 8px;
 }
 .floor-box .fl-porducts img:hover{
 	transform: scale(1.1);
 }
 .floor-box .fl-porducts a.fl-pro-details{
-
+	margin-top: 5px;
 }
 .floor-box .fl-porducts .fl-porducts-div{
 	margin-top: 20px;
