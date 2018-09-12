@@ -1208,18 +1208,19 @@ margin-top: 20px;
 	width: 322px;
 	height: 90px;
 }
-#login-box .form-box{
+#login-box .form-box form{
 	width: 600px;
 	height: 549px;
 	border:3px solid #F60;
 	margin: 0 auto;
 	position: relative;
+	/*border-radius:10px;*/
 }
 #login-box .title_name{
 	height:73px;
 	text-align: center;
 	overflow:hidden;
-	border-bottom: 3px solid #F60;
+	/*border-bottom: 3px solid #F60;*/
 }
 #login-box .title_name span{
 	display: inline-block;
@@ -1238,9 +1239,58 @@ margin-top: 20px;
 	width:506px;
 	height: 562px;
 	background: url(../images/bg_name_03.png) no-repeat ;
-
+	position: absolute;
+	left:-506px;
+	top:-116px;
 }
 #login-box .form-box .right-pic{
+	width: 508px;
+	height: 570px;
+	background: url(../images/bg_name_05.png) no-repeat ;
+	position: absolute;
+	right:-508px;
+	top:-114px;
 
-
+}
+#login-box .form-box .login-form{
+	padding:50px 20px;
+	box-sizing:border-box;
+}
+#login-box .form-box .p-username{
+	width: 450px;
+	height: 40px;
+	padding:5px;
+	border:1px solid #ddd;
+}
+#login-box .form-box .login_divBox{
+	/*margin:50px 20px;*/
+}
+#login-box .form-box .input-user-li,.input-pwd-li{
+	
+	border:1px solid #ddd;
+	font-size: 14px;
+	margin: 0 auto;
+	position: relative;
+	width:465px;
+	margin-bottom: 20px;
+}
+#login-box .form-box input{
+	line-height: 30px;
+	width: 360px;
+	height: 30px;
+	padding:5px 20px;
+	padding-left: 40px;
+}
+#login-box .user_icon{
+	display: inline-block;
+	width: 20px;
+    /*margin-top: 5px;*/
+    height: 20px;
+    line-height: 40px;
+	position: absolute;
+	top:5px;
+	left:0;
+    margin:5px 0;
+	background: url(../images/Complex_img.png) no-repeat -97px -39px;
+	padding-right: 15px;
 }

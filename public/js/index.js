@@ -100,7 +100,7 @@
   	// console.log(4,parent)
 
   	// 猜你喜欢
-  	 html=``
+  	 html=``;
   	 parent = document.querySelector("#main>.cnxh-box>.cnxh-pros>.cnxh-ul")
   		for(p of res.slice(13,21)){
   			var {pic,title,price,sell} = p; 
