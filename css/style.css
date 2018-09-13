@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-08-28 23:49:34
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-05 23:58:12
+* @Last Modified time: 2018-09-13 23:54:22
 */
 /******************公共样式 类***********************/
 .margin_auto{
@@ -1263,34 +1263,92 @@ margin-top: 20px;
 	border:1px solid #ddd;
 }
 #login-box .form-box .login_divBox{
-	/*margin:50px 20px;*/
+	    margin: 0 auto;
+    width: 465px;
 }
 #login-box .form-box .input-user-li,.input-pwd-li{
 	
 	border:1px solid #ddd;
 	font-size: 14px;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	position: relative;
 	width:465px;
 	margin-bottom: 20px;
+	padding:5px;
+	    width: 465px;
+	    box-sizing: border-box;
 }
-#login-box .form-box input{
+#login-box .form-box .login-ul input{
 	line-height: 30px;
 	width: 360px;
 	height: 30px;
 	padding:5px 20px;
 	padding-left: 40px;
 }
-#login-box .user_icon{
+#login-box em{
 	display: inline-block;
 	width: 20px;
-    /*margin-top: 5px;*/
     height: 20px;
-    line-height: 40px;
 	position: absolute;
-	top:5px;
-	left:0;
-    margin:5px 0;
-	background: url(../images/Complex_img.png) no-repeat -97px -39px;
 	padding-right: 15px;
+	left:2px;
+
+    margin:5px 0;
+}
+#login-box .user_icon{
+	top:9px;
+	background: url(../images/Complex_img.png) no-repeat -97px -39px;
+}
+#login-box .password_icon{
+		top:9px;
+	background: url(../images/Complex_img.png) no-repeat -102px -10px;
+}
+#login-box .auto_login{
+	margin-top: 30px;
+	min-height:24px;
+	line-height: 24px;
+}
+#login-box  a.forget_pwd{
+	float: right;
+
+}
+#login-box p.login-forget a{
+	color:#999;
+
+}
+#login-box a.login-checkbox{
+	background: url(../images/Complex_img.png) no-repeat -287px -149px;
+	padding-left: 18px;
+	width:13px;
+	height: 13px;
+}
+#login-box  .instance_login {
+	text-align: center;
+}
+#login-box  .instance_login a{
+	display: block;
+	height: 49px;
+	line-height: 49px;
+	color:#fff;
+	background: #ff635b;
+	font-size: 16px;
+	margin-top: 15px;
+}
+#login-box  .instance_login a:hover{
+	background: #DB4139;
+}
+#login-box  .other_method{
+	    margin: 30px 0px;
+    text-align: center;
+}
+#login-box  .other_method .title{
+	border-bottom: 1px solid #ddd;
+	    font-size: 14px;
+	        color: #999;
+	text-align: center;
+}
+#login-box  .other_method .title span{
+	background: #fff;
+	top:10px;
+	position: relative;
 }
