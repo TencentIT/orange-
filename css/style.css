@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-08-28 23:49:34
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-13 23:54:22
+* @Last Modified time: 2018-09-15 00:05:08
 */
 /******************公共样式 类***********************/
 .margin_auto{
@@ -1210,11 +1210,17 @@ margin-top: 20px;
 }
 #login-box .form-box form{
 	width: 600px;
-	height: 549px;
 	border:3px solid #F60;
 	margin: 0 auto;
 	position: relative;
 	/*border-radius:10px;*/
+}
+#login-box .login-form{
+	height: 549px;
+	height: 508px;
+}
+#login-box .register-form{
+	height: 508px;
 }
 #login-box .title_name{
 	height:73px;
@@ -1232,6 +1238,9 @@ margin-top: 20px;
 	border-radius: 50%;
 	background: #F60;
 }
+#login-box .form-box{
+	position: relative;
+}
 #login-box .form-box~div{
 	position: absolute;
 }
@@ -1240,16 +1249,16 @@ margin-top: 20px;
 	height: 562px;
 	background: url(../images/bg_name_03.png) no-repeat ;
 	position: absolute;
-	left:-506px;
-	top:-116px;
+	    left: 150px;
+    top: -40px;
 }
 #login-box .form-box .right-pic{
 	width: 508px;
 	height: 570px;
 	background: url(../images/bg_name_05.png) no-repeat ;
 	position: absolute;
-	right:-508px;
-	top:-114px;
+	right: 150px;
+    top: -45px;
 
 }
 #login-box .form-box .login-form{
@@ -1266,7 +1275,7 @@ margin-top: 20px;
 	    margin: 0 auto;
     width: 465px;
 }
-#login-box .form-box .input-user-li,.input-pwd-li{
+#login-box .form-box .input-user-li,.input-pwd-li,.input-yzm-li{
 	
 	border:1px solid #ddd;
 	font-size: 14px;
@@ -1278,6 +1287,7 @@ margin-top: 20px;
 	    width: 465px;
 	    box-sizing: border-box;
 }
+
 #login-box .form-box .login-ul input{
 	line-height: 30px;
 	width: 360px;
@@ -1292,16 +1302,18 @@ margin-top: 20px;
 	position: absolute;
 	padding-right: 15px;
 	left:2px;
-
+	top:9px;
+	background: url(../images/Complex_img.png) no-repeat ;
     margin:5px 0;
 }
+#login-box .form-box em.Codes_icon{
+	background-position:-101px  -69px;
+}
 #login-box .user_icon{
-	top:9px;
-	background: url(../images/Complex_img.png) no-repeat -97px -39px;
+	background-position:-97px -39px;
 }
 #login-box .password_icon{
-		top:9px;
-	background: url(../images/Complex_img.png) no-repeat -102px -10px;
+	background-position:-102px -10px;
 }
 #login-box .auto_login{
 	margin-top: 30px;
@@ -1351,4 +1363,11 @@ margin-top: 20px;
 	background: #fff;
 	top:10px;
 	position: relative;
+}
+#login-box   .icon_login{
+	text-align: center;
+}
+#login-box   .icon_login a{
+	/*float: left;*/
+	margin: 0 10px;
 }
