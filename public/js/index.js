@@ -1,11 +1,10 @@
 (async function(){
 	var res =await ajax({
-		url :"http://localhost:3002/index/products",
+		url :"http://localhost:3002/index",
 		dataType:"json",
 		type:"get"
 	});
-	// console.log(res);
-
+	console.log(res);
 
 //推荐产品模块 数据
 	var html = ``;
@@ -117,40 +116,4 @@
   	
   		console.log(5,parent)
   		parent.innerHTML = html;
-
-      //轮播图区域 数据交互
 })();
-
-// 鲜盟店铺
-$.ajax({
-  url:"http://localhost:3002/index/xmdpAreas",
-  type:"get",
-  dataType:"json",
-  success:function(res){
-    // console.log("carousel",res);  数据成功过来了
-    var parent = document.querySelector(`.xm-dianpu>.areas>ul`);
-    console.log(7,parent);
-
-    var html = ``;
-    for(var p of res.slice(0,7)){
-      var {Provincial,area1,area2,area3,area4,area5,area6} = p;
-      html+=`<li> 
-         <div class="area-title"> 
-          <a href="#" class="">${Provincial}</a> 
-         </div> 
-         <div class="area-list"> 
-          <a href="#">${Provincial}</a> 
-          <a href="#">${area1}</a> 
-          <a href="#">${area2}</a> 
-          <a href="#">${area3}</a> 
-          <a href="#">${area4}</a> 
-          <a href="#">${area5}</a> 
-           <a href="#">${area6}</a> 
-         </div> 
-       </li>
-       `
-    }
-    // console.log(7,html);
-    parent.innerHTML = html;
-  }
-})

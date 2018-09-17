@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-08-28 23:49:34
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-09-15 23:10:43
+* @Last Modified time: 2018-09-05 23:58:12
 */
 /******************公共样式 类***********************/
 .margin_auto{
@@ -136,7 +136,7 @@ li.new_user~li{
 	height: 40px;
 	background: #ff7200;
 	color:#fff;
-	margin-left:-4px;
+	margin-left:-3px;
 }
 .logo_box .gwc{
 	float: right;
@@ -319,7 +319,7 @@ header.top_header{
 }
 header.top_header>div.menu{
 	position: absolute;
-    top: 136px;
+    top: 156px;
     left: 0px;
     z-index: 1000;
 }
@@ -328,7 +328,7 @@ header.top_header>div.menu{
 	width:100%;
 	height: 460px;
 	position: relative;	
-	top:69px;
+	top:-4px;
 	border-top:4px solid #EE6800;
 }
 .slideBox .bottom_ul{
@@ -429,25 +429,30 @@ header.top_header>div.menu{
 }	
 .slideBox .lunbo_imgs .lunbo_img1{
 	width:780px;
+	background: url(../AD/ad-1.jpg) no-repeat;
 }
 .slideBox .lunbo_imgs .lunbo_img2{
 	min-width:100%;
+	background: url(../AD/ad-2.jpg) no-repeat;
 	background-position:center center;
 }
 
 .slideBox .lunbo_imgs .lunbo_img3{
 	width:780px;
+	background: url(../AD/ad-3.jpg) no-repeat;
 	background-size:cover;
 }
 .slideBox .lunbo_imgs .lunbo_img7{
 	width:556px;
 	height: 460px;
+	background: url(../AD/ad-7.jpg) no-repeat;
 	background-position: center;
 	/*background-size:contain;*/
 }
 .slideBox .lunbo_imgs .lunbo_img6{
 	width:700px;
 	/*height: 460px;*/
+	background: url(../AD/ad-6.jpg) no-repeat;
 	/*background-position: center;*/
 	background-size:cover;
 }
@@ -497,7 +502,7 @@ header.top_header>div.menu{
 .tj_products{
 	width: 1200px;	
 	height: 184px;	
-	margin-top: 90px;
+	margin-top: 20px;
 	margin-bottom: 10px;
 	border: 1px solid #ddd;
 }
@@ -528,7 +533,6 @@ header.top_header>div.menu{
 	width: 110px;	
 	height: 150px;	
 	transition:all .5s linear;
-	    margin: 0 5px;
 }
 .tj_products .tj_ul li img:hover{
 	transform: scale(1.1);
@@ -573,7 +577,7 @@ header.top_header>div.menu{
   	border-bottom: 3px solid #FF7200;
   }
  .xm-dianpu .areas{
-	height: 240px;
+	height: 197px;
 	border:1px solid #ddd;
 		position: relative;
  }
@@ -582,7 +586,7 @@ header.top_header>div.menu{
  }
   .xm-dianpu .areas ul {
   	display:flex;
-  	justify-content:flex-start;
+  	justify-content:space-between;
   	flex-wrap :wrap;
   	/*position: absolute;
   	left:20px;
@@ -591,7 +595,7 @@ header.top_header>div.menu{
   }
  .xm-dianpu .areas ul li{
  	width: 278px;	
- 	height: 110px;	
+ 	height: 87px;	
  	
  }
   .xm-dianpu .areas .area-title {
@@ -873,7 +877,7 @@ header.top_header>div.menu{
 }
 .floor-box .fl-lbt-ul img{
 	width: 400px;
-	height: 514px;
+	height: 520px;
 }
 /*.floor-box .fl-porducts{
 	width: 800px;
@@ -883,7 +887,7 @@ header.top_header>div.menu{
 }*/
 .floor-box .fl-porducts .fl-pro-ul li{
 	width: 200px;
-	/*height: 235px;*/
+	height: 260px;
 	/*border:1px solid red;*/
 	float: left;
 	padding:5px;
@@ -895,22 +899,21 @@ header.top_header>div.menu{
 .floor-box .fl-porducts a.fl-a-img{
 	text-align: center;
 	display: block; 
-	/*margin-bottom: 10px;*/
-	    margin: 7px 0 10px;
 }
 .floor-box .fl-porducts img{
 	width: 180px;
 	height: 160px;
 	transition: all .5s linear;
+	    margin-bottom: 8px;
 }
 .floor-box .fl-porducts img:hover{
 	transform: scale(1.1);
 }
 .floor-box .fl-porducts a.fl-pro-details{
-
+	margin-top: 5px;
 }
 .floor-box .fl-porducts .fl-porducts-div{
-	margin-top: 10px;
+	margin-top: 20px;
 	/*border:1px solid red;*/
 }
 .floor-box span.xscx-price{
@@ -1187,222 +1190,11 @@ margin-top: 20px;
 	right:0px;
 	padding:1px 2px;
 	font-weight: bold;	
-font-emphasize-style: accent;
 
 }
 .fixedBox .flxedBoxList li span{
 	font-size: 14px;
 	padding:0 5px;
 }
-/******************Login.html***********************/
-#login-box{
-	margin-top: 20px;
-}
-#login-box a.logo{
-	display:block;
-	text-align: center;
-	margin-bottom: 20px;	
-}
-#login-box a.logo img{
-	width: 322px;
-	height: 90px;
-}
-#login-box .form-box form{
-	width: 600px;
-	border:3px solid #F60;
-	margin: 0 auto;
-	position: relative;
-	    padding: 50px 20px;
-    box-sizing: border-box;
-}
-#login-box .login-form{
-	height: 549px;
-	height: 508px;
-}
-#login-box .register-form{
-	height: 508px;
-}
-#login-box .title_name{
-	height:73px;
-	text-align: center;
-	overflow:hidden;
-	/*border-bottom: 3px solid #F60;*/
-}
-#login-box .title_name span{
-	display: inline-block;
-	width:156px;
-	height: 156px;
-	line-height:73px;
-	font-size: 30px;
-	color:#fff; 
-	border-radius: 50%;
-	background: #F60;
-}
-#login-box .form-box{
-	position: relative;
-}
-#login-box .form-box~div{
-	position: absolute;
-}
-#login-box .form-box .left-pic{
-	width:506px;
-	height: 562px;
-	background: url(../images/bg_name_03.png) no-repeat ;
-	position: absolute;
-	    left: 149px;
-    top: -40px;
-}
-#login-box .form-box .right-pic{
-	width: 508px;
-	height: 570px;
-	background: url(../images/bg_name_05.png) no-repeat ;
-	position: absolute;
-	right: 150px;
-    top: -45px;
-
-}
-#login-box .form-box .login-form{
-	padding:50px 20px;
-	box-sizing:border-box;
-}
-#login-box .form-box .p-username{
-	width: 450px;
-	height: 40px;
-	padding:5px;
-	border:1px solid #ddd;
-}
-#login-box .form-box .login_divBox{
-	    margin: 0 auto;
-    width: 465px;
-}
-#login-box .form-box .input-user-li,.input-pwd-li,.input-mail-li{
-	
-	border:1px solid #ddd;
-	font-size: 14px;
-	position: relative;
-	margin-bottom: 20px;
-	padding:5px;
-    width: 465px;
-    box-sizing: border-box;
-    height: 48px;
-    line-height: 40px;
-}
-
-#login-box .form-box .login-ul input{
-	line-height: 30px;
-	width: 200px;
-	height: 30px;
-	padding:5px 20px;
-	padding-left: 40px;
-}
-#login-box em{
-	display: inline-block;
-	width: 20px;
-    height: 20px;
-	position: absolute;
-	padding-right: 15px;
-	left:2px;
-	top:9px;
-	background: url(../images/Complex_img.png) no-repeat ;
-    margin:5px 0;
-}
-#login-box .form-box em.Codes_icon{
-	background-position:-101px  -69px;
-}
-#login-box .user_icon{
-	background-position:-97px -39px;
-}
-#login-box .password_icon{
-	background-position:-102px -10px;
-}
-#login-box .auto_login{
-	margin-top: 30px;
-	min-height:24px;
-	line-height: 24px;
-}
-#login-box  a.forget_pwd{
-	float: right;
-
-}
-#login-box p.login-forget a{
-	color:#999;
-}
-
-#login-box a.login-checkbox{
-	background: url(../images/Complex_img.png) no-repeat -287px -149px;
-	padding-left: 18px;
-	width:13px;
-	height: 13px;
-}
-#login-box  .instance_login {
-	text-align: center;
-}
-#login-box  .instance_login .form_submit{
-	display: block;
-	width:100%;
-	height: 49px;
-	line-height: 49px;
-	color:#fff;
-	background: #ff635b;
-	font-size: 16px;
-	margin-top: 15px;
-	cursor:pointer;
-}
-#login-box  .instance_login .fail{
-	display: block;
-	width:100%;
-	height: 49px;
-	line-height: 49px;
-	color:#fff;
-	background: gray;
-	font-size: 16px;
-	margin-top: 15px;
-}
-#login-box  .instance_login a:hover{
-	background: #DB4139;
-}
-#login-box  .other_method{
-	    margin: 30px 0px;
-    text-align: center;
-}
-#login-box  .other_method .title{
-	border-bottom: 1px solid #ddd;
-	    font-size: 14px;
-	        color: #999;
-	text-align: center;
-}
-#login-box  .other_method .title span{
-	background: #fff;
-	top:10px;
-	position: relative;
-}
-#login-box   .icon_login{
-	text-align: center;
-}
-#login-box   .icon_login a{
-	/*float: left;*/
-	margin: 0 10px;
-}
-/*注册信息提示*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
