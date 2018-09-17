@@ -313,6 +313,18 @@ header .bottom_line{
 .nav_bar_left_items li .linkname p>a{
 	padding-left:0;
 }
+/* 盒子模块 */
+.menv_details{
+	width: 621px;
+    height: 461px;
+    background: #fff;
+    position: absolute;
+    left: 196px;
+    top: 0px;
+}
+.menu_list li .menv_details li{
+
+}
 /******************index.html样式***********************/
 header.top_header{
 	position: relative;
@@ -1370,4 +1382,8 @@ margin-top: 20px;
 #login-box   .icon_login a{
 	/*float: left;*/
 	margin: 0 10px;
+}
+/**************产品列表样式属性*****************/
+.Inside_pages{
+    height:2000px;
 }

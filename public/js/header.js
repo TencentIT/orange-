@@ -5,7 +5,6 @@ $(function(){
 		success:function(res){
 			//console.log("header",res);
 			$(res).replaceAll("#header");
-			 var $search=
         var $search = $(".search_box .search");
         $search.click(function(){
         location.href=
