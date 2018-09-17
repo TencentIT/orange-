@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>橘色商城登录界面</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<div id="login-box">
+		<a href="index.html"  class="logo"><img src="images/logo.png"></a>
+		
+		<div class="form-box">
+			
+			<div class="title_name"><span>登录</span></div>
+			 
+			<form class="login-form" method="post">
+				<div class="login_divBox">
+					<ul class="login-ul">
+						<li  class="input-user-li">
+							<em class="user_icon"></em><input type="text" name="uname" placeholder="用户名" id="uname">
+						</li>
+						<li class="input-pwd-li"><em class="password_icon"></em><input type="text" placeholder="密码"  name="upwd" id="upwd"></li>
+					</ul>
+					<div class="auto_login">
+					<p class="login-forget">
+						<a href="#" class="login-checkbox">自动登录
+						<a href="#" class="forget_pwd">忘记密码？</a>
+					</p>
+					</div>
+					<div class="instance_login">
+						<input  name="submit" type="button" value="立即登录" onclick="post_msg()" class="form_submit" id="submit">
+					</div>
+				</div>
+
+				<!-- <a href="#" class="login-submit"></a> -->
+				<!-- 第三方登录方式 -->
+				<div class="other_method">
+					<div class="title">
+						<span>第三方登录方式</span>
+					</div>
+				</div>
+				<div class="icon_login clearfix">
+					<a href="#"><img src="images/l_1.png"></a>
+					<a href="#"><img src="images/l_2.png"></a>
+					<a href="#"><img src="images/l_4.png"></a>
+				</div>
+			</form>
+			<div class="left-pic"></div>
+		
+			<div class="right-pic"></div>
+			
+
+		</div>
+		
+	</div>
+	<script src="js/common.js"></script>
+	<script>
+
+		function post_msg(){
+			var xhr = createXhr();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var res = xhr.responseText;
+					if(res=="login_success")
+						alert("登录成功")
+					else if(res=="login_fail") alert("用户名或密码错误")
+					else  alert(res);
+
+					// console.log(res);
+				}
+			}
+			xhr.open("post","/index/login",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+			var uname = document.getElementById("uname").value;
+			var upwd  = document.getElementById("upwd").value;
+
+			var formData = "uname="+uname+"&upwd="+upwd;
+				console.log(formData);
+				xhr.send(formData);
+		}
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
