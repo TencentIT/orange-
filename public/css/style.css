@@ -1554,8 +1554,44 @@ font-emphasize-style: accent;
 	margin-top: 5px;
 	margin-left: 3px;
 }
-
-
+/* 样式 */
+.scrollsidebar {
+    position: relative;
+}
+.side_content {
+	position: relative
+}
+.page_left_style {
+    width: 220px;
+    float: left;
+}
+.show_btn {
+	display: none;
+	position: fixed;
+	z-index: 1111
+}
+.show_btn span {
+	background: url(../images/indexhead_sprite.png) -95px -380px no-repeat;
+	width: 25px;
+	height: 100px;
+	overflow: hidden;
+	float: left;
+	cursor: pointer;
+	position: absolute;
+	left: 0px;
+	top: 30%;
+}
+.side_title span {
+	background: url(../images/indexhead_sprite.png) -65px -413px no-repeat;
+	width: 25px;
+	height: 40px;
+	overflow: hidden;
+	float: left;
+	cursor: pointer;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+}
 
 
 

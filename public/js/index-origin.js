@@ -1,3 +1,4 @@
+// 用ajax 然后再后台拼接数据 实现前后数据交互
 (async function(){
 	var res =await ajax({
 		url :"http://localhost:3002/index/products",

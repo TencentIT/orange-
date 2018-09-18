@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" /> 
    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script> 
   <script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script> 
+  <script src="js/vue.js"></script>
  </head> 
  <body> 
   <header class="top_header width1200 margin_auto"> 
@@ -29,58 +30,11 @@
         <div class="linkname clearfix"> 
          <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
         </div> 
-        <div id="menv_details">371
+        <div id="menv_details">
           <div class="menv_details_left border1px">
             <ul class="m_left">
-              <li>
-                <a href="#">面膜</a>
-                <a href="#">撕拉面膜</a>
-                <a href="#">面膜贴</a>
-                <a href="#">免洗面膜</a>
-                <a href="#">水洗面膜</a>
-              </li>
-              <li>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-              </li>
-              <li>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-              </li>
-              <li>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-              </li>
-              <li>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-              </li>
-              <li>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-              </li>
-              <li>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-              </li>
-              <li>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-              </li>
+              
+
             </ul>
           </div>
           <div class="menv_details_right"></div>
@@ -204,6 +158,14 @@
     <img class="tj_first" /> 
     <ul class="tj_ul"> 
     <!-- 后台数据过来 通过ajax数据交互 -->
+    <li  v-for="p of res.slice(0,4)"> 
+      <img :src="p.pic" /> 
+      <div class="tj-pro-detail"> 
+       <a href="#" class="tj-details">{{p.title}}</a> 
+       <span class="tj-price">￥{{p.price.toFixed(2)}}</span> 
+       <a class="tj-buy">立即购买</a> 
+      </div>
+    </li>
     </ul> 
    </div> 
    <!-- 3 鲜盟店铺 --> 
@@ -213,18 +175,19 @@
     </div> 
     <div class="areas"> 
      <ul> 
-      <!-- <li> 
+      <li v-for="p of res.slice(0,7)"> 
        <div class="area-title"> 
-        <a href="#" class="">四川成都武侯区</a> 
+        <a href="#" class="">{{p.Provincial}}</a> 
        </div> 
        <div class="area-list"> 
-        <a href="#">武侯分店一部</a> 
-        <a href="#">武侯分店一部</a> 
-        <a href="#">武侯分店一部</a> 
-        <a href="#">武侯分店一部</a> 
-        <a href="#">武侯分店一部</a> 
-        <a href="#">武侯分店一部</a> 
-       </div> </li>  -->
+        <a href="#">{{p.area1}}</a> 
+        <a href="#">{{p.area2}}</a> 
+        <a href="#">{{p.area3}}</a> 
+        <a href="#">{{p.area4}}</a> 
+        <a href="#">{{p.area5}}</a> 
+        <a href="#">{{p.area6}}</a> 
+       </div> 
+      </li> 
       
      </ul> 
     </div> 
@@ -255,11 +218,10 @@
       </ul> 
      </div> 
      <div class="rx-products-list"> 
-      <ul class="clearfix"> 
-       <!-- <li> <a href="#" class="rx-img-a"><img src="products/p_1.jpg" alt="" /></a> <a href="#" class="rx-detail">陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5</a> <p> <span class="rx-price">￥232.12</span> <span class="rx-sell">销售:&nbsp;&nbsp;<b>123</b>件</span> </p> </li> 
-       <li> <a href="#" class="rx-img-a"><img src="products/p_2.jpg" alt="" /></a> <a href="#" class="rx-detail">陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5</a> <p> <span class="rx-price">￥232.12</span> <span class="rx-sell">销售:&nbsp;&nbsp;<b>123</b>件</span> </p> </li> 
-       <li> <a href="#" class="rx-img-a"><img src="products/p_3.jpg" alt="" /></a> <a href="#" class="rx-detail">陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5</a> <p> <span class="rx-price">￥232.12</span> <span class="rx-sell">销售:&nbsp;&nbsp;<b>123</b>件</span> </p> </li> 
-       <li> <a href="#" class="rx-img-a"><img src="products/p_4.jpg" alt="" /></a> <a href="#" class="rx-detail">陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5</a> <p> <span class="rx-price">￥232.12</span> <span class="rx-sell">销售:&nbsp;&nbsp;<b>123</b>件</span> </p> </li>  -->
+      <ul class="clearfix" id="rx-ul"> 
+       <li> <a href="#" class="rx-img-a" v-for="p of res(4,8)">
+         <img :src="p.pic" alt="" /></a> <a href="#" class="rx-detail">{{p.title}}</a> <p> <span class="rx-price">￥{{p.price.toFixed2}}</span> <span class="rx-sell">销售:&nbsp;&nbsp;<b>{{p.sell}}</b>件</span> </p> 
+        </li> 
       </ul> 
      </div> 
     </div> 
@@ -639,7 +601,7 @@
    </footer> 
   <script src="js/common.js" type="text/javascript"></script> 
    <script src="js/ajax.js" type="text/javascript"></script> 
-  <script src="js/index.js" type="text/javascript"></script> 
+  <script src="js/index-vue-version.js" type="text/javascript"></script> 
 <!--   <script src="js/index_carousel.js" type="text/javascript"></script> -->
   <script type="text/javascript" src="js/header.js"></script>
   <script type="text/javascript" src="js/footer.js"></script>
