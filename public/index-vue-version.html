@@ -9,6 +9,8 @@
    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script> 
   <script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script> 
   <script src="js/vue.js"></script>
+  <script src="js/qs.min.js"></script>
+  <script src="js/axios.min.js"></script>
  </head> 
  <body> 
   <header class="top_header width1200 margin_auto"> 
@@ -151,7 +153,7 @@
 			// $(".slideBox").slide({titCell:".bottom_ul .lunbo_imgs_ul",mainCell:".lunbo_imgs ul.lunbo_imgs_ul",autoPlay:true,autoPage:true});
       jQuery(".slideBox").slide({titCell:".bottom_ul ul",mainCell:".lunbo_imgs ul",autoPlay:true,autoPage:true});
     </script> 
-		</script> 
+
   <div id="main"> 
    <!-- 2 推荐产品 --> 
    <div class="tj_products"> 
@@ -217,10 +219,12 @@
        <li></li> 
       </ul> 
      </div> 
-     <div class="rx-products-list"> 
+     <div class="rx-products-list" id="rx-products-list"> 
       <ul class="clearfix" id="rx-ul"> 
-       <li> <a href="#" class="rx-img-a" v-for="p of res(4,8)">
-         <img :src="p.pic" alt="" /></a> <a href="#" class="rx-detail">{{p.title}}</a> <p> <span class="rx-price">￥{{p.price.toFixed2}}</span> <span class="rx-sell">销售:&nbsp;&nbsp;<b>{{p.sell}}</b>件</span> </p> 
+       <li> <a href="#" class="rx-img-a" v-for="p1 of res(4,8)">
+         <img :src="p1.pic" alt="" /></a> <a href="#" class="rx-detail">{{p1.title}}</a> <p> 
+           <span class="rx-price">￥{{p1.price.toFixed2}}</span>
+            <span class="rx-sell">销售:&nbsp;&nbsp;<b>{{p1.sell}}</b>件</span> </p> 
         </li> 
       </ul> 
      </div> 
@@ -235,15 +239,16 @@
     </div> 
     <div class="xscx-items"> 
      <ul class="xscx-ul clearfix"> 
-      <!-- <li> <a href="#" class="xscx-img-a"><img src="products/p_1.jpg" alt="" /></a> 
+      <li v-for="p of res(9,13)"> <a href="#" class="xscx-img-a"><img src="products/p_1.jpg" alt="" /></a> 
        <div class="xscx-box"> 
-        <a href="#" class="xscx-detail">Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒</a> 
+        <a href="#" class="xscx-detail">{{p.title}}</a> 
         <div> 
-         <span class="xscx-price">￥<b>232.12</b></span> 
-         <span class="xscx-sub-price">￥65.00</span> 
+         <span class="xscx-price">￥<b>{{p.price}}</b></span> 
+         <span class="xscx-sub-price">￥{{p.sell}}</span> 
         </div> 
         <button>剩余时间：23时34分23秒</button> 
        </div> </li> 
+        <!--
       <li> <a href="#" class="xscx-img-a"><img src="products/p_2.jpg" alt="" /></a> 
        <div class="xscx-box"> 
         <a href="#" class="xscx-detail">Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒</a> 
@@ -600,7 +605,7 @@
 
    </footer> 
   <script src="js/common.js" type="text/javascript"></script> 
-   <script src="js/ajax.js" type="text/javascript"></script> 
+   <!-- <script src="js/ajax.js" type="text/javascript"></script>  -->
   <script src="js/index-vue-version.js" type="text/javascript"></script> 
 <!--   <script src="js/index_carousel.js" type="text/javascript"></script> -->
   <script type="text/javascript" src="js/header.js"></script>

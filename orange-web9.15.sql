@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- 数据库: `orange-web`
 --
 CREATE DATABASE IF NOT EXISTS `orange-web9.15` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `orange-web`;
+USE `orange-web9.15`;
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `orange_provincial` (
 -- 转存表中的数据 `orange_provincial`
 --
 
-INSERT INTO `orange_provincial` (`pid`, `Provincial`, `area6`, `area5`, `area4`, `area3`, `area2`, `area1`) VALUES
+INSERT INTO `orange_provincial` (`a_id`, `Provincial`, `area6`, `area5`, `area4`, `area3`, `area2`, `area1`) VALUES
 (1, '北京市', '北京市一区', '北京市二区', '北京市三区', '北京市四区', '北京市五区', '北京市六区'),
 (2, '天津市', '天津市一区', '天津市二区', '天津市三区', '天津市四区', '天津市五区', '天津市六区'),
 (3, '上海市', '上海市一区', '上海市二区', '上海市三区', '上海市四区', '上海市五区', '上海市六区'),
