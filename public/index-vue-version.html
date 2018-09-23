@@ -11,6 +11,11 @@
   <script src="js/vue.js"></script>
   <script src="js/qs.min.js"></script>
   <script src="js/axios.min.js"></script>
+  <style>
+    [cloak]{
+      display: none;
+    }
+  </style>
  </head> 
  <body> 
   <header class="top_header width1200 margin_auto"> 
@@ -156,9 +161,9 @@
 
   <div id="main"> 
    <!-- 2 推荐产品 --> 
-   <div class="tj_products"> 
+   <div class="tj_products" > 
     <img class="tj_first" /> 
-    <ul class="tj_ul"> 
+    <ul class="tj_ul" cloak> 
     <!-- 后台数据过来 通过ajax数据交互 -->
     <li  v-for="p of res.slice(0,4)"> 
       <img :src="p.pic" /> 
@@ -176,7 +181,7 @@
      <span class="xmdp-title">鲜盟店铺</span> 
     </div> 
     <div class="areas"> 
-     <ul> 
+     <ul cloak> 
       <li v-for="p of res.slice(0,7)"> 
        <div class="area-title"> 
         <a href="#" class="">{{p.Provincial}}</a> 
@@ -220,11 +225,11 @@
       </ul> 
      </div> 
      <div class="rx-products-list" id="rx-products-list"> 
-      <ul class="clearfix" id="rx-ul"> 
-       <li> <a href="#" class="rx-img-a" v-for="p1 of res(4,8)">
-         <img :src="p1.pic" alt="" /></a> <a href="#" class="rx-detail">{{p1.title}}</a> <p> 
-           <span class="rx-price">￥{{p1.price.toFixed2}}</span>
-            <span class="rx-sell">销售:&nbsp;&nbsp;<b>{{p1.sell}}</b>件</span> </p> 
+      <ul class="clearfix" id="rx-ul"  cloak> 
+       <li  v-for="p of res.slice(4,8)"> <a href="#" class="rx-img-a">
+         <img :src="p.pic" alt="" /></a> <a href="#" class="rx-detail">{{p.title}}</a> <p> 
+           <span class="rx-price">￥{{p.price.toFixed(2)}}</span>
+            <span class="rx-sell">销售:&nbsp;&nbsp;<b>{{p.sell}}</b>件</span> </p> 
         </li> 
       </ul> 
      </div> 
@@ -238,53 +243,17 @@
      <a href="#">更多促销</a> 
     </div> 
     <div class="xscx-items"> 
-     <ul class="xscx-ul clearfix"> 
-      <li v-for="p of res(9,13)"> <a href="#" class="xscx-img-a"><img src="products/p_1.jpg" alt="" /></a> 
+     <ul class="xscx-ul clearfix"  cloak> 
+      <li v-for="p in res.slice(9,14)"> <a href="#" class="xscx-img-a"><img :src="p.pic" alt="" /></a> 
        <div class="xscx-box"> 
         <a href="#" class="xscx-detail">{{p.title}}</a> 
         <div> 
-         <span class="xscx-price">￥<b>{{p.price}}</b></span> 
+         <span class="xscx-price">￥<b>{{p.price.toFixed(2)}}</b></span> 
          <span class="xscx-sub-price">￥{{p.sell}}</span> 
         </div> 
         <button>剩余时间：23时34分23秒</button> 
        </div> </li> 
-        <!--
-      <li> <a href="#" class="xscx-img-a"><img src="products/p_2.jpg" alt="" /></a> 
-       <div class="xscx-box"> 
-        <a href="#" class="xscx-detail">Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒</a> 
-        <div> 
-         <span class="xscx-price">￥<b>232.12</b></span> 
-         <span class="xscx-sub-price">￥65.00</span> 
-        </div> 
-        <button>剩余时间：23时34分23秒</button> 
-       </div> </li> 
-      <li> <a href="#" class="xscx-img-a"><img src="products/p_3.jpg" alt="" /></a> 
-       <div class="xscx-box"> 
-        <a href="#" class="xscx-detail">Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒</a> 
-        <div> 
-         <span class="xscx-price">￥<b>232.12</b></span> 
-         <span class="xscx-sub-price">￥65.00</span> 
-        </div> 
-        <button>剩余时间：23时34分23秒</button> 
-       </div> </li> 
-      <li> <a href="#" class="xscx-img-a"><img src="products/p_4.jpg" alt="" /></a> 
-       <div class="xscx-box"> 
-        <a href="#" class="xscx-detail">Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒</a> 
-        <div> 
-         <span class="xscx-price">￥<b>232.12</b></span> 
-         <span class="xscx-sub-price">￥65.00</span> 
-        </div> 
-        <button>剩余时间：23时34分23秒</button> 
-       </div> </li> 
-      <li> <a href="#" class="xscx-img-a"><img src="products/p_5.jpg" alt="" /></a> 
-       <div class="xscx-box"> 
-        <a href="#" class="xscx-detail">Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒</a> 
-        <div> 
-         <span class="xscx-price">￥<b>232.12</b></span> 
-         <span class="xscx-sub-price">￥65.00</span> 
-        </div> 
-        <button>剩余时间：23时34分23秒</button> 
-       </div> </li>  -->
+       
      </ul> 
     </div> 
    </div> 
@@ -307,47 +276,16 @@
        </ul> 
       </div> 
       <div class="fl-porducts"> 
-       <ul class="fl-pro-ul clearfix"> 
-        <!-- <li> <a href="#" class="fl-a-img"><img src="products/p_1.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_1.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_2.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_3.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_4.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_5.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_6.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_7.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li>  -->
+       <ul class="fl-pro-ul clearfix" id="fl-pro-ul"  cloak> 
+        <li v-for="p in res.slice(14,22)" > 
+          <a href="#" class="fl-a-img"><img :src="p.pic" alt="" /></a>
+           <a href="#" class="fl-pro-details">{{p.title}}</a> 
+          <div class="fl-porducts-div"> 
+          <span class="xscx-price">￥<i>{{p.price}}</i></span> 
+          <span class="xscx-sub-price">销量<i>{{p.sell}}</i>件</span> 
+         </div> 
+        </li> 
+        
        </ul> 
       </div> 
      </div> 
@@ -365,47 +303,15 @@
        </ul> 
       </div> 
       <div class="fl-porducts"> 
-       <ul class="fl-pro-ul  clearfix"> 
-       <!--  <li> <a href="#" class="fl-a-img"><img src="products/p_1.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
+       <ul class="fl-pro-ul  clearfix" id="f-2"  cloak> 
+        <li  v-for="p in res.slice(22,30)"> <a href="#" class="fl-a-img">
+          <img :src="p.pic" alt="" /></a> <a href="#" class="fl-pro-details">{{p.title}}</a> 
          <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_1.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_2.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_3.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_4.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_5.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_6.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_7.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li>  -->
+          <span class="xscx-price">￥<i>{{p.price.toFixed(2)}}</i></span> 
+          <span class="xscx-sub-price">销量<i>{{p.sell.toFixed(2)}}</i>件</span> 
+         </div> 
+        </li> 
+        
        </ul> 
       </div> 
      </div> 
@@ -423,47 +329,16 @@
        </ul> 
       </div> 
       <div class="fl-porducts"> 
-       <ul class="fl-pro-ul  clearfix"> 
-        <!-- <li> <a href="#" class="fl-a-img"><img src="products/p_1.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
+       <ul class="fl-pro-ul  clearfix" id="f-3" cloak> 
+        <li v-for="p of res.slice(30,38)"> <a href="#" class="fl-a-img">
+        <img :src="p.pic" alt="" />
+        </a> <a href="#" class="fl-pro-details">{{p.title}}</a> 
          <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_1.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_2.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_3.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_4.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_5.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_6.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li> 
-        <li> <a href="#" class="fl-a-img"><img src="products/p_7.jpg" alt="" /></a> <a href="#" class="fl-pro-details">Olay玉兰油 新生塑颜金纯活能水</a> 
-         <div class="fl-porducts-div"> 
-          <span class="xscx-price">￥<i>123.00</i></span> 
-          <span class="xscx-sub-price">销量<i>345</i>件</span> 
-         </div> </li>  -->
+          <span class="xscx-price">￥<i>{{p.price.toFixed(2)}}</i></span> 
+          <span class="xscx-sub-price">销量<i>{{p.sell.toFixed(2)}}</i>件</span> 
+         </div> 
+        </li> 
+       
        </ul> 
       </div> 
      </div> 
@@ -473,71 +348,16 @@
    <div class="cnxh-box">
     <div class="title"><span >猜你喜欢</span></div>
     <div class="cnxh-pros">
-      <ul class="cnxh-ul">
-       <!--  <li>
-          <a href="#" class="cnxh-a"><img src="products/p_13.jpg" alt=""></a>
-          <a href="#" class="cnxh-detail">御泥坊 玫瑰滋养+红石榴亮颜美肤套装 深层补水滋润 提亮肤色</a>
+      <ul class="cnxh-ul" id="cnxh-ul" cloak>
+        <li  v-for="p of res.slice(38,46)">
+          <a href="#" class="cnxh-a"><img :src="p.pic" alt=""></a>
+          <a href="#" class="cnxh-detail">{{p.title}}</a>
           <div class="cnxh-div">
-            <span class="price"><i>￥</i>123.00</span>
-            <span class="sell">销量<i>345</i>件</span>
+            <span class="price"><i>￥</i>{{p.price.toFixed(2)}}</span>
+            <span class="sell">销量<i>{{p.sell.toFixed(2)}}</i>件</span>
           </div>
         </li>
-         <li>
-          <a href="#" class="cnxh-a"><img src="products/p_11.jpg" alt=""></a>
-          <a href="#" class="cnxh-detail">御泥坊 玫瑰滋养+红石榴亮颜美肤套装 深层补水滋润 提亮肤色</a>
-          <div class="cnxh-div">
-            <span class="price"><i>￥</i>123.00</span>
-            <span class="sell">销量<i>345</i>件</span>
-          </div>
-        </li>
-         <li>
-          <a href="#" class="cnxh-a"><img src="products/p_15.jpg" alt=""></a>
-          <a href="#" class="cnxh-detail">御泥坊 玫瑰滋养+红石榴亮颜美肤套装 深层补水滋润 提亮肤色</a>
-          <div class="cnxh-div">
-            <span class="price"><i>￥</i>123.00</span>
-            <span class="sell">销量<i>345</i>件</span>
-          </div>
-        </li>
-         <li>
-          <a href="#" class="cnxh-a"><img src="products/p_16.jpg" alt=""></a>
-          <a href="#" class="cnxh-detail">御泥坊 玫瑰滋养+红石榴亮颜美肤套装 深层补水滋润 提亮肤色</a>
-          <div class="cnxh-div">
-            <span class="price"><i>￥</i>123.00</span>
-            <span class="sell">销量<i>345</i>件</span>
-          </div>
-        </li>
-         <li>
-          <a href="#" class="cnxh-a"><img src="products/p_17.jpg" alt=""></a>
-          <a href="#" class="cnxh-detail">御泥坊 玫瑰滋养+红石榴亮颜美肤套装 深层补水滋润 提亮肤色</a>
-          <div class="cnxh-div">
-            <span class="price"><i>￥</i>123.00</span>
-            <span class="sell">销量<i>345</i>件</span>
-          </div>
-        </li>
-         <li>
-          <a href="#" class="cnxh-a"><img src="products/p_18.jpg" alt=""></a>
-          <a href="#" class="cnxh-detail">御泥坊 玫瑰滋养+红石榴亮颜美肤套装 深层补水滋润 提亮肤色</a>
-          <div class="cnxh-div">
-            <span class="price"><i>￥</i>123.00</span>
-            <span class="sell">销量<i>345</i>件</span>
-          </div>
-        </li>
-         <li>
-          <a href="#" class="cnxh-a"><img src="products/p_19.jpg" alt=""></a>
-          <a href="#" class="cnxh-detail">御泥坊 玫瑰滋养+红石榴亮颜美肤套装 深层补水滋润 提亮肤色</a>
-          <div class="cnxh-div">
-            <span class="price"><i>￥</i>123.00</span>
-            <span class="sell">销量<i>345</i>件</span>
-          </div>
-        </li>
-         <li>
-          <a href="#" class="cnxh-a"><img src="products/p_8.jpg" alt=""></a>
-          <a href="#" class="cnxh-detail">御泥坊 玫瑰滋养+红石榴亮颜美肤套装 深层补水滋润 提亮肤色</a>
-          <div class="cnxh-div">
-            <span class="price"><i>￥</i>123.00</span>
-            <span class="sell">销量<i>345</i>件</span>
-          </div>
-        </li> -->
+        
       </ul>
     </div>
 

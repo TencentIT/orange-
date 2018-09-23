@@ -6,7 +6,8 @@ router.get('/products',(req,res)=>{
     var sql = `SELECT * FROM orange_index_products WHERE pid>0`;
     pool.query(sql,[],(err,result)=>{
     	if(err) throw err;
-    	res.send(result);
+			res.send(result);
+		 
     })
 })
 // 轮播
@@ -22,7 +23,9 @@ router.get("/xmdpAreas",(req,res)=>{
 	var sql = `SELECT *  FROM  orange_provincial WHERE a_id>0`;
 	pool.query(sql,[],(err,result)=>{
 		if(err) throw err;
-		res.send(result);
+		setTimeout(function(){
+			res.send(result);
+		},1000);
 	})
 })
 // 注册
@@ -103,4 +106,5 @@ router.post("/login",(req,res)=>{
 
 	
 })
+
 module.exports = router;

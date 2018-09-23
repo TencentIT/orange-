@@ -203,7 +203,7 @@ header .menu li:nth-child(4){
 }
 .menu .nav_bar_left_title{
 	float: left;
-	/*position: absolute;*/
+	position: relative;
 }
 .menu .nav_bar_left_title a.products{
 	display:inline-block;
@@ -252,6 +252,9 @@ header .bottom_line{
 	box-sizing: border-box;
 	/*margin-top:6px;*/
 	z-index:6;
+	position: absolute;
+    top: 40px;
+    left: 0;
 }
 .nav_bar_left_items .menu_list{
 	padding-left: 4px;
@@ -313,6 +316,74 @@ header .bottom_line{
 .nav_bar_left_items li .linkname p>a{
 	padding-left:0;
 }
+.menv_Detail {
+    left: 196px;
+    display: none;
+    top: 0px;
+    padding: 10px;
+    background: #FFFFFF;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    width: 600px;
+    height: 440px;
+    z-index: 200;
+}
+.menv_Detail .cat_pannel {
+    text-align: left;
+    height: 456px;
+}
+.menv_Detail .cat_pannel .hd_sort_list {
+    float: left;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-left: -1px;
+    width: 350px;
+    height: 425px;
+    overflow: hidden;
+    font-family: "新宋体";
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+}
+.menv_Detail .cat_pannel .hd_sort_list dl {
+    width: 100%;
+    overflow: hidden;
+    line-height: 2em;
+    margin: 5px 0px;
+}
+.menv_Detail .cat_pannel .hd_sort_list dt {
+    position: relative;
+    float: left;
+    width: 55px;
+    padding: 0px 20px 0 0;
+    text-align: right;
+    border: 1px solid #ec124a;
+    margin-right: 10px;
+}
+.menv_Detail .cat_pannel .hd_sort_list dt a {
+    display: block;
+    font-size: 12px;
+    color: #ec124a;
+}
+.menv_Detail .cat_pannel .hd_sort_list dt i {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 4px;
+    height: 14px;
+}
+.menv_Detail .cat_pannel .hd_sort_list dd a {
+    font-size: 12px;
+    border-right: 1px dotted #ddd;
+    display: block;
+    float: left;
+    padding: 0px 5px;
+    margin: 3px 0px;
+    color: #666666;
+}
+#allSortOuterbox .menv_Detail .cat_pannel .hd_sort_list dd a:hover {
+    color: #FF0000;
+}
 /******************index.html样式***********************/
 header.top_header{
 	position: relative;
@@ -372,6 +443,7 @@ header.top_header>div.menu{
 	margin-top:5px;
 	cursor:pointer;
 	/*zoom:1;*/
+	font-size: 0;
 }
 .slideBox .bottom_ul .lbt_dots li.on{
 	background: #CC0000;
@@ -1383,117 +1455,103 @@ font-emphasize-style: accent;
 	/*float: left;*/
 	margin: 0 10px;
 }
-/*注册信息提示*/
-/**************产品列表样式属性*****************/
-.Inside_pages{
-	height: 1000px;
+/**************product_detail.html*****************/
+/* 进口食品、进口牛 */
+#main .import_products{
+	margin: 12px 0;
+	height:28px;
+	line-height: 28px;
+	font-family:"新宋体";
 }
-.Location_link {
-    margin: 10px 0px;
-    line-height: 28px;
-    font-family: "新宋体";
+#main .import_products em{
+	display:block;
+	width: 28px;
+	height: 28px;
+	background: url(../images/indexhead_sprite.png) right -440px;
+	float: left;
+
 }
-.Location_link em {
-    display: block;
-    background: url(../images/indexhead_sprite.png) right -440px;
-    width: 28px;
-    height: 28px;
-    float: left;
-    margin-right: 5px;
+/* 今日推荐 */
+#main .recommend{
+	/* height:183px; */
+	border: 1px solid #ddd; 
+	/* position: relative; */
+	margin-bottom:20px;
 }
-.page_recommend {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    position: relative;
+.recommend .hd{
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	border: 1px solid #ddd; 
 }
-.page_recommend .hd {
-    height: 40px;
-    line-height: 40px;
-    border-bottom: 1px solid #ddd;
-    font-size: 18px;
+.recommend .hd em{	
+	padding:0px  3px;
+	margin-left:10px;
+	margin-top: 10px;
+	margin-right: 5px;
+	background-color: #F60;
 }
-.page_recommend .hd em {
-    float: left;
-    padding: 11px 3px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right: 5px;
-    background-color: #F60;
+.recommend .hd ul {
+	float: right;
+	margin-top: 10px;
+	margin-right: 30px;
+
+
 }
-.page_recommend .hd ul {
-    float: right;
-    overflow: hidden;
-    zoom: 1;
-    margin-top: 10px;
-    margin-right: 30px;
-}
-.page_recommend .hd ul li {
-    font-size: 0px;
-    margin-top: 5px;
-    margin-right: 5px;
-    float: left;
-    width: 15px;
+.recommend .hd ul li{
+	width: 15px;
     height: 15px;
-    background-color: #999;
-    cursor: pointer;
+	background-color: #999;
+	cursor: pointer;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	font-size: 0;	
 }
-.page_recommend .hd ul li.on {
-    background: #F60;
+.recommend .hd ul li.on{
+	background: #F60;	
 }
-.page_recommend .bd li {
+.recommend .bd{
+	width:1200px;
+	overflow: hidden;			
+}
+.recommend .bd ul{
+	width: 1495px;
+	/* border: 1px solid blue;  */
+	overflow:hidden;
+}
+.recommend .bd ul li{
 	float: left;
 	width: 288px;
-	margin: 10px 0px;
-	padding: 0px 5px;
-	border-right: 1px solid #ddd;
+	margin:10px 0;
+	padding:0 5px;
+    border-right: 1px solid #ddd;
 }
-.page_recommend .bd ul:after{
-	display:block;
-	content:"";
-	clear:both;
-}
-.page_recommend .bd li .img {
-	float: left;
+.recommend .bd ul li img{
 	width: 120px;
-	margin-right: 10px;
+	float: left;
 }
-.page_recommend .bd li .pro_info {
-	float: right;
-	width: 158px;
-	font-family: "新宋体";
-	color: #666
-}
-.page_recommend .bd li .pro_info a {
-	display: block;
+.recommend .pro_info a{
 	line-height: 18px;
-	overflow: hidden;
-	height: 36px;
+	height:36px;	
 	margin-bottom: 10px;
+	overflow: hidden;
+	display:block;
+
 }
-.page_recommend .bd li .pro_info .Price {
+.recommend .pro_info .Price{
 	color: #F30;
-	font-size: 18px;
-	margin-bottom: 20px;
-	font-family: "Microsoft YaHei"
+    font-size: 18px;
+    margin-bottom: 20px;
+	font-family:"Microsoft YaHei"; 
 }
-.page_recommend .bd li .pro_info .Price i{ font-size:14px}
-.page_recommend .bd li .pro_info .Sales b {color: #F60;}
-.page_recommend a.next, .page_recommend a.prev {
-	display: none;
-	position: absolute;
-	height: 50px;
-	width: 30px;
-	top: 45%;
-	background: url(../images/backg_img.png);
-	z-index: 22;
-	color: #ffffff;
-	line-height: 50px;
+.recommend .pro_info .Price i{
+	font-size: 14px;
+}      
+.recommend .pro_info .Sales b{
+	color: #F60;
 }
-.page_recommend.hover a.next, .page_recommend.hover a.prev {display: block}
-.page_recommend a.next em, .page_recommend a.prev em {font-size: 30px}
-.page_recommend a.next {left: 0px;}
-.page_recommend a.prev {right: 0px;}
-/************条件筛选样式属性***************/
+/* 条件筛选样式 */
 .Filter {margin: 10px 0px;border: 1px solid #ddd;font-family: "新宋体"}
 .Filter .Filter_list {
 	border-bottom: 1px solid #ddd;
@@ -1542,28 +1600,227 @@ font-emphasize-style: accent;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	course: hand;
+	cursor: hand;
 }
 .Filter .Filter_list .more {position: absolute;right: 30px;top: 10px;}
-.infonav_more .pullup {
-	display: block;
-	float: right;
-	width: 15px;
-	height: 7px;
-	background: url(../images/search.ele.png) no-repeat;
-	margin-top: 5px;
-	margin-left: 3px;
+
+/* 中间商品 */
+#main .products_box{
+	height:1176px;
 }
-/* 样式 */
-.scrollsidebar {
-    position: relative;
+.show_btn {
+    display: none;
+    position: fixed;
+    z-index: 1111;
+}
+.show_btn span {
+    background: url(../images/indexhead_sprite.png) -95px -380px no-repeat;
+    width: 25px;
+    height: 100px;
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    top: 30%;
 }
 .side_content {
-	position: relative
+	position: relative;
+	width: 220px;
 }
-.page_left_style {
-    width: 220px;
+.side_title span {
+    background: url(../images/indexhead_sprite.png) -65px -413px no-repeat;
+    width: 25px;
+    height: 40px;
+    overflow: hidden;
     float: left;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+}
+.Record {
+    border: 1px solid #ddd;
+}
+.Record .title_name {
+    height: 40px;
+    background: #F3F3F3;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    overflow: visible;
+}
+.Record ul li {
+    text-align: center;
+    line-height: 24px;
+    margin: 10px;
+}
+.Record ul li a {
+    font-size: 14px;
+}
+.Record ul li img {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+.Record ul li b {
+    color: #FF4A4A;
+    font-size: 14px;
+}
+.left {
+    float: left;
+}
+.Record ul li .p_name {
+    height: 36px;
+    line-height: 18px;
+    font-size: 12px;
+    font-family: 新宋体;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed rgb(221, 221, 221);
+    overflow: hidden;
+}
+/* 销售排行 */
+.pro_ranking {margin: 20px 0px;border: 1px solid #ddd;width:220px;}
+.pro_ranking .title_name {
+	height: 40px;
+	background-color: #F60;
+	line-height: 40px;
+	color: #fff;
+	font-size: 18px;
+	padding: 0px 10px;
+}
+.pro_ranking .ranking_list li {display: block;padding:10px;position: relative;border-bottom: 1px dashed #ddd}
+.pro_ranking .ranking_list li.on dd {width: 200px;display: block}
+.pro_ranking .ranking_list li .icon_ranking {
+	-moz-border-radius: 3px;      /* Gecko browsers */
+	-webkit-border-radius: 3px;   /* Webkit browsers */
+	border-radius: 3px;            /* W3C syntax */
+	position: absolute;
+	width: 20px;
+	line-height: 20px;
+	height: 20px;
+	background: #F30;
+	color: #FFF;
+	text-align: center
+}
+.pro_ranking .ranking_list li.on .icon_ranking {
+	display: block;
+	position: absolute;
+	background: url(../images/indexhead_sprite.png) -150px -163px no-repeat;
+	color: #FFF;
+	line-height: 30px;
+	width: 45px;
+	height: 45px;
+	padding-left: 8px;
+	text-align: start
+}
+.pro_ranking .ranking_list li.on dd a {float: left;margin-right: 10px; border:1px solid #ddd}
+.pro_ranking .ranking_list li.on dd .Price {
+	float: left;
+	font-size: 16px;
+	color: #F30;
+	display: block;
+	margin-top: 50px;
+}
+.pro_ranking .ranking_list li dt {
+	line-height: 18px;
+	height: 18px;
+	overflow: hidden;
+	width: 170px;
+	margin-left: 30px;
+}
+.pro_ranking .ranking_list li.on dt {
+	right: 0px;
+	width: 110px;
+	position: absolute;
+	line-height: 18px;
+	height: 36px;
+	top: 15px;
+	overflow: hidden
+}
+.pro_ranking .ranking_list li dd {display: none;height: 100px;}
+.pro_ranking .ranking_list li .tempWrap {padding: 5px;}
+.pro_ranking .ranking_list a {color: #666;font-family: "新宋体";font-size: 12px;display: block}
+.pro_ranking .ranking_list a:hover {color: #F60}
+
+/* 右侧 */
+.page_right_style {width: 960px;float: right;margin-left: 20px;}
+.page_right_style.Widescreen {width: 1200px;margin-left: 0px;float: none}
+.Sorted {
+	height: 40px;
+	background: #F3F3F3;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+	font-family: "新宋体"
+}
+.Sorted .Sorted_style {float: left;width: 780px;}
+.Sorted .Sorted_style a {
+	display: block;
+	float: left;
+	width: 40px;
+	border-right: 1px solid #ddd;
+	line-height: 40px;
+	height: 40px;
+	padding: 0px 10px;
+}
+.Sorted .Sorted_style a.on {background: #FF4A4A;color: #FFFFFF;}
+.Sorted .Sorted_style a i {font-size: 12px;margin-left: 2px;}
+.s_Paging {float: right;width: 100px;line-height: 38px;border-left: 1px solid #ddd;}
+.s_Paging a {font-size: 16px;color: #666666;font-weight: bold;}
+.s_Paging a.on {color: #FF6600}
+.s_Paging span {font-family: "Microsoft YaHei";padding: 0px 10px;font-size: 16px;color: #666666}
+/******搜索******/
+.Sorted .products_search {display: none}
+.fixToTop .Sorted .products_search {
+	float: left;
+	display: block;
+	width: 300px;
+	position: relative;
+	height: 40px;
+}
+.fixToTop .Sorted .products_search .search_text {
+	width: 260px;
+	padding-left: 5px;
+	padding-right: 30px;
+	color: #999;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	-moz-border-radius: 5px;      /* Gecko browsers */
+	-webkit-border-radius: 5px;   /* Webkit browsers */
+	border-radius: 5px;            /* W3C syntax */
+}
+.fixToTop .Sorted .products_search .search_btn {
+	background: url(../images/Search_img.png) no-repeat;
+	background-size: 20px;
+	position: absolute;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	border: 0px;
+	top: 10px;
+	cursor: pointer
+}
+/************************排序样式属性*************************/
+#Sorted.fixToTop {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 1111
+}
+#Sorted.fixToTop .Sorted {
+	width: 1200px;
+	margin: 0 auto
+}
+.side_content {
+	position: relative;
+	display: inline-block;
 }
 .show_btn {
 	display: none;
@@ -1592,14 +1849,189 @@ font-emphasize-style: accent;
 	right: 0px;
 	top: 50%;
 }
-
-
-
-
-
-
-
-
-
-
-
+/**************************排行样式属性****************************/
+.pro_ranking {margin: 20px 0px;border: 1px solid #ddd;}
+.pro_ranking .title_name {
+	height: 40px;
+	background-color: #F60;
+	line-height: 40px;
+	color: #fff;
+	font-size: 18px;
+	padding: 0px 10px;
+}
+.pro_ranking .ranking_list li {display: block;padding:10px;position: relative;border-bottom: 1px dashed #ddd}
+.pro_ranking .ranking_list li.on dd {width: 200px;display: block}
+.pro_ranking .ranking_list li .icon_ranking {
+	-moz-border-radius: 3px;      /* Gecko browsers */
+	-webkit-border-radius: 3px;   /* Webkit browsers */
+	border-radius: 3px;            /* W3C syntax */
+	position: absolute;
+	width: 20px;
+	line-height: 20px;
+	height: 20px;
+	background: #F30;
+	color: #FFF;
+	text-align: center
+}
+.pro_ranking .ranking_list li.on .icon_ranking {
+	display: block;
+	position: absolute;
+	background: url(../images/indexhead_sprite.png) -150px -163px no-repeat;
+	color: #FFF;
+	line-height: 30px;
+	width: 45px;
+	height: 45px;
+	padding-left: 8px;
+	text-align: start
+}
+.pro_ranking .ranking_list li.on dd a {float: left;margin-right: 10px; border:1px solid #ddd}
+.pro_ranking .ranking_list li.on dd .Price {
+	float: left;
+	font-size: 16px;
+	color: #F30;
+	display: block;
+	margin-top: 50px;
+}
+.pro_ranking .ranking_list li dt {
+	line-height: 18px;
+	height: 18px;
+	overflow: hidden;
+	width: 170px;
+	margin-left: 30px;
+}
+.pro_ranking .ranking_list li.on dt {
+	right: 0px;
+	width: 110px;
+	position: absolute;
+	line-height: 18px;
+	height: 36px;
+	top: 15px;
+	overflow: hidden
+}
+.pro_ranking .ranking_list li dd {display: none;height: 100px;}
+.pro_ranking .ranking_list li .tempWrap {padding: 5px;}
+.pro_ranking .ranking_list a {color: #666;font-family: "新宋体";font-size: 12px;display: block}
+.pro_ranking .ranking_list a:hover {color: #F60}
+/*************记录样式属性*******************/
+.Record {border: 1px solid #ddd}
+.Record .title_name {
+	height: 40px;
+	background: #F3F3F3;
+	color: #666;
+	border-bottom: 1px solid #ddd;
+	font-size: 18px;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+	overflow: visible
+}
+.Record ul li {text-align: center;line-height: 24px;margin: 10px;}
+.Record ul li a {font-size: 14px;}
+.Record ul li img {width: 150px;height: 150px;text-align: center}
+.Record ul li b {color: #FF4A4A;font-size: 14px}
+.Record ul li .p_name {border-bottom: 1px  dashed #ddd; overflow:hidden; height:36px; line-height:18px; font-size:12px; font-family:"新宋体"; margin-top:10px; padding-bottom:5px;}
+/*****************************产品列表样式属性**************************/
+.p_list {margin: 10px 0px;}
+.gl-item {width: 238px;height: 394px;float: left;border: 1px solid #FFFFFF;position:relative}
+.gl-item .Price b {font-size: 22px;color: #FF4A4A;}
+.gl-item .Price span {color: #999999;padding: 0px 5px;}
+.gl-item .name {height: 40px;line-height: 18px;margin: 5px 0px;font-family: "新宋体"}
+.gl-item .Review {font-size: 14px;margin-bottom: 10px;color: #666666; }
+.gl-item .icon_special{ background:url(../images/superscript_dot.png) no-repeat; position:absolute; width:65px; height:78px; top:0px; right:0px;}
+.gl-item .icon_special.tejia{ background-position:0px}
+.gl-item .icon_special.xinping{ background-position: -66px 0px;}
+.gl-item .Review a {color: #FF0000;font-size: 14px}
+.p-operate {overflow: hidden;margin-bottom: 10px;}
+.gl-item .p-o-btn {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #DDD;
+	padding: 0 5px 0 24px;
+	position: relative;
+	background: #FFF;
+	color: #999;
+	font-family: "新宋体"
+}
+.gl-item .img {margin-bottom: 8px;}
+.gl-item .Borders {margin: 10px;width: 218px}
+.gl-item.hover {
+	border: 1px solid #ddd;
+	z-index: 1;
+	border-color: #E9E9E9;
+	-webkit-box-shadow: 0 0 2px 2px #F8F8F8;
+	-moz-box-shadow: 0 0 2px 2px #f8f8f8;
+	box-shadow: 0 0 2px 2px #F8F8F8;
+}
+.gl-item .p-o-btn.shop_cart {
+	margin-left: -1px;
+	color: #FF0000;
+	width: 70px;
+	padding: 0 5px 0 30px;
+}
+.gl-item .p-o-btn.shop_cart:hover {border: 1px solid  #F30; color:#FFF; background-color:#F30;}
+.gl-item .p-o-btn.shop_cart:hover  em {background-position: 0 -455px;}
+.gl-item .p-o-btn.shop_cart em {background-position: 0 -270px;}
+.gl-item .p-o-btn.Collect em {background-position: 0 -411px;}
+.gl-item.hover .p-o-btn.Collect:hover {
+	color: #e4393c;
+	z-index: 1;
+	border-color: #e4393c;
+	text-decoration: none;
+}
+.gl-item .p-o-btn.Collect:hover {color: #FF0000;border: 1px solid #FF0000;}
+.gl-item .p-o-btn.Collect:hover em {background-position: 0 -434px;}
+.gl-item .p-o-btn em {
+	position: absolute;
+	display: block;
+	font-style: normal;
+	left: 4px;
+	top: 3px;
+	width: 20px;
+	height: 20px;
+	background: url(../images/search.ele.png) no-repeat 9999px 9999px;
+	-webkit-transition: background-position .15s ease-in-out;
+	-moz-transition: background-position .15s ease-in-out;
+	transition: background-position .15s ease-in-out;
+}
+/* 尾部分页 */
+ .Paging {
+    margin: 30px 0px;
+    height: 50px;
+    padding: 10px;
+}
+ .Pagination {
+    width: 600px;
+    margin: 0 auto;
+}
+ .Paging a {
+    color: #999999;
+    margin: 0px 5px;
+    font-size: 14px;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+}
+.user_style .Paging a:hover,  .Paging a.on {
+    background: #FF4A4A;
+    color: #fff;
+    border: 1px solid #FF4A4A;
+}
+/* 给product_detail.html所有上i品图片都添加放大缩小效果 */
+.tempWrap img{
+	transition: all .5s linear; 
+}
+.tempWrap img:hover{
+	transform: scale(1.1); 
+}
+.side_list img{
+	transition: all .5s linear; 
+}
+.side_list img:hover{
+	transform: scale(1.1); 
+}
+.Borders img{
+	transition: all .5s linear; 
+}
+.Borders img:hover{
+	transform: scale(1.1); 
+}
