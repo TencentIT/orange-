@@ -2017,21 +2017,106 @@ font-emphasize-style: accent;
     border: 1px solid #FF4A4A;
 }
 /* 给product_detail.html所有上i品图片都添加放大缩小效果 */
-.tempWrap img{
+
+.Borders img,#recommend_ul li img,.side_list img,.tempWrap img{
 	transition: all .5s linear; 
 }
-.tempWrap img:hover{
+.Borders img:hover,#recommend_ul li img:hover,.side_list img:hover,.tempWrap img:hover{
 	transform: scale(1.1); 
 }
-.side_list img{
-	transition: all .5s linear; 
+/******************product_details.html商品详情页***********************/
+.product_fdj_box{
+	height: 502px;
+
 }
-.side_list img:hover{
-	transform: scale(1.1); 
+.fdj_left{
+	width: 372px;
+	height: 502px;
+	position: relative;
 }
-.Borders img{
-	transition: all .5s linear; 
+/* 放大镜中间显示图片 */
+.card-img-top{
+	width: 370px;
+	height: 380px;
 }
-.Borders img:hover{
-	transform: scale(1.1); 
+#mask{
+	width: 235px;
+	height: 210px;
+	cursor:crosshair;
+	background: #000;
+	opacity:0.15;
+	border: 1px solid #fff;
+	position: absolute;
+	top:0px;
+	left:0px;	
+}
+#super-mask{
+	width: 370px;
+	height: 380px;
+	position: absolute;
+	top:0px;
+	left:0px;
+}
+#div-lg img{
+	/* background: url(../mid/01.jpg) no-repeat; */
+	width: 700px;
+	height:500px;
+	background-position:cover;
+	position: absolute;
+	top:0px;
+	left:370px;	
+	display: block;
+}
+.list_pro{
+	width: 370px;
+	height: 64px;
+	/* line-height:74px ; */
+	padding:6px 5px;
+	/* overflow:hidden; */
+	box-sizing:border-box;	
+}
+.list_pro .list_ul{
+	width: 324px;
+	height:57px;
+	overflow:hidden;
+	display: inline-block;	
+	text-align: center;
+	cursor: pointer;
+}	
+.list_pro ul{
+	width: 455px;
+	height: 55px;
+}
+.list_pro ul li{
+	float: left;
+	height: 55px;
+	width: 65px;
+	/* border:1px solid red; */
+	text-align:center;
+	/* overflow:hidden; */
+}
+.list_pro ul li img{
+	width: 55px;
+	height: 55px;
+}
+.scrollbutton{
+	width: 14px;
+	height: 57px;
+	cursor: pointer;
+	/* background:green; */
+    line-height: 50px;
+    font-size: 24px;
+    font-family: 新宋体;
+    color: rgb(153, 153, 153);
+	overflow: hidden;
+	position: relative;	
+	/* float: left; */
+	display: inline-block;  
+}
+
+.scrollbutton:hover{
+	background-color: #dae0e5;
+}
+.disabled{
+	background:pink;
 }

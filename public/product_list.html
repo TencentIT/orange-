@@ -11,6 +11,9 @@
      <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script> 
      <script src="js/jquery.SuperSlide.2.1.1.js"></script>
      <script src="js/jquery.reveal.js"></script>
+     <script src="js/vue.js"></script>
+     <script src="js/axios.min.js"></script>     
+
 </head>
 <body>
    
@@ -29,7 +32,12 @@
                                  <a href="#">面部护理</a> 
                                 </div> 
                                 <div class="linkname clearfix"> 
-                                 <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
+                                 <p> 
+                                    <a href="#">撕拉面膜</a>
+                                    <a href="#">面膜贴</a>
+                                    <a href="#">免洗面膜</a>
+                                    <!-- <a href="#">水洗面膜</a> -->
+                                </p> 
                                 </div> 
                                 <div class="menv_Detail" style="display: none;"> 
                                         <div class="cat_pannel clearfix"> 
@@ -137,65 +145,86 @@
                                <li> 
                                 <div class="menu_name"> 
                                  <span>&lt;</span> 
-                                 <a href="#">面部护理</a> 
+                                 <a href="#">身体护理</a> 
                                 </div> 
                                 <div class="linkname clearfix"> 
-                                 <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
+                                 <p><a href="product_Detailed.html"> 面霜</a>
+                                    <a href="#">眼霜</a>
+                                    <a href="#"> 面膜</a>
+                                    <a href="#">护肤套装</a>  </p> 
                                 </div> 
                                 <div class="menv_details"></div> 
                             </li> 
                                <li> 
                                 <div class="menu_name"> 
                                  <span>&lt;</span> 
-                                 <a href="#">面部护理</a> 
+                                 <a href="#">香水彩妆</a> 
                                 </div> 
                                 <div class="linkname clearfix"> 
-                                 <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
+                                 <p> <a href="#">卸妆 </a>
+                                    <a href="#">防晒</a>
+                                    <a href="#">BB</a> 
+                                    <a href="#">女士香水</a> 
+                                 </p> 
                                 </div> 
                                 <div class="menv_details"></div> </li> 
                                <li> 
                                 <div class="menu_name"> 
                                  <span>&lt;</span> 
-                                 <a href="#">面部护理</a> 
+                                 <a href="#">洗发护发</a> 
                                 </div> 
                                 <div class="linkname clearfix"> 
-                                 <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
+                                 <p><a href="#">洗发</a>
+                                    <a href="#">护发</a>
+                                    <a href="#">沐浴</a>
+                                    <a href="#">润肤乳</a>  </p> 
                                 </div> 
                                 <div class="menv_details"></div> </li> 
                                <li> 
                                 <div class="menu_name"> 
                                  <span>&lt;</span> 
-                                 <a href="#">面部护理</a> 
+                                 <a href="#">女性护理</a> 
                                 </div> 
                                 <div class="linkname clearfix"> 
-                                 <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
+                                 <p>  <a href="#">洁面</a>
+                                    <a href="#">坚果炒货</a>
+                                    <a href="#">乳液</a> 
+                                    <a href="#"> 面霜</a>  </p> 
                                 </div> 
                                 <div class="menv_details"></div> </li> 
                                <li> 
                                 <div class="menu_name"> 
                                  <span>&lt;</span> 
-                                 <a href="#">面部护理</a> 
+                                 <a href="#">男性护理</a> 
                                 </div> 
                                 <div class="linkname clearfix"> 
-                                 <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
+                                 <p>   <a href="#">洁面</a>
+                                    <a href="#">坚果炒货</a>
+                                    <a href="#">乳液</a> 
+                                    <a href="#"> 面霜</a>  </p> 
                                 </div> 
                                 <div class="menv_details"></div> </li> 
                                <li> 
                                 <div class="menu_name"> 
                                  <span>&lt;</span> 
-                                 <a href="#">面部护理</a> 
+                                 <a href="#">推荐品牌</a> 
                                 </div> 
                                 <div class="linkname clearfix"> 
-                                 <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
+                                 <p>  <a href="#">欧莱雅</a>
+                                    <a href="#"> 菲诗小铺</a>
+                                    <a href="#"> 雅诗兰黛</a>  </p> 
                                 </div> 
                                 <div class="menv_details"></div> </li> 
                                <li> 
                                 <div class="menu_name"> 
                                  <span>&lt;</span> 
-                                 <a href="#">面部护理</a> 
+                                 <a href="#">女性护理</a> 
                                 </div> 
                                 <div class="linkname clearfix"> 
-                                 <p> <a href="#">茅台</a> <a href="#">五粮液</a> <a href="#">郎酒</a> <a href="#">剑南春</a> </p> 
+                                 <p>  <a href="#">洁面</a>
+                                    <a href="#">坚果炒货</a>
+                                    <a href="#">乳液</a> 
+                                    <a href="#"> 面霜</a>  </p> 
                                 </div> 
                                 <div class="menv_details"></div> </li> 
                               </ul> 
@@ -238,53 +267,24 @@
         <div class="recommend">
             <div class="hd"><em></em>今日推荐<ul class="clearfix"></ul></div>
             <div class="bd">
-                    <ul>
-                        <li>
-                            <div class="img"><a href="#"><img src="products/p_4.jpg" width="120" height="120" /></a></div>
-                            <!-- <div class="pro_info">"img"><a href="#"><img src="products/p_4.jpg" width="120" height="120" /></a></div> -->
+                    <ul id="recommend_ul">
+                        <li v-for="p of res.slice(0,5)">
+                            <div class="img"><a :href="p.href"><img :src="p.pic" width="120" height="120" /></a></div>
                             <div class="pro_info">
-                            <a href="#">洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a>
-                            <p class="Price"><i>￥</i>231.00</p>
-                            <p class="Sales">热销：<b>1234</b>件</p>
+                            <a href="#">{{p.title}}</a>
+                            <p class="Price"><i>￥{{p.price.toFixed(2)}}</i></p>
+                            <p class="Sales">热销：<b>{{p.sell.toFixed(2)}}</b>件</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="img"><a href="#"><img src="products/p_55.jpg" width="120" height="120" /></a></div>
-                            <div class="pro_info">
-                            <a href="#">洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a>
-                            <p class="Price"><i>￥</i>231.00</p>
-                            <p class="Sales">热销：<b>1234</b>件</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img"><a href="#"><img src="products/p_17.jpg" width="120" height="120" /></a></div>
-                            <div class="pro_info">
-                            <a href="#">洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a>
-                            <p class="Price"><i>￥</i>231.00</p>
-                            <p class="Sales">热销：<b>1234</b>件</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img"><a href="#"><img src="products/p_54.jpg" width="120" height="120" /></a></div>
-                            <div class="pro_info">
-                            <a href="#">洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a>
-                            <p class="Price"><i>￥</i>231.00</p>
-                            <p class="Sales">热销：<b>1234</b>件</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img"><a href="#"><img src="products/p_58.jpg" width="120" height="120" /></a></div>
-                            <div class="pro_info">
-                            <a href="#">洗颜专科 柔澈泡沫 洁面乳 120g（资生堂旗下）</a>
-                            <p class="Price"><i>￥</i>231.00</p>
-                            <p class="Sales">热销：<b>1234</b>件</p>
-                            </div>
-                        </li>
+                        
                     </ul>   
             </div>
         </div>  
         <script>
-            $(".recommend").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,trigger:"click",vis:4})
+            // window.onload = function(){
+             $(".recommend").slide({titCell:".hd ul",mainCell:"#recommend_ul",autoPage:true,effect:"left",autoPlay:true,trigger:"click",vis:4})
+
+            // }
         </script>
         <!-- 条件筛选样式  -->  
         <div class="Filter">
@@ -365,7 +365,35 @@
             </div>
             </div>
         </div>
-
+        <script>
+        //点击效果start
+        //    window.onload = function(){
+            function infonav_more_down(index)
+            {
+                var inHeight = ($("div[class='p_f_name infonav_hidden']").eq(index).find('p').length)*30;//先设置了P的高度，然后计算所有P的高度
+                console.log(1,inHeight);
+                if(inHeight > 60){
+                $("div[class='p_f_name infonav_hidden']").eq(index).animate({height:inHeight});
+                $(".infonav_more").eq(index).replaceWith('<p class="infonav_more"><a class="more"  onclick="infonav_more_up('+index+');return false;" href="javascript:">收起<em class="pulldown"></em></a></p>');
+                }else{
+                return false;
+                }
+            }
+            function infonav_more_up(index)
+            {
+                var infonav_height = 85;
+                $("div[class='p_f_name infonav_hidden']").eq(index).animate({height:infonav_height});
+                $(".infonav_more").eq(index).replaceWith('<p class="infonav_more"> <a class="more" onclick="infonav_more_down('+index+');return false;" href="javascript:">更多<em class="pullup"></em></a></p>');
+            }
+            
+        //    }
+            // function onclick(event) {
+            //     info_more_down();
+            //     return false;
+            // }
+        
+        //点击效果end  
+        </script>
         <!-- 中间商品 -->
         <div class="scrollsidebar side_green clearfix" id="scrollsidebar"> 
             <div class="show_btn" id="rightArrow">
@@ -377,113 +405,57 @@
                 <div class="side_title">
                 <a title="隐藏" class="close_btn"><span></span></a>
                 </div> 
-                <div class=" side_list"> 
+                <div class="side_list"> 
                     <div class="Record"> 
                         <div class="title_name">
                         浏览记录
                         </div> 
-                        <ul> 
-                            <li> <a href="#"> <p><img src="products/p_32.jpg" /></p> <p class="p_name">商品名称</p> </a> <p><span class="p_Price left">价格:<b>￥5.30</b></span><span class="p_Sales right">销量：2345件</span></p> </li> 
-                            <li> <a href="#"> <p><img src="products/p_33.jpg" /></p> <p class="p_name">【麻麻派】东北特产野生开口松子 孕妇休闲零食坚果 原味坚果特产东</p> </a> <p><span class="p_Price left">价格:<b>￥5.30</b></span><span class="p_Sales right">销量：2345件</span></p> </li> 
-                            <li> <a href="#"> <p><img src="products/p_34.jpg" /></p> <p class="p_name">商品名称</p> </a> <p><span class="p_Price left">价格:<b>￥5.30</b></span><span class="p_Sales right">销量：2345件</span></p> </li> 
-                            <li> <a href="#"> <p><img src="products/p_36.jpg" /></p> <p class="p_name">商品名称</p> </a> <p><span class="p_Price left">价格:<b>￥5.30</b></span><span class="p_Sales right">销量：2345件</span></p> </li> 
+                        <ul id="Record_ul"> 
+                            <li v-for="p of res.slice(5,9)"> 
+                                <a :href="p.href"> <p><img :src="p.pic" /></p> 
+                                    <p class="p_name">商品名称</p> </a> <p><span class="p_Price left">价格:<b>￥{{p.price.toFixed(2)}}</b>
+                                    </span><span class="p_Sales right">销量：{{p.sell}}件</span></p>
+                            </li> 
+                           
                         </ul> 
                     </div> 
                 </div>
            
             <!--列表样式属性--> 
                 <div class="pro_ranking"> 
-                        <div class="title_name">
-                        <em></em>销量排行
-                        </div> 
-                        <div class="ranking_list"> 
-                        <ul id="tabRank"> 
-                        <li class="t_p on"> <em class="icon_ranking">1</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">2</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">3</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">4</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">5</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">6</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">7</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">8</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">9</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        <li class="t_p"> <em class="icon_ranking">10</em> 
-                        <dt>
-                            <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                        </dt> 
-                        <dd class="clearfix"> 
-                            <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                            <span class="Price">￥23.00</span> 
-                        </dd> </li> 
-                        </ul> 
+                    <div class="title_name">
+                    <em></em>销量排行
+                    </div> 
+                    <div class="ranking_list"> 
+                    <ul id="tabRank"> 
+                            <li class="t_p on"> <em class="icon_ranking">1</em> 
+                                <dt>
+                                 <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
+                                </dt> 
+                                <dd class="clearfix"> 
+                                 <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
+                                 <span class="Price">￥23.00</span> 
+                                </dd> </li> 
+                        <li class="t_p"  v-for="p of res.slice(24,33)"> 
+                            <em class="icon_ranking">{{p.pid}}</em> 
+                            <dt>
+                                <h3><a :href="p.href">{{p.title}}</a></h3>
+                            </dt> 
+                            <dd class="clearfix"> 
+                                <a :href="p.href"><img :src="p.pic" width="90" height="90" /></a> 
+                                <span class="Price">￥{{p.price.toFixed(2)}}</span> 
+                            </dd> 
+                        </li> 
+                    </ul> 
                         </div> 
                 </div>
             </div>
                 <script type="text/javascript">
+                 window.onload = function(){
                     jQuery("#tabRank li").hover(function(){ jQuery(this).addClass("on").siblings().removeClass("on")},function(){ });
+
+                 }
+                  
                     // jQuery("#tabRank").slide({ titCell:"dt h3",autoPlay:false,effect:"left",delayTime:300 });
                 </script> 
 
@@ -512,322 +484,29 @@
                     </div> 
                     <!--产品列表样式--> 
                     <div class="p_list  clearfix"> 
-                     <ul> 
-                      <li class="gl-item"> <em class="icon_special tejia"></em> 
+                     <ul id="p_list_ul"> 
+                      <li class="gl-item" v-for="p of res.slice(9,24)"> <em class="icon_special tejia"></em> 
                        <div class="Borders"> 
                         <div class="img">
-                         <a href="Product_Detailed.html"><img src="products/P_1.jpg" style="width:220px;height:220px" /></a>
+                         <a :href="p.href"><img :src="p.pic" style="width:220px;height:220px" /></a>
                         </div> 
                         <div class="Price">
-                         <b>&yen;89</b>
+                         <b>&yen;{{p.price.toFixed(2)}}</b>
                          <span>[&yen;49.01/500g]</span>
                         </div> 
                         <div class="name">
-                         <a href="Product_Detailed.html">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                         <a href="p.href">{{p.title}}</a>
                         </div> 
                         <div class="Review">
                          已有
-                         <a href="#">2345</a>评论
+                         <a href="#">{{p.sell}}</a>评论
                         </div> 
                         <div class="p-operate"> 
                          <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
                          <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
                         </div> 
                        </div> </li> 
-                      <li class="gl-item"> <em class="icon_special tejia"></em> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="Product_Detailed.html"><img src="products/P_2.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="Product_Detailed.html">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> <em class="icon_special tejia"></em> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="Product_Detailed.html"><img src="products/P_3.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="Product_Detailed.html">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="Product_Detailed.html"><img src="products/P_4.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="Product_Detailed.html">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> <em class="icon_special xinping"></em> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="Product_Detailed.html"><img src="products/P_5.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="Product_Detailed.html">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_6.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_7.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_15.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_9.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_8.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_11.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_16.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_16.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_17.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                      <li class="gl-item"> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a href="#"><img src="products/P_15.jpg" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;89</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="#">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">2345</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
+                     
                      </ul> 
                      
                     </div> 
@@ -857,5 +536,6 @@
     <script type="text/javascript" src="js/footer.js"></script>
     <!-- 先注释掉这段jQuery代码  隐藏显示侧边栏 效果 -->
     <!-- <script src="js/indexSlide_hover.js"></script> -->
+    <script src="js/product_list.js"></script>
 </body>
 </html>
