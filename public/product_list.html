@@ -428,15 +428,7 @@
                     </div> 
                     <div class="ranking_list"> 
                     <ul id="tabRank"> 
-                            <li class="t_p on"> <em class="icon_ranking">1</em> 
-                                <dt>
-                                 <h3><a href="#">韩束墨菊深度补水八件套（补水保湿 深层）</a></h3>
-                                </dt> 
-                                <dd class="clearfix"> 
-                                 <a href="#"><img src="products/p_29.jpg" width="90" height="90" /></a> 
-                                 <span class="Price">￥23.00</span> 
-                                </dd> </li> 
-                        <li class="t_p"  v-for="p of res.slice(24,33)"> 
+                        <li class="t_p"  v-for="p of res.slice(0,10)"> 
                             <em class="icon_ranking">{{p.pid}}</em> 
                             <dt>
                                 <h3><a :href="p.href">{{p.title}}</a></h3>
@@ -452,7 +444,7 @@
             </div>
                 <script type="text/javascript">
                  window.onload = function(){
-                    jQuery("#tabRank li").hover(function(){ jQuery(this).addClass("on").siblings().removeClass("on")},function(){ });
+                        jQuery("#tabRank li").hover(function(){ jQuery(this).addClass("on").siblings().removeClass("on")},function(){ });
 
                  }
                   
@@ -512,9 +504,9 @@
                     </div> 
                     <!-- 底部分页 -->
                     <div class="Paging"> 
-                            <div class="Pagination"> 
+                            <div class="Pagination">  
                                 <a href="#">首页</a>    
-                                <a href="#" class="pn-prev disabled">&lt;上一页</a> 
+                                <a href="#" class="pn-prev">&lt;上一页</a> 
                                 <a href="#" class="on">1</a> 
                                 <a href="#">2</a> 
                                 <a href="#">3</a> 

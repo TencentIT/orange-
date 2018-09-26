@@ -81,16 +81,16 @@ CREATE TABLE IF NOT EXISTS `orange_index_products` (
 -- 转存表中的数据 `orange_index_products`
 --
 
-INSERT INTO `orange_index_products` (`pid`, `title`, `price`, `pic`, `sell`,`href`) VALUES
-(1, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_1.png', 124,, "product_details.html?lid=1"),
-(2, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 1024, 'Products/p_2.png', 110,"product_details.html?lid=2" ),
-(3, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_3.png', 1211,"product_details.html?lid=3" ),
-(4, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 1204, 'Products/p_4.png', 5623,"product_details.html?lid=4" ),
-(5, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 162, 'products/p_5.png', 120,"product_details.html?lid=5" ),
-(6, 'Olay玉兰油 新生塑颜金纯活能水', 236, 'products/p_6.png', 130,"product_details.html?lid=6" ),
-(7, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_7.png', 264,"product_details.html?lid=7" ,"product_details.html?lid=8" ),
-(8, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_8.png', 578,"product_details.html?lid=9" ),
-(9, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 433, 'Products/p_9.png', 865,"product_details.html?lid=7" ),
+INSERT INTO `orange_index_products` (`pid`, `title`, `price`, `pic`, `sell`) VALUES
+(1, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_1.png', 124),
+(2, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 1024, 'Products/p_2.png', 110),
+(3, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_3.png', 1211),
+(4, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 1204, 'Products/p_4.png', 5623),
+(5, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 162, 'products/p_5.png', 120),
+(6, 'Olay玉兰油 新生塑颜金纯活能水', 236, 'products/p_6.png', 130),
+(7, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_7.png', 264),
+(8, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_8.png', 578),
+(9, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 433, 'Products/p_9.png', 865),
 (10, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_10.png', 231),
 (11, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 453, 'Products/p_11.png', 462),
 (12, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 24, 'products/p_12.png', 4323),
@@ -109,7 +109,7 @@ INSERT INTO `orange_index_products` (`pid`, `title`, `price`, `pic`, `sell`,`hre
 (25, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 542, 'Products/p_25.png', 542),
 (26, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 224, 'products/p_26.png', 402),
 (27, 'Olay玉兰油 新生塑颜金纯活能水', 3532, 'products/p_27.png', 424),
-(28, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_28.png', 557);
+(28, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_28.png', 557),
 
 (29, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_29.png', 124),
 (30, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 1024, 'Products/p_30.png', 110),
@@ -138,10 +138,10 @@ INSERT INTO `orange_index_products` (`pid`, `title`, `price`, `pic`, `sell`,`hre
 (53, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 542, 'Products/p_53.png', 542),
 (54, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 224, 'products/p_54.png', 402),
 (55, 'Olay玉兰油 新生塑颜金纯活能水', 3532, 'products/p_27.png', 424),
-(56, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_55.png', 557);
-
+(56, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_55.png', 557),
 (57, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_56.png', 124),
-(58, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 1024, 'Products/p_57.png', 110),
+(58, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 1024, 'Products/p_57.png'
+, 110),
 (59, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_58.png', 1211),
 (60, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 1204, 'Products/p_59.png', 5623),
 (61, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 162, 'products/p_60.png', 120),

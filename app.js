@@ -1,6 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const index = require("./routes/index.js")
+const product_list = require("./routes/product_list.js");
+
 
 var app = express();
 
@@ -13,3 +15,4 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use("/index",index);
+app.use("/productlist",product_list);

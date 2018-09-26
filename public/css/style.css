@@ -612,10 +612,10 @@ header.top_header>div.menu{
 }
  .tj_ul a.tj-details{
 	display: inline-block;
-	font-size: 10px;
-	height:24px;
-	line-height:12px; 
-	overflow:hidden;
+    font-size: 10px;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
     margin-bottom: 10px;
  }
  span.tj-price{
@@ -851,6 +851,12 @@ header.top_header>div.menu{
 .xscx .xscx-items .xscx-ul li:last-child .xscx-box{
 	border-right: 0;
 }
+a.xscx-detail{
+	line-height: 18px;
+	height: 36px;
+	display: block;
+	overflow:hidden;
+}
 .xscx .xscx-items .xscx-img-a{
 	display: block;
 	text-align:center;
@@ -945,7 +951,7 @@ header.top_header>div.menu{
 }
 .floor-box .fl-lbt-ul img{
 	width: 400px;
-	height: 514px;
+	height: 522px;
 }
 /*.floor-box .fl-porducts{
 	width: 800px;
@@ -969,6 +975,12 @@ header.top_header>div.menu{
 	display: block; 
 	/*margin-bottom: 10px;*/
 	    margin: 7px 0 10px;
+}
+ a.fl-pro-details{
+	height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    display: block;
 }
 .floor-box .fl-porducts img{
 	width: 180px;
@@ -1054,9 +1066,10 @@ header.top_header>div.menu{
 }
 .cnxh-ul a.cnxh-detail{
 	font-size: 14px;
-	height:36px;
-	line-height: 18px;
-	overflow:hidden;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    display: inline-block;
 }
 .cnxh-ul a.cnxh-a img{
 	width: 210px;
