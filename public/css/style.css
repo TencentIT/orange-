@@ -2063,6 +2063,9 @@ font-emphasize-style: accent;
 	top:0px;
 	left:0px;	
 }
+#mask:hover{
+	cursor:crosshair;
+}
 #super-mask{
 	width: 370px;
 	height: 380px;
@@ -2070,15 +2073,20 @@ font-emphasize-style: accent;
 	top:0px;
 	left:0px;
 }
+#div-lg{
+	width: 508px;
+    height: 442px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 368px;
+    background-position: 0px -388.571px;
+}
 #div-lg img{
 	/* background: url(../mid/01.jpg) no-repeat; */
 	width: 700px;
 	height:500px;
 	background-position:cover;
-	position: absolute;
-	top:0px;
-	left:370px;	
-	display: block;
 }
 .list_pro{
 	width: 370px;
@@ -2087,6 +2095,9 @@ font-emphasize-style: accent;
 	padding:6px 5px;
 	/* overflow:hidden; */
 	box-sizing:border-box;	
+	position: absolute;
+    top: 380px;
+    left: 0px;
 }
 .list_pro .list_ul{
 	width: 324px;
@@ -2132,4 +2143,7 @@ font-emphasize-style: accent;
 }
 .disabled{
 	background:pink;
+}
+.d-none{
+	display: none;
 }

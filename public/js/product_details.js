@@ -18,7 +18,7 @@ $prev.click(function(){
 // 放大镜
 var $mImg = $(".fdj_left>img");
 // console.log(2,$mImg);
-var lgDiv = $("#div-lg");
+
 $ul.on("mouseover","img",function(){
     // alert(1)
     var $img = $(this);
@@ -27,5 +27,29 @@ $ul.on("mouseover","img",function(){
     $mImg.attr("src",md);
 
 })
+var $mask = $("#mask"),
+    $smask = $("#super-mask"),
+    $lgDiv = $("#div-lg"),
+    MSIZE_WIDTH = 235,
+    MSIZE_HEIGHT = 210,
+    SMIZE_WIDTH = 370,
+    SMIZE_HEIGHT =  380
+   ;
+$smask.hover(function(){
+    $mask.toggleClass("d-none");
+    $lgDiv.toggleClass("d-none");
+}).mousemove(function(e){
+    var top = parseInt(e.offsetY- MSIZE_HEIGHT/2);
+    var left = parseInt(e.offsetX - MSIZE_WIDTH/2);
+    console.log("1"+top+left);
+    MAX_WIDTH = SMIZE_WIDTH-MSIZE_WIDTH;
+    MAX_HEIGHT = SMIZE_HEIGHT - MSIZE_HEIGHT; 
+    if(top<0) top = 0;else if(top>MAX_HEIGHT) top  = MAX_HEIGHT;
+    if(left<0) left = 0; else if(left>MAX_WIDTH) left = MAX_WIDTH;
+    $mask.css({"left":left,top:top});
+    $lgDiv.css(
+        "backgroundPosition",
+        `${-3*left}px ${-3*top}px`
+      )
+})
 
-    
