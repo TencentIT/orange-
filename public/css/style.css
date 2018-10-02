@@ -2055,7 +2055,7 @@ font-emphasize-style: accent;
 #mask{
 	width: 235px;
 	height: 210px;
-	cursor:crosshair;
+	/*  */
 	background: #000;
 	opacity:0.15;
 	border: 1px solid #fff;
@@ -2063,31 +2063,26 @@ font-emphasize-style: accent;
 	top:0px;
 	left:0px;	
 }
-#mask:hover{
-	cursor:crosshair;
-}
 #super-mask{
 	width: 370px;
 	height: 380px;
 	position: absolute;
 	top:0px;
 	left:0px;
+	cursor:crosshair;
 }
 #div-lg{
-	width: 508px;
-    height: 442px;
+	width:400px;
+    height:400px;
     overflow: hidden;
     position: absolute;
     top: 0px;
-    left: 368px;
-    background-position: 0px -388.571px;
+	left: 368px;
+	background-repeat:no-repeat;
+	background-position: 0px -388.571px;
+	background-image: url("../lg/01.jpg");
 }
-#div-lg img{
-	/* background: url(../mid/01.jpg) no-repeat; */
-	width: 700px;
-	height:500px;
-	background-position:cover;
-}
+
 .list_pro{
 	width: 370px;
 	height: 64px;
