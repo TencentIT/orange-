@@ -1,26 +1,54 @@
 // 商品放大镜下方轮动图片
 var $prev = $("#pro_btn"),
     $next = $("#next_btn"),
-    $ul = $prev.next(),
+    $ul_div = $prev.next(),
+    $ul = $ul_div.children(),
     LIWIDTH = 65,
     moved = 0
     ;
 $next.click(function(){
-    // var $next = $(this);
-    moved++;
-    $ul.children().css("margin-left",-moved*LIWIDTH);
+    var $next = $(this);
+    // console.log($ul.children("li").length)
+    if(!$next.is(".disabled")){
+        moved++;
+        $ul_div.children().css({
+            "margin-left":-moved*LIWIDTH,
+            "transition":"all 1s linear"
+        });
+        $prev.removeClass("disabled");
+        if(moved==$ul.children().length-5) {
+            $next.addClass("disabled");
+        //    return;
+        }
+    }
     
+  
 });
 $prev.click(function(){
-    moved--;
-    $ul.children().css("margin-left",-moved*LIWIDTH);  
+    var $prev = $(this);
+    if(!$prev.is(".disabled")){
+        moved--;
+        $ul_div.children().css({
+            "margin-left":-moved*LIWIDTH,
+            "transition":"all 1s linear"
+        });
+        if(moved==0){
+            $prev.addClass("disabled");
+        }
+        // else{
+        //     $prev.removeClass("disabled");
+          
+        // }
+    }
+   
+    
 })
 // 放大镜
 var $mImg = $(".card-img-top");
 $lgDiv = $("#div-lg");
 // console.log(2,$mImg);
 
-$ul.on("mouseover","img",function(){
+$ul_div.on("mouseover","img",function(){
     // alert(1)
     var $img = $(this);
     var md = $img.attr("data-md");
