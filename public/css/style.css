@@ -2228,6 +2228,7 @@ font-emphasize-style: accent;
 .ProductD .productDL dl dd del{color:#999999;}
 /********************产品推荐样式属性********************/
 .p_right_info{float:right;width:220px;}
+.Recommend_list{border: 1px solid #ddd;}
 /**品牌**/
 .p_right_info .Brands{ text-align:center; margin-bottom:10px;border:1px solid #ddd;}
 .p_right_info .Brands a{ display:block; border-bottom:1px dashed #ddd;}
@@ -2361,6 +2362,7 @@ font-emphasize-style: accent;
     margin-right: 10px;
     float: left;
 }
+
 /*************记录样式属性*******************/
 .user_Records{ border:1px solid #ddd;}
 .user_Records .title_name{ 
