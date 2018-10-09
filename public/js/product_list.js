@@ -22,7 +22,7 @@ new Vue({
   })
 //   浏览记录
   new Vue({
-    el:"#Record_ul",
+    el:"#record-ul",
     data:{
       res:[
         {title:"",pic:"",price:0,sell:0,href:""},
