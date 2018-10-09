@@ -16,12 +16,13 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `orange-web9.15`
 --
-CREATE DATABASE IF NOT EXISTS `orange-web9.15` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+-- CREATE DATABASE IF NOT EXISTS `orange-web9.15` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE orange-web9.15;
 USE `orange-web9.15`;
 
 -- --------------------------------------------------------

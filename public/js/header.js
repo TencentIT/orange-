@@ -11,9 +11,9 @@ $(function(){
         $search.click(function(){
 			// alert(1);
 			location.href=
-			`http://localhost:3002/product_details.html?kw=${$input.val().trim()}`;
+			`http://localhost:3002/products.html?kw=${$input.val().trim()}`;
 		})
-		
+		// alert($input.val())
 		console.log($input);
 		//键盘回车 搜索 
 		$input.keyup(function(e){
@@ -25,7 +25,8 @@ $(function(){
 
 		if(location.search.indexOf("kw=")!=-1){
 			var kw = location.search.split("=")[1];
-			$input.val(kw);
+			// alert(decodeURI(kw))
+			$input.val(decodeURI(kw));
 		}
 
 		}

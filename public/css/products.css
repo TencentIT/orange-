@@ -1,0 +1,37 @@
+/*定制小购物车部分样式*/
+#main>div.row>div>h5, #main>div.row>div>h6, #cart>li:first-child>h6{
+  background:linear-gradient(to bottom,#f0f0f0,#e0e0e0);
+}
+#cart .input-group-text{
+  width:90px;
+}
+#cart input.form-control{
+  width:25px!important;
+  flex:none;
+}
+#cart .input-group .btn, #plist button.btn{
+  width:20px;
+  background:linear-gradient(to bottom,#f0f0f0,#e0e0e0);
+}
+#cart .input-group-append>.input-group-text{
+  width:80px;
+}
+#cart.position-fixed{
+  top:100px; right:100px
+}
+
+/*定制商品列表部分的样式*/
+/*#plist button.btn{
+}*/
+#plist input.form-control{
+  width:30px;
+}
+#plist+h6 .page-link{
+  border-color:#bbb
+}
+#plist+h6 .page-link:hover{
+  border-color:#007bff;
+}
+#plist+h6 .page-item.disabled{
+  opacity:0.5;
+}
