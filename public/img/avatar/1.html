@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="c" width="500" height="400 "></canvas>
+<script>
+  var ctx = c.getContext('2d')
+  var i = new Image();
+  i.src="default.png";
+  i.onload = function(){
+  }
+  ctx.beginPath();
+  ctx.arc(250,200,100,0, 2*Math.PI/180);
+  ctx.stroke();
+</script>
+</body>
+</html>

@@ -41,18 +41,7 @@ html,body{
 	display:block;
 	clear:both;
 };
-/*.margin_auto{
-    margin:0 auto;
+/* 闪动效果 */
+a.shan{
+    
 }
-.border1px{
-    border:1px solid red;
-}
-.width1200{
-    width:1200px;
-}
-input{
-    border:0;
-}
-*/
-
-/******************购物车样式属性***********************/

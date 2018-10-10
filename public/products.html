@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
+       <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/common.css" /> 
     <link rel="stylesheet" type="text/css" href="fonts/iconfont.css" /> 
-     <link rel="stylesheet" href="css/bootstrap.css">
+
     <link rel="stylesheet" type="text/css" href="css/products.css" /> 
     <link rel="stylesheet" type="text/css" href="css/style.css" /> 
 
@@ -25,7 +26,7 @@
                     <div id="header"></div>
                     <div class="menu width1200 margin_auto "> 
                             <div class="nav_bar_left_title"> 
-                             <a href="#" class="products">所有产品分类</a> 
+                             <a href="#" class="products shan">所有产品分类</a> 
                              <!-- 轮播图左侧`边栏 --> 
                              <div class="nav_bar_left_items" style="display: none;"> 
                               <ul class="menu_list clearfix"> 
@@ -235,14 +236,14 @@
                             </div> 
                             <ul class="nav_name clearfix"> 
                              <!-- <li><a href="#" class="first_li">所有产品分类</a></li> --> 
-                             <li><a href="#">首页</a></li> 
-                             <li><a href="#">产品列表</a></li> 
-                             <li> <a href="#">限时特卖</a> <em class="hot_icon "></em> </li> 
-                             <li><a href="#">联系我们</a></li> 
-                             <li><a href="#">鲜盟人才</a></li> 
-                             <li><a href="#">鲜盟金融</a></li> 
-                             <li><a href="#">鲜盟投资</a></li> 
-                             <li><a href="#">销售品牌</a></li> 
+                             <li><a href="#" class="shan">首页</a></li> 
+                             <li><a href="#"  class="shan">产品列表</a></li> 
+                             <li> <a href="#"  class="shan">限时特卖</a> <em class="hot_icon "></em> </li> 
+                             <li><a href="#"  class="shan">联系我们</a></li> 
+                             <li><a href="#"  class="shan">鲜盟人才</a></li> 
+                             <li><a href="#"  class="shan">鲜盟金融</a></li> 
+                             <li><a href="#"  class="shan">鲜盟投资</a></li> 
+                             <li><a href="#"  class="shan">销售品牌</a></li> 
                             </ul> 
                             <!-- 轮播图左侧边栏 --> 
                     </div> 
@@ -267,22 +268,7 @@
         </div>
 
         <!-- 今日推荐 -->
-        <div class="recommend">
-            <div class="hd"><em></em>今日推荐<ul class="clearfix"></ul></div>
-            <div class="bd">
-                    <ul id="recommend_ul">
-                        <li v-for="p of res.slice(0,5)">
-                            <div class="img"><a :href="p.href"><img :src="p.pic" width="120" height="120" /></a></div>
-                            <div class="pro_info">
-                            <a href="#">{{p.title}}</a>
-                            <p class="Price"><i>￥{{p.price.toFixed(2)}}</i></p>
-                            <p class="Sales">热销：<b>{{p.sell.toFixed(2)}}</b>件</p>
-                            </div>
-                        </li>
-                        
-                    </ul>   
-            </div>
-        </div>  
+        
         <script>
             // window.onload = function(){
              $(".recommend").slide({titCell:".hd ul",mainCell:"#recommend_ul",autoPage:true,effect:"left",autoPlay:true,trigger:"click",vis:4})
@@ -323,9 +309,9 @@
         <!-- 中间商品 -->
           <div class="row">
       <div class="col-md-9">
-        <h5 class="mb-3 p-2 text-muted">笔记本电脑</h5>
+        <h5 class="mb-3 p-2 ">笔记本电脑</h5>
         <div id="plist" class="row bg-white ml-1 mr-1 pt-2 pl-2">
-          <!--<div class="col-md-4 p-1">
+          <div class="col-md-4 p-1">
             <div class="card mb-4 box-shadow pr-2 pl-2">
               <a href="product_details.html?lid=1">
                 <img class="card-img-top" src="img/product/md/57b12a31N8f4f75a3.jpg">
@@ -333,20 +319,20 @@
               <div class="card-body p-0">
                 <h5 class="text-primary">￥6988.00</h5>
                 <p class="card-text">
-                  <a href="product_details.html?lid=1" class="text-muted small" title="Apple MacBook Air 13.3英寸笔记本 银色(Core i5 处理器/8GB内存/128GB SSD闪存 MMGF2CH/A)">Apple MacBook Air 13.3英寸笔记本 银色(Core i5 处理器/8GB内存/128GB SSD闪存 MMGF2CH/A)</a>
+                  <a href="product_details.html?lid=1" class=" small" title="Apple MacBook Air 13.3英寸笔记本 银色(Core i5 处理器/8GB内存/128GB SSD闪存 MMGF2CH/A)">Apple MacBook Air 13.3英寸笔记本 银色(Core i5 处理器/8GB内存/128GB SSD闪存 MMGF2CH/A)</a>
                 </p>
                 <div class="d-flex justify-content-between align-items-center p-2 pt-0">
                   <button class="btn btn-outline-secondary p-0 border-0" type="button">-</button>
                   <input type="text" class="form-control p-1" value="10">
                   <button class="btn btn-outline-secondary p-0 border-0" type="button">+</button>
-                  <a class="btn btn-primary float-right ml-1 pl-1 pr-1" href="cart.html">加入购物车</a>
+                  <a class="btn btn-orange float-right ml-1 pl-1 pr-1" href="cart.html">加入购物车</a>
                 </div>
               </div>
             </div>
-          </div>-->
+          </div>
           <!--42~195行删除-->
         </div>
-        <h6 class="mb-3 p-2 text-muted small">
+        <h6 class="mb-3 p-2  small">
           <nav aria-label="Page navigation example">
             <ul class="pagination mb-0 justify-content-end">
               <li class="page-item  disabled"><a class="page-link bg-transparent" href="#">上一页</a></li>
@@ -359,10 +345,10 @@
         </h6>
       </div>
       <div class="col-md-3 pl-0">
-        <h5 class="justify-content-between align-items-center mb-1 text-muted p-2">
+        <h5 class="justify-content-between align-items-center mb-1  p-2">
           <img src="img/foodstore/foodstore_icon2.png" alt=""> 商家公告
         </h5>
-        <div class="bg-white small p-4 text-muted mb-3">
+        <div class="bg-white small p-4  mb-3">
           <p>本店推出全网最低价套餐，保证比其他平台的价格要低！</p>
           <p>不要葱、姜、蒜等这些忌口暂时无法坐不了，敬请谅解！</p>
           <p>晚上10点以后订餐需另加送餐费2元！谢谢合作！</p>
@@ -370,7 +356,7 @@
         <ul id="cart" class="list-group mb-3">
         <!-- <ul id="cart" class="list-group mb-3 position-fixed"> -->
           <li class="p-0 list-group-item d-flex justify-content-between lh-condensed">
-            <h6 class="w-100 d-flex justify-content-between align-items-center mb-0 text-muted p-2 "> 购物车<a class="btn btn-link text-muted" href="#">清空</a>
+            <h6 class="w-100 d-flex justify-content-between align-items-center mb-0 p-2 "> 购物车<a class="btn btn-link" href="#">清空</a>
             </h6>
           </li>
           <li class="p-0 list-group-item d-flex justify-content-between lh-condensed">
@@ -399,10 +385,10 @@
               </div>
             </div>
           </li>
-          <li class="p-0 list-group-item bg-secondary text-right">
+          <li class="jiesuan p-0 list-group-item bg-secondary text-right">
             <img class="mb-2" src="img/foodstore/foodstore_car_2.png" alt="">
-            <h4 class="d-inline-block text-white pt-2 m-0">￥129870.00</h4>
-            <a class="btn btn-lg btn-primary float-right ml-1 pl-0 pr-0" href="cart.html">去结算</a>
+            <h4 class="p-price d-inline-block pt-2 m-0">￥129870.00</h4>
+            <a class="btn btn-lg btn-orange float-right ml-1 pl-0 pr-0" href="cart.html">去结算</a>
           </li>
         </ul>
       </div>
@@ -417,7 +403,7 @@
     <script type="text/javascript" src="js/footer.js"></script>
     <!-- 先注释掉这段jQuery代码  隐藏显示侧边栏 效果 -->
     <!-- <script src="js/indexSlide_hover.js"></script> -->
-    <script src="js/products.js"></script>
-     <!-- <script src="js/products-xz.js"></script> -->
+    <!-- <script src="js/products.js"></script> -->
+     <script src="js/products-xz.js"></script>
 </body>
 </html>

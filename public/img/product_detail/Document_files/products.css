@@ -1,0 +1,19 @@
+#main>div.row>div>h5, #cart>li:first-child>h6{
+  background:linear-gradient(to bottom,#f0f0f0,#e0e0e0);
+}
+#cart .input-group-text{
+  width:90px;
+}
+#cart input.form-control{
+  width:25px!important;
+  flex:none;
+}
+#cart .input-group .btn{
+  width:20px;
+}
+#cart .input-group-append>.input-group-text{
+  width:80px;
+}
+#cart.position-fixed{
+  top:100px; right:100px
+}

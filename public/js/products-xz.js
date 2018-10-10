@@ -1,35 +1,70 @@
-const express=require("express")
-const router=express.Router()
-const pool=require("../pool")
-
-///products
-router.get("/",(req,res)=>{
-  var kw=req.query.kw;
-  var kws=kw.split(" ");
-  kws.forEach((elem,i,kws)=>
-    kws[i]=` title like '%${elem}%' `)
-  var where=` where ${kws.join(" and ")} `
-  var sql=`SELECT *,(
-    select md from xz_laptop_pic
-    where laptop_id=lid
-    limit 1
-  ) as md
-  FROM xz_laptop `;
-  sql+=where;//查全部，不分页
-  //var pno=req.query.pno;
-  //sql+=` limit ${pno*9},9 `;//不再用sql的limit截取
-  pool.query(sql,[],(err,result)=>{
-    if(err) console.log(err);
-    data={};//新建结果对象
-    data.pno=req.query.pno;//在结果对象中添加pno属性
-    //用查询结果的总数/9,上取整，获得总页数，放入结果data中
-    data.pageCount=Math.ceil(result.length/9)
-    //仅截取查询结果中的pno*9还是的9条记录，放入data中
-    data.products=result.slice(data.pno*9,data.pno*9+9)
-    res.send(data);
+$(function(){
+  
+  function loadPage(pno=0){
+    if(location.search.indexOf("kw=")!=-1){
+      //header.js:23 $input.val(decodeURI(kw))
+      var kw=decodeURI(
+        location.search.split("=")[1]
+      );
+      $.ajax({
+        url:"http://localhost:3002/pro/",
+        type:"get",
+        data:{kw,pno},
+        dataType:"json",
+        success:function(data){
+          var {pno,pageCount,products}=data;
+          var html="";
+          for(var {md,price,title,lid} of products){
+            html+=`<div class="col-md-4 p-1">
+              <div class="card mb-4 box-shadow pr-2 pl-2">
+                <a href="product_details.html?lid=${lid}">
+                  <img class="card-img-top" src="${md}">
+                </a>
+                <div class="card-body p-0">
+                  <h5 class="text-primary">¥${price.toFixed(2)}</h5>
+                  <p class="card-text">
+                    <a href="product_details.html?lid=${lid}" class="text-muted small" title="${title}">${title}</a>
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center p-2 pt-0">
+                    <button class="btn btn-outline-secondary p-0 border-0" type="button">-</button>
+                    <input type="text" class="form-control p-1" value="1">
+                    <button class="btn btn-outline-secondary p-0 border-0" type="button">+</button>
+                    <a class="btn-orange float-right ml-1 pl-1 pr-1" href="cart.html" data-lid="${lid}">加入购物车</a>
+                  </div>
+                </div>
+              </div>
+            </div>`
+          }
+          $("#plist").html(html);
+          console.log(111)
+          var html=`<li class="page-item"><a class="page-link bg-transparent" href="#">上一页</a></li>`;
+          for(var i=1;i<=pageCount;i++){
+            html+=`<li class="page-item ${pno==i-1?'active':''}"><a class="page-link ${pno!=i-1?'bg-transparent':'border'}" href="#">${i}</a></li>`;
+          }
+          html+=`<li class="page-item"><a class="page-link bg-transparent" href="#">下一页</a></li>`;
+          var $page=$(".pagination")
+          $page.html(html);
+          if(pno==0)
+            $page.children(":first").addClass("disabled")
+          if(pno==pageCount-1)
+            $page.children(":last").addClass("disabled")
+        }
+      })
+    }
+  }
+  loadPage();
+  $(".pagination").on("click","a",function(e){
+    e.preventDefault();
+    var $a=$(this);
+    if(!$a.parent().is(".disabled,.active")){
+      if($a.html()=="上一页"){
+        //var pno=?;
+      }else if($a.html()=="下一页"){
+        //var pno=?;
+      }else{
+        var pno=$a.html()-1;
+      }
+      loadPage(pno);
+    }
   })
-  //测试: 
-  //http://localhost:3000/products/?kw=i7 128g&pno=0,1
 })
-
-module.exports=router

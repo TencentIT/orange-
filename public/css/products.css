@@ -1,6 +1,8 @@
 /*定制小购物车部分样式*/
 #main>div.row>div>h5, #main>div.row>div>h6, #cart>li:first-child>h6{
-  background:linear-gradient(to bottom,#f0f0f0,#e0e0e0);
+  background:linear-gradient(to bottom,#FF7200,#EA934D);
+  color:#fff;
+  /* font-size: 18px; */
 }
 #cart .input-group-text{
   width:90px;
@@ -34,4 +36,27 @@
 }
 #plist+h6 .page-item.disabled{
   opacity:0.5;
+}
+.jiesuan{
+  background: linear-gradient(to bottom,#e4e4e4,#e0e0e0);
+}
+.btn-link{
+  color:#fff;
+
+}
+.btn-orange{
+  padding: 6px;
+  border-radius: 5px;
+  background:linear-gradient(to bottom,#FF7200,#EA934D);
+  border-color:#FF7200;
+  color:#fff;
+}
+a.btn-orange:hover{
+  color:#fff;
+}
+.text-primary{
+  color:#F90 !important;
+}
+.page-item.active .page-link {
+  background-color: #F90   ;
 }

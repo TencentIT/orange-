@@ -1,0 +1,10 @@
+/*定制搜索框的大小*/
+#header>.navbar>.form-inline>.input-group>input{
+  width:300px;
+}
+/*定制主导航当前导航项的字体颜色*/
+#header>.nav .nav-link.active,
+#header>.nav .nav-link:hover{
+  background:none;
+  font-weight:bold;
+}

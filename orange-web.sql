@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-10-08 15:51:53
+-- Generation Time: 2018-10-10 02:59:48
 -- 服务器版本： 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -16,14 +16,13 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `orange-web9.15`
+-- Database: `orange-web`
 --
--- CREATE DATABASE IF NOT EXISTS `orange-web9.15` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-CREATE DATABASE orange-web9.15;
-USE `orange-web9.15`;
+CREATE DATABASE IF NOT EXISTS `orange-web` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `orange-web`;
 
 -- --------------------------------------------------------
 
@@ -72,35 +71,34 @@ CREATE TABLE `orange_index_products` (
 --
 
 INSERT INTO `orange_index_products` (`pid`, `title`, `price`, `pic`, `sell`, `href`) VALUES
-(0, NULL, NULL, NULL, NULL, 'product_details.html?lid=0'),
 (1, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_1.png', 124, 'product_details.html?lid=1'),
-(2, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 1024, 'Products/p_2.png', 110, 'product_details.html?lid=1'),
-(3, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_3.png', 1211, 'product_details.html?lid=1'),
-(4, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 1204, 'Products/p_4.png', 5623, 'product_details.html?lid=1'),
-(5, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 162, 'products/p_5.png', 120, 'product_details.html?lid=1'),
-(6, 'Olay玉兰油 新生塑颜金纯活能水', 236, 'products/p_6.png', 130, 'product_details.html?lid=1'),
-(7, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_7.png', 264, 'product_details.html?lid=1'),
-(8, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_8.png', 578, 'product_details.html?lid=1'),
-(9, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 433, 'Products/p_9.png', 865, 'product_details.html?lid=1'),
-(10, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_10.png', 231, 'product_details.html?lid=1'),
-(11, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 453, 'Products/p_11.png', 462, 'product_details.html?lid=1'),
-(12, 'Orion 好丽友 熊猫派派福巧克力味有4枚 100g/盒', 24, 'products/p_12.png', 4323, 'product_details.html?lid='),
-(13, 'Olay玉兰油 新生塑颜金纯活能水', 566, 'products/p_13.png', 543, 'product_details.html?lid='),
-(14, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_14.png', 454, 'product_details.html?lid='),
-(15, '有货潮牌Life After Life/男MA-1飞行夹克', 372, 'Products/p_15.png', 375, 'product_details.html?lid='),
-(16, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 983, 'Products/p_16.png', 337, 'product_details.html?lid='),
-(17, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G有手机 双卡', 387, 'Products/p_17.png', 327, 'product_details.html?lid='),
-(18, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 317, 'Products/p_18.png', 362, 'product_details.html?lid='),
-(19, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 324, 'products/p_19.png', 312, 'product_details.html?lid='),
-(20, 'Olay玉兰油 新生塑颜金纯活能水', 312, 'products/p_20.png', 634, 'product_details.html?lid='),
-(21, '有货潮牌Life After Life/男MA-1飞行夹克', 642, 'Products/p_21.png', 242, 'product_details.html?lid='),
-(22, '有货潮牌Life After Life/男MA-1飞行夹克', 527, 'Products/p_22.png', 463, 'product_details.html?lid='),
-(23, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 312, 'Products/p_23.png', 542, 'product_details.html?lid='),
-(24, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 654, 'Products/p_24.png', 410, 'product_details.html?lid='),
-(25, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 542, 'Products/p_25.png', 542, 'product_details.html?lid='),
-(26, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 224, 'products/p_26.png', 402, 'product_details.html?lid='),
-(27, 'Olay玉兰油 新生塑颜金纯活能水', 3532, 'products/p_27.png', 424, 'product_details.html?lid='),
-(28, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_28.png', 557, 'product_details.html?lid=');
+(2, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 1024, 'Products/p_2.png', 110, 'product_details.html?lid=2'),
+(3, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_3.png', 1211, 'product_details.html?lid=3'),
+(4, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 1204, 'Products/p_4.png', 5623, 'product_details.html?lid=4'),
+(5, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 162, 'products/p_5.png', 120, 'product_details.html?lid=5'),
+(6, 'Olay玉兰油 新生塑颜金纯活能水', 236, 'products/p_6.png', 130, 'product_details.html?lid=6'),
+(7, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_7.png', 264, 'product_details.html?lid=7'),
+(8, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_8.png', 578, 'product_details.html?lid=8'),
+(9, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 433, 'Products/p_9.png', 865, 'product_details.html?lid=9'),
+(10, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_10.png', 231, 'product_details.html?lid=10'),
+(11, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 453, 'Products/p_11.png', 462, 'product_details.html?lid=11'),
+(12, 'Orion 好丽友 熊猫派派福巧克力味有4枚 100g/盒', 24, 'products/p_12.png', 4323, 'product_details.html?lid=12'),
+(13, 'Olay玉兰油 新生塑颜金纯活能水', 566, 'products/p_13.png', 543, 'product_details.html?lid=13'),
+(14, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_14.png', 454, 'product_details.html?lid=14'),
+(15, '有货潮牌Life After Life/男MA-1飞行夹克', 372, 'Products/p_15.png', 375, 'product_details.html?lid=15'),
+(16, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 983, 'Products/p_16.png', 337, 'product_details.html?lid=16'),
+(17, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G有手机 双卡', 387, 'Products/p_17.png', 327, 'product_details.html?lid=17'),
+(18, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 317, 'Products/p_18.png', 362, 'product_details.html?lid=18'),
+(19, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 324, 'products/p_19.png', 312, 'product_details.html?lid=19'),
+(20, 'Olay玉兰油 新生塑颜金纯活能水', 312, 'products/p_20.png', 634, 'product_details.html?lid=20'),
+(21, '有货潮牌Life After Life/男MA-1飞行夹克', 642, 'Products/p_21.png', 242, 'product_details.html?lid=21'),
+(22, '有货潮牌Life After Life/男MA-1飞行夹克', 527, 'Products/p_22.png', 463, 'product_details.html?lid=22'),
+(23, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 312, 'Products/p_23.png', 542, 'product_details.html?lid=23'),
+(24, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 654, 'Products/p_24.png', 410, 'product_details.html?lid=24'),
+(25, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 542, 'Products/p_25.png', 542, 'product_details.html?lid=25'),
+(26, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 224, 'products/p_26.png', 402, 'product_details.html?lid=26'),
+(27, 'Olay玉兰油 新生塑颜金纯活能水', 3532, 'products/p_27.png', 424, 'product_details.html?lid=27'),
+(28, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_28.png', 557, 'product_details.html?lid=28');
 
 -- --------------------------------------------------------
 
