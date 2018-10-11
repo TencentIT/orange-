@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <link href="css/common-ow.css" rel="stylesheet" type="text/css" /> -->
+<!-- <link href="fonts/iconfont.css"  rel="stylesheet" type="text/css" /> -->
+<link href="css/style-ow.css" rel="stylesheet" type="text/css" />
+<!-- <link href="css/Orders.css" rel="stylesheet" type="text/css" /> -->
+<!-- <link href="css/purebox-metro.css" rel="stylesheet" id="skin"> -->
+<link rel="stylesheet" type="text/css" href="css/index-texiao-styles.css">
+
+<script src="js/jigsaw.js"></script>
+
+	<script src="js/common.js"></script>
+<title>用户登录</title>
+</head>
+
+<body>
+<div class="Reg_log_style">
+ <div class="logo"><a href="#"><img src="images/logo.png" /></a></div>
+ <div class="login_style">
+ <div class="left_img"><img src="images/bg_name_03.png" /></div>
+ <div class="right_img"><img src="images/bg_name_05.png" /></div>
+    <form id="myform" class="sign_area" autocomplete="off">
+    <div class="title_name"><span>登录</span></div>
+    
+    <div class="login-wrap">
+			<div class="login-html">
+				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登录</label>
+				<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">注册</label>
+				<div class="login-form">
+					<!-- 登录 -->
+					<form>
+						<div class="sign-in-htm">
+							<div class="group">
+								<label for="uname" class="label" >用户名</label>
+								<input id="username"  name="uname" value="admin" type="text" class="input">
+							</div>
+							<div class="group">
+								<label for="pass" class="label">密码</label>
+								<input id="password" type="password" class="input" data-type="password"  name="upwd">
+							</div>
+							<div class="group">
+								<div class="container">
+									<div id="captcha" style="position: relative;background:#ddd;height:108px;width:379px;" data-type="password"></div>
+									<div id="msg"></div>
+								</div>
+							</div>
+							<div class="group">
+								<input id="check" type="checkbox" class="check" checked>
+								<label for="check"><span class="icon"></span> 保持登录</label>
+							</div>						
+							<div class="group">
+								<!-- href="index.html" v-if="" -->
+								<a><input type="button" class="button" value="登录" onclick="post_msg()"></a>
+							</div>
+						
+						</div>
+					</form>
+					<!-- 注册 -->
+					<form>
+						<div class="sign-up-htm">
+							<div class="group">
+								<label for="user" class="label">用户名</label>
+								<input id="reg_uname" type="text" class="input" name="reg_uname" placeholder="用户名必须介于3~9位之间!">
+								<span class="user_msg"></span>
+							</div>
+							<div class="group">
+								<label for="pass" class="label" >密码</label>
+								<input id="reg_upwd" type="password"  name="reg_upwd" class="input" data-type="password" placeholder="密码6-16位，由字母（区分大小写）、数字、符号组成">
+								<span class="pwd_msg"> </span>
+							</div>
+							<div class="group">
+								<label for="pass" class="label">确认密码</label>
+								<input  type="password" class="input" data-type="password" id="reg_rpwd"  onblur="check_rpwd()">
+								<span class="rpwd_msg"> </span>
+							</div>
+							<div class="group">
+								<label for="pass" class="label" >邮箱地址</label>
+								<input id="pass" type="text" class="input" onblur="check_mail()" name="mail">
+								<span class="mail_msg"> </span>
+							</div>
+							<div class="group">
+								<input type="button"  name="submit" value="注册"  onclick="post_reg_msg()" class="form_submit button" id="form_submit">
+							</div>
+							
+						</div>
+					</form>
+				</div>
+			</div>
+		
+		</div>	
+    
+    </form>
+  <!--其他登录方式-->
+  <div class="Login_Method">
+    <div class="title"><span>第三方登录方式</span></div>
+    <div><a href="#"><img src="images/l_1.png" /></a><a href="#"><img src="images/l_2.png" /></a><a href="#"><img src="images/l_4.png" /></a>
+      </div>
+  </div>
+ </div> 
+ </div>
+ </div>
+ <div class="btmbg">
+    <div class="btm">
+        备案/许可证编号：蜀ICP备12009302号-1-www.dingguagua.com   Copyright © 2015-2018 商城网 All Rights Reserved. 复制必究 , Technical Support: Dgg Group <br>
+
+    </div>    	
+</div>
+
+</body>
+</html>
