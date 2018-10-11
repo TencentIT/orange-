@@ -167,5 +167,8 @@ input, button {
 	background:rgba(255,255,255,.2);
 }
 .foot-lnk{
-	text-align:center;
+	text-align:center;   
+}
+.login-form .group  .fail{
+	background:gray;
 }

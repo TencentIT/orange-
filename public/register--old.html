@@ -83,13 +83,19 @@
 			
 		}
 		$("#uname").blur(function(e){
-				check_uname();
+			
 				vali(//验证姓名文本框
 					"[name=uname]",
 					/^\w{3,9}$/,
 					"用户名必须介于3~9位之间!",
 					e
 				);
+				if(flag)
+					check_uname();
+				else{
+					$(".form_submit").addClass("fail");
+					$("#submit").attr("disabled","disabled");
+				}
 			});
 		$("#upwd").blur(function(e){
 			vali(//验证密码框
@@ -147,6 +153,7 @@
 			}
 		}
 		function post_msg(){
+			// alert(2)
 			var xhr = createXhr();
 			xhr.onreadystatechange = function(){
 				if(xhr.readyState==4&&xhr.status==200){
@@ -164,6 +171,7 @@
 			var formData = "uname="+uname+"&upwd="+upwd;
 				console.log(formData);
 				xhr.send(formData);
+				alert(1)
 		}
 		
 		function check_rpwd(){

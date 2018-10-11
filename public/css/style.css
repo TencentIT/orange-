@@ -203,7 +203,7 @@ header .menu li{
 	float: left;
 	height:40px;
 	box-sizing: border-box;
-	    position: relative;
+	    /* position: relative; */
 }
 header .menu li:nth-child(4){
 	position: relative;
@@ -211,8 +211,9 @@ header .menu li:nth-child(4){
 .menu .nav_bar_left_title{
 	float: left;
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
+
 .menu .nav_bar_left_title a.products{
 	display:inline-block;
 	width: 200px;
@@ -350,7 +351,7 @@ header .bottom_line{
 	padding-left:0;
 }
 .menv_Detail {
-    left: 196px;
+    left: 195px;
     display: none;
     top: 0px;
     padding: 10px;
