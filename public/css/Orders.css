@@ -380,7 +380,7 @@ input.labelauty + label > span.labelauty-checked-image{background-image: url( ..
 	position:relative; 
 	top:15px;
 }
-.Preferential_list .Complete .wc_img{ background:url(../images/wc_img_03.png) no-repeat; width:360px; height:338px; position:absolute; z-index:111; top:0px}
+.Preferential_list .Complete .wc_img{ background:url(../images/wc_img_03.png) no-repeat; width:360px; height:338px; position:absolute; z-index:2; top:0px}
 .Preferential_list .pic_Price{ color:#FFFFFF; font-size:18px; line-height:45px; margin-right:10px;}
 .Preferential_list .pic_Price b{ font-size:26px}
 .Preferential_list .pic_inner .Number{ color:#FFFFFF; text-align: center; line-height:22px; padding-right:5px;}

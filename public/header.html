@@ -49,6 +49,31 @@
 					</a>
                 <i class="ci-right">></i>
                 <i class="ci-count ">0</i>
+                <div class="dorpdown-layer">
+                        <div class="spacer"></div>
+                         <!--<div class="prompt"></div><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div>-->
+                         <ul class="p_s_list">	   
+                            <li>
+                                <div class="img"><img src="products/p_7.jpg"></div>
+                                <div class="content"><p><a href="#">产品名称</a></p><p>颜色分类:紫花8255尺码:XL</p></div>
+                                <div class="Operations">
+                                <p class="Price">￥55.00</p>
+                                <p><a href="#">删除</a></p></div>
+                              </li>
+                            </ul>		
+                         <div class="Shopping_style">
+                         <div class="p-total">共<b>1</b>件商品　共计<strong>￥ 515.00</strong></div>
+                          <a href="Shop_cart.html" title="去购物车结算" id="btn-payforgoods" class="Shopping">去购物车结算</a>
+                         </div>	 
+                       </div>
             </div>
         </div>
     </div>
+
+    <script>
+        $(".gwc").hover(function(){
+            $(this).find(".dorpdown-layer").show()
+        },function(){
+            $(this).find(".dorpdown-layer").hide()
+        })
+    </script>
