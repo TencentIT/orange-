@@ -177,29 +177,6 @@ new Vue({
     })(this);
   }  
 })
-// 浏览记录
-new Vue({
-  el:"#Record_ul",
-  data:{
-    res:[
-       {title:"",pic:"",price:0,sell:0,href:""},
-      {title:"",pic:"",price:0,sell:0,href:""},
-      {title:"",pic:"",price:0,sell:0,href:""},
-      {title:"",pic:"",price:0,sell:0,href:""},
-    ]
-  },
-  beforeCreate(){
-    (async function(_self){
-      // 推荐产品
-      var res = await axios.get("http://localhost:3002/index/products");
-     
-        _self.res = res.data;
-
-      
-
-    })(this);
-  }  
-})
 
 
 var cloaks = document.querySelectorAll("[cloak]"); 

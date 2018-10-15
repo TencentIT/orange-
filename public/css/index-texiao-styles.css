@@ -20,7 +20,7 @@ input, button {
 	position:relative;
 	/* background:url(../images/bg.jpg) no-repeat center; */
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-	border: 3px solid #F60;
+	/* border: 3px solid #F60; */
     border-top: 0;
 }
 .login-html{
@@ -68,7 +68,7 @@ input, button {
 	color:#fe6600;
 }
 .login-form{
-	min-height:345px;
+	/* min-height:345px; */
 	position:relative;
 	-webkit-perspective:1000px;
 	        perspective:1000px;
@@ -87,13 +87,11 @@ input, button {
 }
 .login-form .group .input,
 .login-form .group .button{
-	border:none;
-	padding:15px 20px;
-	border-radius:25px;
-	background: rgb(255, 255, 255);
-	border: 1px solid #ddd;
-	/* color: #fff; */
-	cursor: pointer;
+	border: 0;
+    padding: 15px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
 }
 .login-form .group input[data-type="password"]{
 	text-security:circle;
@@ -105,6 +103,8 @@ input, button {
 }
 .login-form .group .button{
 	background:#ff635b;
+	color: #fff;
+    font-weight: bold;
 }
 .login-form .group label .icon{
 	width:15px;

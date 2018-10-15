@@ -28,7 +28,7 @@ new Vue({
   })
 //   浏览记录
   new Vue({
-    el:"#record-ul",
+    el:"#record_ul",
     data:{
       res:[
         {title:"",pic:"",price:0,sell:0,href:""},

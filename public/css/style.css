@@ -111,8 +111,10 @@ body {
 .text-gray {
     color: #C9C9C9;
 }
-
 .top a.login {
+    color: #EB000E;
+}
+.top span.login {
     color: #EB000E;
 }
 
@@ -139,7 +141,8 @@ li.new_user~li {
 
 .search_input {
     width: 450px;
-    height: 39px;
+    height: 40px;
+    vertical-align: top;
     padding-left: 40px;
     border: 3px solid #FF7200;
     box-sizing: border-box;
@@ -157,7 +160,7 @@ li.new_user~li {
 
 .logo_box .search_box p a {
     margin-right: 14px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .logo_box .search_box p {
@@ -177,12 +180,13 @@ li.new_user~li {
     float: right;
     width: 146px;
     height: 36px;
+    line-height: 36px;
     position: absolute;
     top: 0px;
     right: 0px;
     background-color: #f9f9f9;
     border: 1px solid #DBDBDB;
-    padding: 2px 0;
+    /* padding: 2px 0; */
     box-sizing: border-box;
 }
 
@@ -3758,36 +3762,38 @@ a.fl-pro-details {
 }
 .gwc .s_cart{ background:#FFFFFF}
   .gwc .dorpdown-layer {
-	display: none;
-	right: 0;
-    /* _right: -1px; */
-    margin-top: -3px;
-	width: 308px;
-	background: #FFF;
+    display: none;
+    right: -1px;
+    margin-top: -5px;
+    width: 308px;
+    background: #FFF;
     border: 1px solid #DDD;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    z-index:9999;
+    z-index: 9999;
     position: absolute;
 }  
 .gwc .dorpdown-layer .spacer {
-	position: absolute;
-	right: 0;
-	top: -3px;
-	width: 143px;
-	height: 12px;
-	background: #FFF;
+    position: absolute;
+    right: 0;
+    top: -7px;
+    width: 144px;
+    height: 12px;
+    background: #FFF;
 }
 .gwc .prompt {padding: 10px 15px;}
 .gwc .dorpdown-layer .img{ 
-    text-align: center;
+    /* text-align: center; */
+    margin-top: 13px;
 }
 .gwc .dorpdown-layer .img img{
     width: 40px;
     height: 40px;
-    margin-top: 12px;
+    /* margin-top: 12px; */
+    vertical-align:top;
+
 }
 .p_s_list {
-    margin:10px;
+    padding: 3px 0;
 }
 
 .p_s_list .img{
@@ -3806,6 +3812,7 @@ line-height: 24px;
 }
 .p_s_list li .Price {
     color: #FF0000;
+    padding-right: 5px;
 }
 .dorpdown-layer .Shopping_style {
     padding: 5px;

@@ -1,5 +1,6 @@
 <!--header.html -->
 <!--1 顶部样式 -->
+
 <div id="topbox">
     <div class="header_top">
         <div class="top clearfix  margin_auto">
@@ -11,9 +12,12 @@
             <div class="top_menu clearfix">
                 <ul>
                     <li class="text-gray">欢迎光临本店！</li>
-                    <li><a href="login.html" class="login" target="_blank">[请登录]</a></li>
+                    <li><a class="login" target="_blank" id="welcome" style="display:none"></a></li>
+                    <li><a class="login" href="login.html" target="_blank" id="login">[请登录]</a></li>
+                    <li><a class="login" id="logout" onclick="logout1()" style="display:none">[注销]</a></li>
+                    
                     <li class="new_user text-gray">新用户</li>
-                    <li><a href="register.html" class="login" target="_blank">[免费注册]</a></li>
+                    <li><a href="login.html" class="login" target="_blank">[免费注册]</a></li>
                     <li><a href="#" class="my_order">我的订单</a></li>
                     <li><a href="#" class="gwc">购物车</a></li>
 
@@ -71,9 +75,29 @@
     </div>
 
     <script>
-        $(".gwc").hover(function(){
+        // window.onload = function(){
+            $(".gwc").hover(function(){
             $(this).find(".dorpdown-layer").show()
-        },function(){
-            $(this).find(".dorpdown-layer").hide()
-        })
+            },function(){
+                $(this).find(".dorpdown-layer").hide()
+            })
+            var welcome =document.getElementById("welcome")
+            var login =document.getElementById("login")
+            var logout =document.getElementById("logout")
+            //session
+            if(sessionStorage.getItem("uname")!==null && sessionStorage.getItem("upwd")!==null){
+                login.style.display = "none"
+                welcome.style.display="block"
+                logout.style.display="block"
+                welcome.innerHTML = "欢迎"+sessionStorage.getItem("uname")
+            }
+            
+            function logout1(){
+                sessionStorage.removeItem("uname")
+                sessionStorage.removeItem("upwd")
+                alert("注销成功！");
+                window.location.href="index.html"
+            }
+            // }
+       
     </script>

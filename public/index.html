@@ -599,7 +599,7 @@
                     <div class="fl-porducts">
                         <ul class="fl-pro-ul  clearfix" id="f-3" cloak>
                             <li v-for="p of res.slice(14,22)">
-                                <a :href="href" class="fl-a-img">
+                                <a :href="p.href" class="fl-a-img">
                                     <img :src="p.pic" alt="" />
                                 </a> <a :href="p.href" class="fl-pro-details">{{p.title}}</a>
                                 <div class="fl-porducts-div">
@@ -699,6 +699,7 @@
     <!-- <script src="js/index_carousel.js" type="text/javascript"></script> -->
     <script type="text/javascript" src="js/header.js"></script>
     <script type="text/javascript" src="js/footer.js"></script>
+    
 </body>
 
 </html>
