@@ -20,7 +20,12 @@
     }
     return xhr;
  }
- 
- function logout(){
-   alert("logout")
- }
+
+ //全选
+ $("#CheckedAll").click(function(){
+   if(this.checked){
+     $("input[type=checkbox][name=checkitems]").attr("checked",true)
+   }else{
+     $("input[type=checkbox][name=checkitems]").attr("checked",false)
+   }
+ })
