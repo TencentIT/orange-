@@ -1,15 +1,15 @@
 // function $(id){
 // 	return document.getElementById(id);
 // }
-// function createXhr(){
-// 	var xhr=null;
-// 	if(window.XMLHttpRequest){
-// 		 xhr = new XMLHttpRequest();
-// 	}else{
-// 		 xhr = new ActiveXObject('Microsoft.XMLHTTP');
-// 	}
-// 	return xhr;
-// }
+function createXhr(){
+	var xhr=null;
+	if(window.XMLHttpRequest){
+		 xhr = new XMLHttpRequest();
+	}else{
+		 xhr = new ActiveXObject('Microsoft.XMLHTTP');
+	}
+	return xhr;
+}
 $(document).ready(function(){
   function createXhr(){
     var xhr=null;
