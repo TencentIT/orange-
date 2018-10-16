@@ -1,687 +1,716 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/common.css" /> 
-    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css" /> 
-    <link rel="stylesheet" type="text/css" href="css/style.css" /> 
-     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script> 
-     <script src="js/jquery.SuperSlide.2.1.1.js"></script>
-     <script src="js/jquery.reveal.js"></script>
-     <script src="js/vue.js"></script>
-     <script src="js/axios.min.js"></script>     
-
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/jquery.reveal.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <link rel="stylesheet" href="css/loading.css">
 </head>
+
 <body>
-   
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <div class="load_title">正在加载***橘色商城***站点
+            <span>V1.0</span></div>
+    </div>
     <div id="main" class="">
-            <header>
-                    <div id="header"></div>
-                    <div class="menu width1200 margin_auto ">
-                            <div class="nav_bar_left_title">
-                                <a href="#" class="products shan">所有产品分类</a>
-                                <!-- 轮播图左侧`边栏 -->
-                                <div class="nav_bar_left_items" style="display: none;">
-                                    <ul class="menu_list clearfix">
-                                        <li>
-                                            <div class="menu_name">
-                                                <span>&lt;</span>
-                                                <a href="product_list.html">面部护理</a>
-                                            </div>
-                                            <div class="linkname clearfix">
-                                                <p>
+        <header>
+            <div id="header"></div>
+            <div class="menu width1200 margin_auto ">
+                <div class="nav_bar_left_title">
+                    <a href="#" class="products shan">所有产品分类</a>
+                    <!-- 轮播图左侧`边栏 -->
+                    <div class="nav_bar_left_items" style="display: none;">
+                        <ul class="menu_list clearfix">
+                            <li>
+                                <div class="menu_name">
+                                    <span>&lt;</span>
+                                    <a href="product_list.html">面部护理</a>
+                                </div>
+                                <div class="linkname clearfix">
+                                    <p>
+                                        <a href="product_list.html">撕拉面膜</a>
+                                        <a href="product_list.html">面膜贴</a>
+                                        <a href="product_list.html">免洗面膜</a>
+                                        <!-- <a href="product_list.html">水洗面膜</a> -->
+                                    </p>
+                                </div>
+                                <div class="menv_Detail" style="display: none;">
+                                    <div class="cat_pannel clearfix">
+                                        <div class="hd_sort_list">
+                                            <dl class="clearfix" data-tpc="1">
+                                                <dt>
+                                                        <a href="product_list.html">面膜<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
                                                     <a href="product_list.html">撕拉面膜</a>
                                                     <a href="product_list.html">面膜贴</a>
                                                     <a href="product_list.html">免洗面膜</a>
-                                                    <!-- <a href="product_list.html">水洗面膜</a> -->
-                                                </p>
-                                            </div>
-                                            <div class="menv_Detail" style="display: none;">
-                                                <div class="cat_pannel clearfix">
-                                                    <div class="hd_sort_list">
-                                                        <dl class="clearfix" data-tpc="1">
-                                                            <dt>
-                                                        <a href="product_list.html">面膜<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html">撕拉面膜</a>
-                                                                <a href="product_list.html">面膜贴</a>
-                                                                <a href="product_list.html">免洗面膜</a>
-                                                                <a href="product_list.html">水洗面膜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="2">
-                                                            <dt>
+                                                    <a href="product_list.html">水洗面膜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="2">
+                                                <dt>
                                                         <a href="product_list.html">洁面<i>&gt;</i></a>
                                                        </dt>
-                                                            <dd>
-                                                                <a href="product_list.html">洁面摩丝</a>
-                                                                <a href="product_list.html">洁面乳 </a>
-                                                                <a href="product_list.html">洁面啫哩/胶</a>
-                                                                <a href="product_list.html">面部去角质/磨砂</a>
-                                                                <a href="product_list.html">洁面膏/霜</a>
-                                                                <a href="product_list.html">洁肤皂</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="3">
-                                                            <dt>
+                                                <dd>
+                                                    <a href="product_list.html">洁面摩丝</a>
+                                                    <a href="product_list.html">洁面乳 </a>
+                                                    <a href="product_list.html">洁面啫哩/胶</a>
+                                                    <a href="product_list.html">面部去角质/磨砂</a>
+                                                    <a href="product_list.html">洁面膏/霜</a>
+                                                    <a href="product_list.html">洁肤皂</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="3">
+                                                <dt>
                                                         <a href="product_list.html">化妆水<i>&gt;</i></a>
                                                        </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 喷雾</a>
-                                                                <a href="product_list.html"> 精华水</a>
-                                                                <a href="product_list.html"> 柔肤水</a>
-                                                                <a href="product_list.html">爽肤水</a>
-                                                                <a href="product_list.html">收敛水/紧肤水</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 喷雾</a>
+                                                    <a href="product_list.html"> 精华水</a>
+                                                    <a href="product_list.html"> 柔肤水</a>
+                                                    <a href="product_list.html">爽肤水</a>
+                                                    <a href="product_list.html">收敛水/紧肤水</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
                                                         <a href="product_list.html">眼部护理<i>&gt;</i></a>
                                                        </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 眼膜</a>
-                                                                <a href="product_list.html"> 眼部凝胶</a>
-                                                                <a href="product_list.html">眼部精华</a>
-                                                                <a href="product_list.html">眼霜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">眼部护理<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 眼膜</a>
-                                                                <a href="product_list.html"> 眼部凝胶</a>
-                                                                <a href="product_list.html">眼部精华</a>
-                                                                <a href="product_list.html">眼霜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">防晒<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 眼膜</a>
-                                                                <a href="product_list.html"> 眼部凝胶</a>
-                                                                <a href="product_list.html">眼部精华</a>
-                                                                <a href="product_list.html">眼霜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">唇部护理<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 眼膜</a>
-                                                                <a href="product_list.html"> 眼部凝胶</a>
-                                                                <a href="product_list.html">眼部精华</a>
-                                                                <a href="product_list.html">眼霜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">乳液/面霜<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 乳液</a>
-                                                                <a href="product_list.html"> 面霜</a>
-                                                                <a href="product_list.html">按摩霜</a>
-                                                                <a href="product_list.html">面部啫喱</a>
-                                                                <a href="product_list.html">凝露/凝胶</a>
-                                                            </dd>
-                                                        </dl>
-                                                    </div>
-                                                    <div class="Brands">
-                                                    </div>
-                                                </div>
-                                                <!--品牌-->
-                                            </div>
-                                            <div class="menv_Detail" style="display: none;">
-                                                <div class="cat_pannel clearfix">
-                                                    <div class="hd_sort_list">
-                                                        <dl class="clearfix" data-tpc="1">
-                                                            <dt>
-                                                        <a href="product_list.html">面膜<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html">撕拉面膜</a>
-                                                                <a href="product_list.html">面膜贴</a>
-                                                                <a href="product_list.html">免洗面膜</a>
-                                                                <a href="product_list.html">水洗面膜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="2">
-                                                            <dt>
-                                                        <a href="product_list.html">洁面<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html">洁面摩丝</a>
-                                                                <a href="product_list.html">洁面乳 </a>
-                                                                <a href="product_list.html">洁面啫哩/胶</a>
-                                                                <a href="product_list.html">面部去角质/磨砂</a>
-                                                                <a href="product_list.html">洁面膏/霜</a>
-                                                                <a href="product_list.html">洁肤皂</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="3">
-                                                            <dt>
-                                                        <a href="product_list.html">化妆水<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 喷雾</a>
-                                                                <a href="product_list.html"> 精华水</a>
-                                                                <a href="product_list.html"> 柔肤水</a>
-                                                                <a href="product_list.html">爽肤水</a>
-                                                                <a href="product_list.html">收敛水/紧肤水</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">眼部护理<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 眼膜</a>
-                                                                <a href="product_list.html"> 眼部凝胶</a>
-                                                                <a href="product_list.html">眼部精华</a>
-                                                                <a href="product_list.html">眼霜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">眼部护理<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 眼膜</a>
-                                                                <a href="product_list.html"> 眼部凝胶</a>
-                                                                <a href="product_list.html">眼部精华</a>
-                                                                <a href="product_list.html">眼霜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">防晒<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 眼膜</a>
-                                                                <a href="product_list.html"> 眼部凝胶</a>
-                                                                <a href="product_list.html">眼部精华</a>
-                                                                <a href="product_list.html">眼霜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">唇部护理<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 眼膜</a>
-                                                                <a href="product_list.html"> 眼部凝胶</a>
-                                                                <a href="product_list.html">眼部精华</a>
-                                                                <a href="product_list.html">眼霜</a>
-                                                            </dd>
-                                                        </dl>
-                                                        <dl class="clearfix" data-tpc="4">
-                                                            <dt>
-                                                        <a href="product_list.html">乳液/面霜<i>&gt;</i></a>
-                                                       </dt>
-                                                            <dd>
-                                                                <a href="product_list.html"> 乳液</a>
-                                                                <a href="product_list.html"> 面霜</a>
-                                                                <a href="product_list.html">按摩霜</a>
-                                                                <a href="product_list.html">面部啫喱</a>
-                                                                <a href="product_list.html">凝露/凝胶</a>
-                                                            </dd>
-                                                        </dl>
-                                                    </div>
-                                                    <div class="Brands">
-                                                    </div>
-                                                </div>
-                                                <!--品牌-->
-                                            </div>
-                                        </li>
-            
-                                        <li>
-                                            <div class="menu_name">
-                                                <span>&lt;</span>
-                                                <a href="product_list.html">身体护理</a>
-                                            </div>
-                                            <div class="linkname clearfix">
-                                                <p><a href="product_Detailed.html"> 面霜</a>
+                                                <dd>
+                                                    <a href="product_list.html"> 眼膜</a>
+                                                    <a href="product_list.html"> 眼部凝胶</a>
+                                                    <a href="product_list.html">眼部精华</a>
                                                     <a href="product_list.html">眼霜</a>
-                                                    <a href="product_list.html"> 面膜</a>
-                                                    <a href="product_list.html">护肤套装</a> </p>
-                                            </div>
-                                            <div class="menv_details"></div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_name">
-                                                <span>&lt;</span>
-                                                <a href="product_list.html">香水彩妆</a>
-                                            </div>
-                                            <div class="linkname clearfix">
-                                                <p> <a href="product_list.html">卸妆 </a>
-                                                    <a href="product_list.html">防晒</a>
-                                                    <a href="product_list.html">BB</a>
-                                                    <a href="product_list.html">女士香水</a>
-                                                </p>
-                                            </div>
-                                            <div class="menv_details"></div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_name">
-                                                <span>&lt;</span>
-                                                <a href="product_list.html">洗发护发</a>
-                                            </div>
-                                            <div class="linkname clearfix">
-                                                <p><a href="product_list.html">洗发</a>
-                                                    <a href="product_list.html">护发</a>
-                                                    <a href="product_list.html">沐浴</a>
-                                                    <a href="product_list.html">润肤乳</a> </p>
-                                            </div>
-                                            <div class="menv_details"></div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_name">
-                                                <span>&lt;</span>
-                                                <a href="product_list.html">女性护理</a>
-                                            </div>
-                                            <div class="linkname clearfix">
-                                                <p> <a href="product_list.html">洁面</a>
-                                                    <a href="product_list.html">坚果炒货</a>
-                                                    <a href="product_list.html">乳液</a>
-                                                    <a href="product_list.html"> 面霜</a> </p>
-                                            </div>
-                                            <div class="menv_details"></div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_name">
-                                                <span>&lt;</span>
-                                                <a href="product_list.html">男性护理</a>
-                                            </div>
-                                            <div class="linkname clearfix">
-                                                <p> <a href="product_list.html">洁面</a>
-                                                    <a href="product_list.html">坚果炒货</a>
-                                                    <a href="product_list.html">乳液</a>
-                                                    <a href="product_list.html"> 面霜</a> </p>
-                                            </div>
-                                            <div class="menv_details"></div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_name">
-                                                <span>&lt;</span>
-                                                <a href="product_list.html">推荐品牌</a>
-                                            </div>
-                                            <div class="linkname clearfix">
-                                                <p> <a href="product_list.html">欧莱雅</a>
-                                                    <a href="product_list.html"> 菲诗小铺</a>
-                                                    <a href="product_list.html"> 雅诗兰黛</a> </p>
-                                            </div>
-                                            <div class="menv_details"></div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_name">
-                                                <span>&lt;</span>
-                                                <a href="product_list.html">女性护理</a>
-                                            </div>
-                                            <div class="linkname clearfix">
-                                                <p> <a href="product_list.html">洁面</a>
-                                                    <a href="product_list.html">坚果炒货</a>
-                                                    <a href="product_list.html">乳液</a>
-                                                    <a href="product_list.html"> 面霜</a> </p>
-                                            </div>
-                                            <div class="menv_details"></div>
-                                        </li>
-                                    </ul>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">眼部护理<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 眼膜</a>
+                                                    <a href="product_list.html"> 眼部凝胶</a>
+                                                    <a href="product_list.html">眼部精华</a>
+                                                    <a href="product_list.html">眼霜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">防晒<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 眼膜</a>
+                                                    <a href="product_list.html"> 眼部凝胶</a>
+                                                    <a href="product_list.html">眼部精华</a>
+                                                    <a href="product_list.html">眼霜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">唇部护理<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 眼膜</a>
+                                                    <a href="product_list.html"> 眼部凝胶</a>
+                                                    <a href="product_list.html">眼部精华</a>
+                                                    <a href="product_list.html">眼霜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">乳液/面霜<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 乳液</a>
+                                                    <a href="product_list.html"> 面霜</a>
+                                                    <a href="product_list.html">按摩霜</a>
+                                                    <a href="product_list.html">面部啫喱</a>
+                                                    <a href="product_list.html">凝露/凝胶</a>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="Brands">
+                                        </div>
+                                    </div>
+                                    <!--品牌-->
                                 </div>
-                            </div>
-                            <ul class="nav_name clearfix">
-                                <!-- <li><a href="#" class="first_li">所有产品分类</a></li> -->
-                                <li><a href="index.html" class="shan">首页</a></li>
-                                <li><a href="product_list.html" class="shan">产品列表</a></li>
-                                <li> <a href="Limit_buy.html" class="shan">限时特卖</a> <em class="hot_icon "></em> </li>
-                                <li><a href="help.html" class="shan">联系我们</a></li>
-                                <li><a href="#" class="shan">鲜盟人才</a></li>
-                                <li><a href="#" class="shan">鲜盟金融</a></li>
-                                <li><a href="#" class="shan">鲜盟投资</a></li>
-                                <li><a href="Brands.html" class="shan">销售品牌</a></li>
-                            </ul>
-                            <!-- 轮播图左侧边栏 -->
-                        </div>
-                    <script>
-                        $(".nav_bar_left_title").hover(function(){
-                            $(".nav_bar_left_items").show();
-                            
-                        },function(){
-                            $(".nav_bar_left_items").hide();
-                        })
-                        $(".menu_list li").hover(function(){
-                            $(".menv_Detail").show();
-                        },function(){
-                            $(".menv_Detail").hide();
-                        })
-                    </script>
-                   
-            </header>
+                                <div class="menv_Detail" style="display: none;">
+                                    <div class="cat_pannel clearfix">
+                                        <div class="hd_sort_list">
+                                            <dl class="clearfix" data-tpc="1">
+                                                <dt>
+                                                        <a href="product_list.html">面膜<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html">撕拉面膜</a>
+                                                    <a href="product_list.html">面膜贴</a>
+                                                    <a href="product_list.html">免洗面膜</a>
+                                                    <a href="product_list.html">水洗面膜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="2">
+                                                <dt>
+                                                        <a href="product_list.html">洁面<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html">洁面摩丝</a>
+                                                    <a href="product_list.html">洁面乳 </a>
+                                                    <a href="product_list.html">洁面啫哩/胶</a>
+                                                    <a href="product_list.html">面部去角质/磨砂</a>
+                                                    <a href="product_list.html">洁面膏/霜</a>
+                                                    <a href="product_list.html">洁肤皂</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="3">
+                                                <dt>
+                                                        <a href="product_list.html">化妆水<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 喷雾</a>
+                                                    <a href="product_list.html"> 精华水</a>
+                                                    <a href="product_list.html"> 柔肤水</a>
+                                                    <a href="product_list.html">爽肤水</a>
+                                                    <a href="product_list.html">收敛水/紧肤水</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">眼部护理<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 眼膜</a>
+                                                    <a href="product_list.html"> 眼部凝胶</a>
+                                                    <a href="product_list.html">眼部精华</a>
+                                                    <a href="product_list.html">眼霜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">眼部护理<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 眼膜</a>
+                                                    <a href="product_list.html"> 眼部凝胶</a>
+                                                    <a href="product_list.html">眼部精华</a>
+                                                    <a href="product_list.html">眼霜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">防晒<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 眼膜</a>
+                                                    <a href="product_list.html"> 眼部凝胶</a>
+                                                    <a href="product_list.html">眼部精华</a>
+                                                    <a href="product_list.html">眼霜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">唇部护理<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 眼膜</a>
+                                                    <a href="product_list.html"> 眼部凝胶</a>
+                                                    <a href="product_list.html">眼部精华</a>
+                                                    <a href="product_list.html">眼霜</a>
+                                                </dd>
+                                            </dl>
+                                            <dl class="clearfix" data-tpc="4">
+                                                <dt>
+                                                        <a href="product_list.html">乳液/面霜<i>&gt;</i></a>
+                                                       </dt>
+                                                <dd>
+                                                    <a href="product_list.html"> 乳液</a>
+                                                    <a href="product_list.html"> 面霜</a>
+                                                    <a href="product_list.html">按摩霜</a>
+                                                    <a href="product_list.html">面部啫喱</a>
+                                                    <a href="product_list.html">凝露/凝胶</a>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="Brands">
+                                        </div>
+                                    </div>
+                                    <!--品牌-->
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="menu_name">
+                                    <span>&lt;</span>
+                                    <a href="product_list.html">身体护理</a>
+                                </div>
+                                <div class="linkname clearfix">
+                                    <p><a href="product_Detailed.html"> 面霜</a>
+                                        <a href="product_list.html">眼霜</a>
+                                        <a href="product_list.html"> 面膜</a>
+                                        <a href="product_list.html">护肤套装</a> </p>
+                                </div>
+                                <div class="menv_details"></div>
+                            </li>
+                            <li>
+                                <div class="menu_name">
+                                    <span>&lt;</span>
+                                    <a href="product_list.html">香水彩妆</a>
+                                </div>
+                                <div class="linkname clearfix">
+                                    <p> <a href="product_list.html">卸妆 </a>
+                                        <a href="product_list.html">防晒</a>
+                                        <a href="product_list.html">BB</a>
+                                        <a href="product_list.html">女士香水</a>
+                                    </p>
+                                </div>
+                                <div class="menv_details"></div>
+                            </li>
+                            <li>
+                                <div class="menu_name">
+                                    <span>&lt;</span>
+                                    <a href="product_list.html">洗发护发</a>
+                                </div>
+                                <div class="linkname clearfix">
+                                    <p><a href="product_list.html">洗发</a>
+                                        <a href="product_list.html">护发</a>
+                                        <a href="product_list.html">沐浴</a>
+                                        <a href="product_list.html">润肤乳</a> </p>
+                                </div>
+                                <div class="menv_details"></div>
+                            </li>
+                            <li>
+                                <div class="menu_name">
+                                    <span>&lt;</span>
+                                    <a href="product_list.html">女性护理</a>
+                                </div>
+                                <div class="linkname clearfix">
+                                    <p> <a href="product_list.html">洁面</a>
+                                        <a href="product_list.html">坚果炒货</a>
+                                        <a href="product_list.html">乳液</a>
+                                        <a href="product_list.html"> 面霜</a> </p>
+                                </div>
+                                <div class="menv_details"></div>
+                            </li>
+                            <li>
+                                <div class="menu_name">
+                                    <span>&lt;</span>
+                                    <a href="product_list.html">男性护理</a>
+                                </div>
+                                <div class="linkname clearfix">
+                                    <p> <a href="product_list.html">洁面</a>
+                                        <a href="product_list.html">坚果炒货</a>
+                                        <a href="product_list.html">乳液</a>
+                                        <a href="product_list.html"> 面霜</a> </p>
+                                </div>
+                                <div class="menv_details"></div>
+                            </li>
+                            <li>
+                                <div class="menu_name">
+                                    <span>&lt;</span>
+                                    <a href="product_list.html">推荐品牌</a>
+                                </div>
+                                <div class="linkname clearfix">
+                                    <p> <a href="product_list.html">欧莱雅</a>
+                                        <a href="product_list.html"> 菲诗小铺</a>
+                                        <a href="product_list.html"> 雅诗兰黛</a> </p>
+                                </div>
+                                <div class="menv_details"></div>
+                            </li>
+                            <li>
+                                <div class="menu_name">
+                                    <span>&lt;</span>
+                                    <a href="product_list.html">女性护理</a>
+                                </div>
+                                <div class="linkname clearfix">
+                                    <p> <a href="product_list.html">洁面</a>
+                                        <a href="product_list.html">坚果炒货</a>
+                                        <a href="product_list.html">乳液</a>
+                                        <a href="product_list.html"> 面霜</a> </p>
+                                </div>
+                                <div class="menv_details"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav_name clearfix">
+                    <!-- <li><a href="#" class="first_li">所有产品分类</a></li> -->
+                    <li><a href="index.html" class="shan">首页</a></li>
+                    <li><a href="product_list.html" class="shan">产品列表</a></li>
+                    <li> <a href="Limit_buy.html" class="shan">限时特卖</a> <em class="hot_icon "></em> </li>
+                    <li><a href="help.html" class="shan">联系我们</a></li>
+                    <li><a href="#" class="shan">鲜盟人才</a></li>
+                    <li><a href="#" class="shan">鲜盟金融</a></li>
+                    <li><a href="#" class="shan">鲜盟投资</a></li>
+                    <li><a href="Brands.html" class="shan">销售品牌</a></li>
+                </ul>
+                <!-- 轮播图左侧边栏 -->
+            </div>
+            <script>
+                $(".nav_bar_left_title").hover(function() {
+                    $(".nav_bar_left_items").show();
+
+                }, function() {
+                    $(".nav_bar_left_items").hide();
+                })
+                $(".menu_list li").hover(function() {
+                    $(".menv_Detail").show();
+                }, function() {
+                    $(".menv_Detail").hide();
+                })
+            </script>
+
+        </header>
         <!-- 进口食品、进口牛 -->
         <div class="import_products">
-                <em></em><a href="#">进口食品、进口牛</a>  &lt;   <a href="#">进口饼干/糕点</a>  
+            <em></em><a href="#">进口食品、进口牛</a> &lt; <a href="#">进口饼干/糕点</a>
         </div>
 
         <!-- 今日推荐 -->
         <div class="recommend">
-            <div class="hd"><em></em>今日推荐<ul class="clearfix"></ul></div>
+            <div class="hd"><em></em>今日推荐
+                <ul class="clearfix"></ul>
+            </div>
             <div class="bd">
-                    <ul id="recommend_ul">
-                        <li v-for="p of res.slice(0,5)">
-                            <div class="img"><a :href="p.href"><img :src="p.pic" width="120" height="120" /></a></div>
-                            <div class="pro_info">
+                <ul id="recommend_ul">
+                    <li v-for="p of res.slice(0,5)">
+                        <div class="img">
+                            <a :href="p.href"><img :src="p.pic" width="120" height="120" /></a>
+                        </div>
+                        <div class="pro_info">
                             <a href="#">{{p.title}}</a>
                             <p class="Price"><i>￥{{p.price.toFixed(2)}}</i></p>
                             <p class="Sales">热销：<b>{{p.sell.toFixed(2)}}</b>件</p>
-                            </div>
-                        </li>
-                        
-                    </ul>   
+                        </div>
+                    </li>
+
+                </ul>
             </div>
-        </div>  
+        </div>
         <script>
             // window.onload = function(){
-             $(".recommend").slide({titCell:".hd ul",mainCell:"#recommend_ul",autoPage:true,effect:"left",autoPlay:true,trigger:"click",vis:4})
+            $(".recommend").slide({
+                titCell: ".hd ul",
+                mainCell: "#recommend_ul",
+                autoPage: true,
+                effect: "left",
+                autoPlay: true,
+                trigger: "click",
+                vis: 4
+            })
 
             // }
         </script>
-        <!-- 条件筛选样式  -->  
+        <!-- 条件筛选样式  -->
         <div class="Filter">
             <div class="Filter_list clearfix">
                 <div class="Filter_title"><span>品牌：</span></div>
                 <div class="Filter_Entire"><a href="#">全部</a></div>
                 <div class="p_f_name infonav_hidden">
-                <p><a href="#" title="莱家/Loacker">莱家/Loacker </a>  
-                <a href="#" title="">丽芝士/Richeese</a>  
-                <a href="#" title="白色恋人/SHIROI KOIBITO ">白色恋人/SHIROI KOIBITO </a> 
-                <a href="#">爱时乐/Astick </a> 
-                <a href="#">利葡/LiPO </a> 
-                <a href="#">友谊牌/Tipo </a> 
-                <a href="#"> 三立/SANRITSU  </a>  
-                <a href="#"> 皇冠/Danisa </a>  </p>
-                <p><a href="#">丹麦蓝罐/Kjeldsens</a>
-                <a href="#">茱莉/Julie's </a>  
-                <a href="#">向日葵/Sunflower </a>  
-                <a href="#">福多/fudo </a> 
-                <a href="#">非凡农庄/PEPPER...  </a>
-                <a href="#">凯尔森/Kelsen </a> 
-                <a href="#"> 蜜兰诺/Milano </a> 
-                <a href="#">壹格/EgE  </a>  </p>
-                <p><a href="#">沃尔克斯/Walkers </a> 
-                <a href="#">澳门永辉/MACAU...</a>  
-                <a href="#" title="莱家/Loacker">莱家/Loacker </a>  
-                <a href="#" title="">丽芝士/Richeese</a>  
-                <a href="#" title="白色恋人/SHIROI KOIBITO ">白色恋人/SHIROI KOIBITO </a> 
-                <a href="#">爱时乐/Astick </a> 
-                <a href="#">利葡/LiPO </a> 
-                <a href="#">友谊牌/Tipo </a>  </p>
-                <p><a href="#"> 三立/SANRITSU  </a>  
-                <a href="#"> 皇冠/Danisa </a>  
-                <a href="#">丹麦蓝罐/Kjeldsens</a>
-                <a href="#">茱莉/Julie's </a>  
-                <a href="#">向日葵/Sunflower </a>  
-                <a href="#">福多/fudo </a> 
-                <a href="#">非凡农庄/PEPPER...  </a>
-                <a href="#">凯尔森/Kelsen </a>  </p>
-                <p><a href="#"> 蜜兰诺/Milano </a> 
-                <a href="#">壹格/EgE  </a>  
-                <a href="#">沃尔克斯/Walkers </a> 
-                <a href="#">澳门永辉/MACAU...</a>  
-                    <a href="#" title="莱家/Loacker">莱家/Loacker </a>  
-                <a href="#" title="">丽芝士/Richeese</a>  
-                <a href="#" title="白色恋人/SHIROI KOIBITO ">白色恋人/SHIROI KOIBITO </a> 
-                <a href="#">爱时乐/Astick </a>  </p>
-                
+                    <p><a href="#" title="莱家/Loacker">莱家/Loacker </a>
+                        <a href="#" title="">丽芝士/Richeese</a>
+                        <a href="#" title="白色恋人/SHIROI KOIBITO ">白色恋人/SHIROI KOIBITO </a>
+                        <a href="#">爱时乐/Astick </a>
+                        <a href="#">利葡/LiPO </a>
+                        <a href="#">友谊牌/Tipo </a>
+                        <a href="#"> 三立/SANRITSU  </a>
+                        <a href="#"> 皇冠/Danisa </a> </p>
+                    <p><a href="#">丹麦蓝罐/Kjeldsens</a>
+                        <a href="#">茱莉/Julie's </a>
+                        <a href="#">向日葵/Sunflower </a>
+                        <a href="#">福多/fudo </a>
+                        <a href="#">非凡农庄/PEPPER...  </a>
+                        <a href="#">凯尔森/Kelsen </a>
+                        <a href="#"> 蜜兰诺/Milano </a>
+                        <a href="#">壹格/EgE  </a> </p>
+                    <p><a href="#">沃尔克斯/Walkers </a>
+                        <a href="#">澳门永辉/MACAU...</a>
+                        <a href="#" title="莱家/Loacker">莱家/Loacker </a>
+                        <a href="#" title="">丽芝士/Richeese</a>
+                        <a href="#" title="白色恋人/SHIROI KOIBITO ">白色恋人/SHIROI KOIBITO </a>
+                        <a href="#">爱时乐/Astick </a>
+                        <a href="#">利葡/LiPO </a>
+                        <a href="#">友谊牌/Tipo </a> </p>
+                    <p><a href="#"> 三立/SANRITSU  </a>
+                        <a href="#"> 皇冠/Danisa </a>
+                        <a href="#">丹麦蓝罐/Kjeldsens</a>
+                        <a href="#">茱莉/Julie's </a>
+                        <a href="#">向日葵/Sunflower </a>
+                        <a href="#">福多/fudo </a>
+                        <a href="#">非凡农庄/PEPPER...  </a>
+                        <a href="#">凯尔森/Kelsen </a> </p>
+                    <p><a href="#"> 蜜兰诺/Milano </a>
+                        <a href="#">壹格/EgE  </a>
+                        <a href="#">沃尔克斯/Walkers </a>
+                        <a href="#">澳门永辉/MACAU...</a>
+                        <a href="#" title="莱家/Loacker">莱家/Loacker </a>
+                        <a href="#" title="">丽芝士/Richeese</a>
+                        <a href="#" title="白色恋人/SHIROI KOIBITO ">白色恋人/SHIROI KOIBITO </a>
+                        <a href="#">爱时乐/Astick </a> </p>
+
                 </div>
                 <p class="infonav_more"><a href="#" class="more" onclick="infonav_more_down(0);return false;">更多<em class="pullup"></em></a></p>
             </div>
             <div class="Filter_list clearfix">
-            <div class="Filter_title"><span>产地：</span></div>
-            <div class="Filter_Entire"><a href="#">全部</a></div>
-            <div class="p_f_name">
-                <a href="#">中国大陆</a>     
-                <a href="#">中国台湾</a>     
-                <a href="#">中国香港</a>     
-                <a href="#">中国澳门</a>     
-                <a href="#">日本</a>     
-                <a href="#">韩国</a>     
-                <a href="#">越南</a>    
-                <a href="#">泰国</a>
-            </div>
-            </div>
-            <div class="Filter_list clearfix">
-            <div class="Filter_title"><span>包装方式：</span></div>
-            <div class="Filter_Entire"><a href="#">全部</a></div>
-            <div class="p_f_name">
-            <a href="#">袋装</a><a href="#">盒装</a><a href="#">罐装</a><a href="#">礼盒装</a><a href="#">散装(称重)</a>
-            </div>
+                <div class="Filter_title"><span>产地：</span></div>
+                <div class="Filter_Entire"><a href="#">全部</a></div>
+                <div class="p_f_name">
+                    <a href="#">中国大陆</a>
+                    <a href="#">中国台湾</a>
+                    <a href="#">中国香港</a>
+                    <a href="#">中国澳门</a>
+                    <a href="#">日本</a>
+                    <a href="#">韩国</a>
+                    <a href="#">越南</a>
+                    <a href="#">泰国</a>
+                </div>
             </div>
             <div class="Filter_list clearfix">
-            <div class="Filter_title"><span>价格：</span></div>
-            <div class="Filter_Entire"><a href="#">全部</a></div>
-            <div class="p_f_name">
-                <a href="#">0-50</a><a href="#">50-150</a><a href="#">150-500</a><a href="#">500-1000</a><a href="#">1000以上</a>
+                <div class="Filter_title"><span>包装方式：</span></div>
+                <div class="Filter_Entire"><a href="#">全部</a></div>
+                <div class="p_f_name">
+                    <a href="#">袋装</a><a href="#">盒装</a><a href="#">罐装</a><a href="#">礼盒装</a><a href="#">散装(称重)</a>
+                </div>
             </div>
+            <div class="Filter_list clearfix">
+                <div class="Filter_title"><span>价格：</span></div>
+                <div class="Filter_Entire"><a href="#">全部</a></div>
+                <div class="p_f_name">
+                    <a href="#">0-50</a><a href="#">50-150</a><a href="#">150-500</a><a href="#">500-1000</a><a href="#">1000以上</a>
+                </div>
             </div>
         </div>
         <script>
-        //点击效果start
-        //    window.onload = function(){
-            function infonav_more_down(index)
-            {
-                var inHeight = ($("div[class='p_f_name infonav_hidden']").eq(index).find('p').length)*30;//先设置了P的高度，然后计算所有P的高度
-                console.log(1,inHeight);
-                if(inHeight > 60){
-                $("div[class='p_f_name infonav_hidden']").eq(index).animate({height:inHeight});
-                $(".infonav_more").eq(index).replaceWith('<p class="infonav_more"><a class="more"  onclick="infonav_more_up('+index+');return false;" href="javascript:">收起<em class="pulldown"></em></a></p>');
-                }else{
-                return false;
+            //点击效果start
+            //    window.onload = function(){
+            function infonav_more_down(index) {
+                var inHeight = ($("div[class='p_f_name infonav_hidden']").eq(index).find('p').length) * 30; //先设置了P的高度，然后计算所有P的高度
+                console.log(1, inHeight);
+                if (inHeight > 60) {
+                    $("div[class='p_f_name infonav_hidden']").eq(index).animate({
+                        height: inHeight
+                    });
+                    $(".infonav_more").eq(index).replaceWith('<p class="infonav_more"><a class="more"  onclick="infonav_more_up(' + index + ');return false;" href="javascript:">收起<em class="pulldown"></em></a></p>');
+                } else {
+                    return false;
                 }
             }
-            function infonav_more_up(index)
-            {
+
+            function infonav_more_up(index) {
                 var infonav_height = 85;
-                $("div[class='p_f_name infonav_hidden']").eq(index).animate({height:infonav_height});
-                $(".infonav_more").eq(index).replaceWith('<p class="infonav_more"> <a class="more" onclick="infonav_more_down('+index+');return false;" href="javascript:">更多<em class="pullup"></em></a></p>');
+                $("div[class='p_f_name infonav_hidden']").eq(index).animate({
+                    height: infonav_height
+                });
+                $(".infonav_more").eq(index).replaceWith('<p class="infonav_more"> <a class="more" onclick="infonav_more_down(' + index + ');return false;" href="javascript:">更多<em class="pullup"></em></a></p>');
             }
-            
-        //    }
+
+            //    }
             // function onclick(event) {
             //     info_more_down();
             //     return false;
             // }
-        
-        //点击效果end  
+
+            //点击效果end
         </script>
         <!-- 中间商品 -->
-        <div class="scrollsidebar side_green clearfix" id="scrollsidebar"> 
+        <div class="scrollsidebar side_green clearfix" id="scrollsidebar">
             <div class="show_btn" id="rightArrow">
                 <span></span>
-            </div> 
-            <!--左侧样式--> 
-            <div class="page_left_style side_content"> 
-                <!--浏览记录--> 
+            </div>
+            <!--左侧样式-->
+            <div class="page_left_style side_content">
+                <!--浏览记录-->
                 <div class="side_title">
-                <a title="隐藏" class="close_btn"><span></span></a>
-                </div> 
-                <div class="side_list"> 
-                    <div class="Record"> 
-                        <div class="title_name">
-                        浏览记录
-                        </div> 
-                        <ul id="record-ul"> 
-                            <li v-for="p of res.slice(5,9)"> 
-                                <a :href="p.href"> <p><img :src="p.pic" /></p> 
-                                    <p class="p_name">商品名称</p> </a> <p><span class="p_Price left">价格:<b>￥{{p.price.toFixed(2)}}</b>
-                                    </span><span class="p_Sales right">销量：{{p.sell}}件</span></p>
-                            </li> 
-                           
-                        </ul> 
-                    </div> 
+                    <a title="隐藏" class="close_btn"><span></span></a>
                 </div>
-           
-            <!--列表样式属性--> 
-                <div class="pro_ranking"> 
+                <div class="side_list">
+                    <div class="Record">
+                        <div class="title_name">
+                            浏览记录
+                        </div>
+                        <ul id="record-ul">
+                            <li v-for="p of res.slice(5,9)">
+                                <a :href="p.href">
+                                    <p><img :src="p.pic" /></p>
+                                    <p class="p_name">商品名称</p>
+                                </a>
+                                <p><span class="p_Price left">价格:<b>￥{{p.price.toFixed(2)}}</b>
+                                    </span><span class="p_Sales right">销量：{{p.sell}}件</span></p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!--列表样式属性-->
+                <div class="pro_ranking">
                     <div class="title_name">
-                    <em></em>销量排行
-                    </div> 
-                    <div class="ranking_list"> 
-                    <ul id="tabRank"> 
-                        <li class="t_p"  v-for="p of res.slice(0,10)"> 
-                            <em class="icon_ranking">{{p.pid}}</em> 
-                            <dt>
+                        <em></em>销量排行
+                    </div>
+                    <div class="ranking_list">
+                        <ul id="tabRank">
+                            <li class="t_p" v-for="p of res.slice(0,10)">
+                                <em class="icon_ranking">{{p.pid}}</em>
+                                <dt>
                                 <h3><a :href="p.href">{{p.title}}</a></h3>
-                            </dt> 
-                            <dd class="clearfix"> 
-                                <a :href="p.href"><img :src="p.pic" width="90" height="90" /></a> 
-                                <span class="Price">￥{{p.price.toFixed(2)}}</span> 
-                            </dd> 
-                        </li> 
-                    </ul> 
-                        </div> 
+                            </dt>
+                                <dd class="clearfix">
+                                    <a :href="p.href"><img :src="p.pic" width="90" height="90" /></a>
+                                    <span class="Price">￥{{p.price.toFixed(2)}}</span>
+                                </dd>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-                <script type="text/javascript">
-                 window.onload = function(){
-                        jQuery("#tabRank li").hover(function(){ jQuery(this).addClass("on").siblings().removeClass("on")},function(){ });
+            <script type="text/javascript">
+                window.onload = function() {
+                    jQuery("#tabRank li").hover(function() {
+                        jQuery(this).addClass("on").siblings().removeClass("on")
+                    }, function() {});
 
-                 }
-                  
-                    // jQuery("#tabRank").slide({ titCell:"dt h3",autoPlay:false,effect:"left",delayTime:300 });
-                </script> 
+                }
+
+                // jQuery("#tabRank").slide({ titCell:"dt h3",autoPlay:false,effect:"left",delayTime:300 });
+            </script>
 
             <!-- 右侧 -->
-            <div class="page_right_style"> 
-                    <div id="Sorted"> 
-                     <div class="Sorted"> 
-                      <div class="Sorted_style"> 
-                       <a href="#" class="on">综合<i class="iconfont icon-fold"></i></a> 
-                       <a href="#">销量<i class="iconfont icon-fold"></i></a> 
-                       <a href="#">价格<i class="iconfont icon-fold"></i></a> 
-                       <a href="#">新品<i class="iconfont icon-fold"></i></a> 
-                      </div> 
-                      <!--产品搜索--> 
-                      <div class="products_search"> 
-                       <input name="" type="text" class="search_text" value="请输入你要搜索的产品" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" />
-                       <input name="" type="submit" value="" class="search_btn" /> 
-                      </div> 
-                      <!--页数--> 
-                      <div class="s_Paging"> 
-                       <span> 1/12</span> 
-                       <a href="#" class="on">&lt;</a> 
-                       <a href="#">&gt;</a> 
-                      </div> 
-                     </div> 
-                    </div> 
-                    <!--产品列表样式--> 
-                    <div class="p_list  clearfix"> 
-                     <ul id="p_list_ul"> 
-                      <li class="gl-item" v-for="p of res.slice(9,24)"> <em class="icon_special tejia"></em> 
-                       <div class="Borders"> 
-                        <div class="img">
-                         <a :href="p.href"><img :src="p.pic" style="width:220px;height:220px" /></a>
-                        </div> 
-                        <div class="Price">
-                         <b>&yen;{{p.price.toFixed(2)}}</b>
-                         <span>[&yen;49.01/500g]</span>
-                        </div> 
-                        <div class="name">
-                         <a href="p.href">{{p.title}}</a>
-                        </div> 
-                        <div class="Review">
-                         已有
-                         <a href="#">{{p.sell}}</a>评论
-                        </div> 
-                        <div class="p-operate"> 
-                         <a href="#" class="p-o-btn Collect"><em></em>收藏</a> 
-                         <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a> 
-                        </div> 
-                       </div> </li> 
-                     
-                     </ul> 
-                     
-                    </div> 
-                    <!-- 底部分页 -->
-                    <div class="Paging"> 
-                            <div class="Pagination">  
-                                <a href="#">首页</a>    
-                                <a href="#" class="pn-prev">&lt;上一页</a> 
-                                <a href="#" class="on">1</a> 
-                                <a href="#">2</a> 
-                                <a href="#">3</a> 
-                                <a href="#">4</a> 
-                                <a href="#">下一页&gt;</a> 
-                                <a href="#">尾页</a> 
-                            </div> 
-                       </div> 
-            </div> 
-           
-        </div> 
-         
-         
+            <div class="page_right_style">
+                <div id="Sorted">
+                    <div class="Sorted">
+                        <div class="Sorted_style">
+                            <a href="#" class="on">综合<i class="iconfont icon-fold"></i></a>
+                            <a href="#">销量<i class="iconfont icon-fold"></i></a>
+                            <a href="#">价格<i class="iconfont icon-fold"></i></a>
+                            <a href="#">新品<i class="iconfont icon-fold"></i></a>
+                        </div>
+                        <!--产品搜索-->
+                        <div class="products_search">
+                            <input name="" type="text" class="search_text" value="请输入你要搜索的产品" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" />
+                            <input name="" type="submit" value="" class="search_btn" />
+                        </div>
+                        <!--页数-->
+                        <div class="s_Paging">
+                            <span> 1/12</span>
+                            <a href="#" class="on">&lt;</a>
+                            <a href="#">&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <!--产品列表样式-->
+                <div class="p_list  clearfix">
+                    <ul id="p_list_ul">
+                        <li class="gl-item" v-for="p of res.slice(9,24)"> <em class="icon_special tejia"></em>
+                            <div class="Borders">
+                                <div class="img">
+                                    <a :href="p.href"><img :src="p.pic" style="width:220px;height:220px" /></a>
+                                </div>
+                                <div class="Price">
+                                    <b>&yen;{{p.price.toFixed(2)}}</b>
+                                    <span>[&yen;49.01/500g]</span>
+                                </div>
+                                <div class="name">
+                                    <a href="p.href">{{p.title}}</a>
+                                </div>
+                                <div class="Review">
+                                    已有
+                                    <a href="#">{{p.sell}}</a>评论
+                                </div>
+                                <div class="p-operate">
+                                    <a href="#" class="p-o-btn Collect"><em></em>收藏</a>
+                                    <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- 底部分页 -->
+                <div class="Paging">
+                    <div class="Pagination">
+                        <a href="#">首页</a>
+                        <a href="#" class="pn-prev">&lt;上一页</a>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">下一页&gt;</a>
+                        <a href="#">尾页</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
     </div>
- 
+
     <!-- 5 右侧菜单栏购物车区域 -->
     <div class="fixedBox">
-            <ul class="flxedBoxList">
-                <li>
-                    <a href="#" class="fixedBox-a">
-                        <em class="iconfont icon-yonghu"></em>
-                        <span class="user">用户</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="fixedBox-a">
-                        <em class="iconfont icon-cart  gwc"></em>
-                        <span>购物车</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="fixedBox-a">
-                        <em class="iconfont icon-service"></em>
-                        <span class="user">客服</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="fixedBox-a">
-                        <em class="iconfont icon-erweima"></em>
-                        <span>微信</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="fixedBox-a">
-                        <em class="iconfont  icon-shoucang"></em>
-                        <span class="user">收藏</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="fixedBox-a">
-                        <em class="iconfont  icon-zuji"></em>
-                        <span>足迹</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="fixedBox-a">
-                        <em class="iconfont  icon-fankui"></em>
-                        <span class="user">反馈</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="fixedBox-a">
-                        <em class="iconfont icon-top"></em>
-                        <span>返回顶部</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="flxedBoxList">
+            <li>
+                <a href="#" class="fixedBox-a">
+                    <em class="iconfont icon-yonghu"></em>
+                    <span class="user">用户</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fixedBox-a">
+                    <em class="iconfont icon-cart  gwc"></em>
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fixedBox-a">
+                    <em class="iconfont icon-service"></em>
+                    <span class="user">客服</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fixedBox-a">
+                    <em class="iconfont icon-erweima"></em>
+                    <span>微信</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fixedBox-a">
+                    <em class="iconfont  icon-shoucang"></em>
+                    <span class="user">收藏</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fixedBox-a">
+                    <em class="iconfont  icon-zuji"></em>
+                    <span>足迹</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fixedBox-a">
+                    <em class="iconfont  icon-fankui"></em>
+                    <span class="user">反馈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="fixedBox-a">
+                    <em class="iconfont icon-top"></em>
+                    <span>返回顶部</span>
+                </a>
+            </li>
+        </ul>
+    </div>
     <footer></footer>
     <script type="text/javascript" src="js/header.js"></script>
     <script type="text/javascript" src="js/footer.js"></script>
@@ -689,4 +718,5 @@
     <!-- <script src="js/indexSlide_hover.js"></script> -->
     <script src="js/product_list.js"></script>
 </body>
+
 </html>
