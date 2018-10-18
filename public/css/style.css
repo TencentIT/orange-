@@ -111,9 +111,11 @@ body {
 .text-gray {
     color: #C9C9C9;
 }
+
 .top a.login {
     color: #EB000E;
 }
+
 .top span.login {
     color: #EB000E;
 }
@@ -3619,10 +3621,31 @@ a.fl-pro-details {
 .Brands_list li.Brands_info .logo_style {
     margin: 8px;
     border: 1px solid #ddd;
+    position: relative;
 }
 
-.Brands_list li.Brands_info .logo_style:hover {
-    border: 1px solid #F90
+.Brands_list li.Brands_info .logo_style:hover span.hide-box {
+    box-sizing: border-box;
+    border: 1px solid #F90;
+    height: 156px;
+    line-height: 156px;
+    font-size: 20px;
+    /* text-align: center; */
+    color: #fff;
+    /* background: rgba(0, 0, 0, .5); */
+    background: #f90;
+    opacity: .5;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.Brands_list li.Brands_info .logo_style span.hide-box {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 184px;
+    height: 0px;
+    font-size: 0px;
 }
 
 .Brands_list li.Brands_info .logo_style h4 {
@@ -3760,8 +3783,12 @@ a.fl-pro-details {
     font-weight: bold;
     padding: 0 10px;
 }
-.gwc .s_cart{ background:#FFFFFF}
-  .gwc .dorpdown-layer {
+
+.gwc .s_cart {
+    background: #FFFFFF
+}
+
+.gwc .dorpdown-layer {
     display: none;
     right: -1px;
     margin-top: -5px;
@@ -3771,7 +3798,8 @@ a.fl-pro-details {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     position: absolute;
-}  
+}
+
 .gwc .dorpdown-layer .spacer {
     position: absolute;
     right: 0;
@@ -3780,40 +3808,49 @@ a.fl-pro-details {
     height: 12px;
     background: #FFF;
 }
-.gwc .prompt {padding: 10px 15px;}
-.gwc .dorpdown-layer .img{ 
+
+.gwc .prompt {
+    padding: 10px 15px;
+}
+
+.gwc .dorpdown-layer .img {
     /* text-align: center; */
     margin-top: 13px;
 }
-.gwc .dorpdown-layer .img img{
+
+.gwc .dorpdown-layer .img img {
     width: 40px;
     height: 40px;
     /* margin-top: 12px; */
-    vertical-align:top;
-
+    vertical-align: top;
 }
+
 .p_s_list {
     padding: 3px 0;
 }
 
-.p_s_list .img{
+.p_s_list .img {
     float: left;
 }
-.p_s_list .content{
+
+.p_s_list .content {
     float: left;
 }
-.p_s_list .Operations{
+
+.p_s_list .Operations {
     float: right;
 }
 
-.p_s_list li{
-border-bottom: 1px solid #D4D4D4;
-line-height: 24px;
+.p_s_list li {
+    border-bottom: 1px solid #D4D4D4;
+    line-height: 24px;
 }
+
 .p_s_list li .Price {
     color: #FF0000;
     padding-right: 5px;
 }
+
 .dorpdown-layer .Shopping_style {
     padding: 5px;
     overflow: hidden;
@@ -3825,6 +3862,7 @@ line-height: 24px;
     float: left;
     line-height: 29px;
 }
+
 .gwc .dorpdown-layer a.Shopping {
     float: right;
     height: 29px;
