@@ -30,7 +30,7 @@
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-        <div class="load_title">正在加载***橘色商城***站点
+        <div class="load_title">正在加载***鲜盟商城***站点
             <span>V1.0</span></div>
     </div>
     <div class="jq22-container" style="padding-top:100px">
@@ -69,34 +69,34 @@
                             </div>
                         </form>
                         <!-- 注册 -->
-                        <form>
-                            <div class="sign-up-htm">
-                                <div class="group">
-                                    <label for="user" class="label">用户名</label>
-                                    <input id="reg_uname" type="text" class="input" name="reg_uname" placeholder="用户名必须介于3~9位之间!">
-                                    <span class="user_msg"></span>
-                                </div>
-                                <div class="group">
-                                    <label for="pass" class="label">密码</label>
-                                    <input id="reg_upwd" type="password" name="reg_upwd" class="input" data-type="password" placeholder="密码6-16位，由字母（区分大小写）、数字、符号组成">
-                                    <span class="pwd_msg"> </span>
-                                </div>
-                                <div class="group">
-                                    <label for="pass" class="label">确认密码</label>
-                                    <input type="password" class="input" data-type="password" id="reg_rpwd" placeholder="请确认密码" onblur="check_rpwd()">
-                                    <span class="rpwd_msg"> </span>
-                                </div>
-                                <div class="group">
-                                    <label for="pass" class="label">邮箱地址</label>
-                                    <input id="pass" type="text" class="input" onblur="check_mail()" name="mail" placeholder="请输入邮箱地址">
-                                    <span class="mail_msg"> </span>
-                                </div>
-                                <div class="group">
-                                    <input type="button" name="submit" value="注册" onclick="post_reg_msg()" class="form_submit button" id="form_submit">
-                                </div>
 
+                        <div class="sign-up-htm">
+                            <div class="group">
+                                <label for="user" class="label">用户名</label>
+                                <input id="reg_uname" type="text" class="input" name="reg_uname" placeholder="用户名必须介于3~9位之间!">
+                                <span class="user_msg"></span>
                             </div>
-                        </form>
+                            <div class="group">
+                                <label for="pass" class="label">密码</label>
+                                <input id="reg_upwd" type="password" name="reg_upwd" class="input" data-type="password" placeholder="密码6-16位，由字母（区分大小写）、数字、符号组成">
+                                <span class="pwd_msg"> </span>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">确认密码</label>
+                                <input type="password" class="input" data-type="password" id="reg_rpwd" placeholder="请确认密码" onblur="check_rpwd()">
+                                <span class="rpwd_msg"> </span>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">邮箱地址</label>
+                                <input id="pass" type="text" class="input" onblur="check_mail()" name="mail" placeholder="请输入邮箱地址">
+                                <span class="mail_msg"> </span>
+                            </div>
+                            <div class="group">
+                                <button onclick="postregmsg()" class="form_submit button" id="form_submit">注册</button>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
 
@@ -147,10 +147,10 @@
         }
 
         jigsaw.init(document.getElementById('captcha'), function() {
-            document.getElementById('msg').innerHTML = '您的滑动速度超过了99%的人！'
-            f = true;
-        })
-        console.log(login_state, f)
+                document.getElementById('msg').innerHTML = '您的滑动速度超过了99%的人！'
+                f = true;
+            })
+            // console.log(login_state, f)
 
         // if(login_state == 1 && f==true){
         // 	alert("登录成功")
@@ -190,7 +190,7 @@
                 check_uname();
             else {
                 $("#form_submit").addClass("fail");
-                $("#form_submit").attr("disabled", "disabled");
+                //  $("#form_submit").attr("disabled", "disabled");
             }
         });
         $("#reg_upwd").blur(function(e) {
@@ -204,7 +204,7 @@
                 check_upwd();
             else {
                 $("#form_submit").addClass("fail");
-                $("#form_submit").attr("disabled", "disabled");
+                // // $("#form_submit").attr("disabled", "disabled");
             }
         })
 
@@ -214,29 +214,29 @@
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     // console.log(222)
                     var res = xhr.responseText;
-                    console.log(res);
+                    // console.log(res);
                     if (res == 'username_exist') {
                         $("#form_submit").addClass("fail");
                         $("#reg_uname").next().html(`<img src='images/err.png'>用户名已经存在`);
-                        $("#form_submit").attr("disabled", "disabled");
+                        // // $("#form_submit").attr("disabled", "disabled");
                         return;
                     } else if (res == "username_not_exist") {
                         $("#form_submit").removeClass("fail");
                         $("#reg_uname").next().html(`<img src='images/ok.png'>用户名可以注册`);
-                        $("#form_submit").attr("disabled", "true");
+                        // $("#form_submit").attr("disabled", "true");
                     } else {
                         $("#form_submit").addClass("fail");
                         $("#reg_uname").next().html(`<img src='images/err.png'>用户名不可以为空`);
-                        $("#form_submit").attr("disabled", "disabled");
+                        // // $("#form_submit").attr("disabled", "disabled");
                     }
                 }
             }
             xhr.open("post", "/index/check_uname", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-            var uname = document.getElementById("reg_uname").value;
-            var formData = "uname=" + uname;
-            console.log(formData);
+            var reg_uname = document.getElementById("reg_uname").value;
+            var formData = "reg_uname=" + reg_uname;
+            // console.log(formData);
             xhr.send(formData);
         }
 
@@ -248,43 +248,44 @@
                 // alert("相同")
                 $("#form_submit").removeClass("fail");
                 $("#form_submit").addClass("fail");
-                $("#submit").attr("disabled", "disabled");
+                // // $("#submit").attr("disabled", "disabled");
             } else {
                 // alert("不同")
                 $("#form_submit").removeClass("fail");
-                $("#submit").attr("disabled", "true");
+                // $("#submit").attr("disabled", "true");
             }
 
         }
 
-        function reg_post_msg() {
-            var xhr = createXhr();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // console.log(222)
-                    var res = xhr.responseText;
-                    console.log(res);
-                }
-            }
-            xhr.open("post", "/index/register", true);
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        // function reg_post_msg() {
+        //     alert(2);
+        //     var xhr = createXhr();
+        //     xhr.onreadystatechange = function() {
+        //         if (xhr.readyState == 4 && xhr.status == 200) {
+        //             // console.log(222)
+        //             var res = xhr.responseText;
+        //             console.log(res);
+        //         }
+        //     }
+        //     xhr.open("post", "/index/register", true);
+        //     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-            var uname = document.getElementById("reg_uname").value;
-            var upwd = document.getElementById("reg_upwd").value;
+        //     var uname = document.getElementById("reg_uname").value;
+        //     var upwd = document.getElementById("reg_upwd").value;
 
-            var formData = "uname=" + uname + "&upwd=" + upwd;
-            console.log(formData);
-            xhr.send(formData);
-        }
+        //     var formData = "uname=" + uname + "&upwd=" + upwd;
+        //     console.log(formData);
+        //     xhr.send(formData);
+        // }
 
         function check_rpwd() {
             if ($("#reg_rpwd").val() != $("#reg_upwd").val()) {
                 $(".rpwd_msg").html(`<img src='images/err.png'>两次输入的密码不一致`);
                 $("#form_submit").addClass("fail");
-                $("#submit").attr("disabled", "disabled");
+                // // $("#submit").attr("disabled", "disabled");
             } else {
                 $(".rpwd_msg").html(`<img src='images/ok.png'>`);
-                $("#submit").attr("disabled", "true");
+                // $("#submit").attr("disabled", "true");
             }
         }
 
@@ -299,31 +300,37 @@
             var mail_txt = $(".checkMail").next().text();
             if (flag) {
                 $("#form_submit").removeClass("fail");
-                $("#form_submit").attr("disabled", "true");
+                // $("#form_submit").attr("disabled", "true");
             } else {
                 $("#form_submit").addClass("fail");
-                $("#form_submit").attr("disabled", "disabled");
+                // // $("#form_submit").attr("disabled", "disabled");
             }
         }
 
-        function post_reg_msg() {
+        function postregmsg() {
+            alert(111);
             var xhr = createXhr();
+            alert(xhr)
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    // console.log(222)
+                    // alert(222)
                     var res = xhr.responseText;
-                    console.log(res);
+                    window.location.href = "login.html";
+                    // alert(res);
                 }
             }
-            xhr.open("post", "/index/register", true);
+            xhr.open("post", "index/register", true);
+            // alert(333)
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
             var uname = document.getElementById("reg_uname").value;
             var upwd = document.getElementById("reg_upwd").value;
 
             var formData = "uname=" + uname + "&upwd=" + upwd;
-            console.log(formData);
+            alert(formData);
+            // alert(1);
             xhr.send(formData);
+            // alert(444)
         }
     </script>
 </body>

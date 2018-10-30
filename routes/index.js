@@ -31,51 +31,44 @@ router.get("/xmdpAreas",(req,res)=>{
 // 注册
 router.post("/register",(req,res)=>{
 	var obj = req.body;
-	// console.log(obj);
+	console.log(2,obj);
 	var uname = obj.uname;
 	var upwd = obj.upwd;
-	// console.log(uname,upwd);
+  console.log(3,uname,upwd);
+if(uname=="" || upwd=="") {
+  console.log("uname cannot null .reg");
+  return;
+}
 
-	var sql = `select * from   orange_user where uname=?`;
-	pool.query(sql,[uname],(err,result)=>{
-		// console.log(3,result);
-		if(err) throw err;
-		if(result.length>0){
-			res.send('username_exist');
-			return;
-		}
-		else{
-			var sql = `INSERT INTO  orange_user (uname ,upwd) VALUES (?,?)`;
-			pool.query(sql,[uname,upwd],(err,result)=>{
-				if(err) throw err;
-				else
-					res.send('reg_suc');
-				// res.send({code: 200, msg: 'register suc'});
-			})	
-		}
-	});	
-
-	
+  var sql = `INSERT INTO  orange_user (uname ,upwd) VALUES (?,?)`;
+  pool.query(sql,[uname,upwd],(err,result)=>{
+    if(err) throw err;
+    else
+      res.send('reg_suc');
+    // res.send({code: 200, msg: 'register suc'});
+  })	
 })
 // 检查用户名
 router.post("/check_uname",(req,res)=>{
+  console.log(1,req.body);
 	var obj = req.body;
 	// console.log(obj);
-	var uname = obj.uname;
+	var reg_uname = obj.reg_uname;
 	// console.log(uname);
-	if(!uname){
+	if(reg_uname==""){
 		res.send('username_null');
 		return;
 	}
 
 	var sql = `select * from   orange_user where uname=?`;
-	pool.query(sql,[uname],(err,result)=>{
+	pool.query(sql,[reg_uname],(err,result)=>{
 		if(err) throw err;
 		if(result.length>0){
 			res.send('username_exist');
 			return;
 		}else{
-			res.send('username_not_exist');
+      res.send('username_not_exist');
+      
 		}
 	});	
 })

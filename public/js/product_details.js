@@ -44,7 +44,7 @@ $prev.click(function(){
     
 })
 // 放大镜
-var $mImg = $(".card-img-top");
+var $mImg = $(".card-img-top-fdj");
 $lgDiv = $("#div-lg");
 // console.log(2,$mImg);
 

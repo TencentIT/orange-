@@ -42,6 +42,10 @@ footer iframe {
     min-height: 470px;
 }
 
+#rx-ul {
+    position: absolute;
+}
+
 
 /******************header.html样式***********************/
 
@@ -944,6 +948,7 @@ a.tj-buy {
 }
 
 .right-rx-product .rx-products-list {
+    position: relative;
     border: 1px solid #ddd;
     border-top: 0;
 }
