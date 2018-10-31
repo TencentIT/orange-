@@ -497,7 +497,7 @@ header.top_header {
 
 header.top_header>div.menu {
     position: absolute;
-    top: 129px;
+    top: 132px;
     left: 0px;
     z-index: 1000;
 }
@@ -1487,7 +1487,7 @@ a.fl-pro-details {
 
 .fixedBox .flxedBoxList {
     width: 45px;
-    height: 556px;
+    height: 568px;
     position: relative;
     margin-top: 120px;
     right: 40px;
@@ -1522,7 +1522,7 @@ a.fl-pro-details {
     display: block;
     width: 40px;
     height: 30px;
-    margin: 0 auto;
+    margin: 0 auto 2px;
     font-size: 30px;
 }
 

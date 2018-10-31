@@ -197,3 +197,7 @@ $(".menu_list li").hover(function() {
 //     rxUl.css("left",left)
 //   },100)
 // })
+
+$(document).ready(function(){
+
+})
