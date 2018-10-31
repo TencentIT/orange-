@@ -40,12 +40,9 @@ $(function(){
           console.log(111)
           var html=`<a href="${pno>=1?pno:1}" class="pn-prev">上一页</a>`;
           for(var i=1;i<=pageCount;i++){
-            // html+=`<li class="page-item ${pno==i-1?'active':''}">
-            //   <a class="page-link ${pno!=i-1?'bg-transparent':'border'}" href="#">${i}</a>
-            //   </li>`;
             html+=`<a href="#" class="${pno!=i-1?'':'on'}">${i}</a>`
           }
-          html+=`<a href="${pno<pageCount?parseInt(pno)+1:pno}">下一页</a>`;
+          html+=`<a href="${pno<pageCount-1?parseInt(pno)+1:pno}">下一页</a>`;
           var $page=$(".Pagination")
           $page.html(html);
           if(pno==0)
@@ -63,20 +60,19 @@ $(function(){
   $(".Pagination").on("click","a",function(e){
     e.preventDefault();
     var $a=$(this);
-    // if(!$a.parent().is(".page_disabled,.on")){
-      if($a.html()=="上一页" ){
-        var pno=$(this).attr("href")-1;
-        alert(pno);
-      }else if($a.html()=="下一页"){
-        var pno=parseInt($(this).attr("href"));
-        alert(pno);
-         
-      }else{
-        var pno=$a.html()-1;
-        alert(pno);
-      }
-      loadPage(pno);
+    if($a.html()=="上一页" ){
+      var pno=$(this).attr("href")-1;
+      alert(pno);
+    }else if($a.html()=="下一页"){
+      var pno=parseInt($(this).attr("href"));
+      alert(pno);
       
+    }else{
+      var pno=$a.html()-1;
+      alert(pno);
+    }
+    loadPage(pno);
+    
      
   })
 
