@@ -33,15 +33,16 @@ router.post("/register",(req,res)=>{
 	var obj = req.body;
 	console.log(2,obj);
 	var uname = obj.uname;
-	var upwd = obj.upwd;
-  console.log(3,uname,upwd);
+  var upwd = obj.upwd;
+  var email  =obj.email;
+  console.log(3,uname,upwd,email);
 if(uname=="" || upwd=="") {
   console.log("uname cannot null .reg");
   return;
 }
 
-  var sql = `INSERT INTO  orange_user (uname ,upwd) VALUES (?,?)`;
-  pool.query(sql,[uname,upwd],(err,result)=>{
+  var sql = `INSERT INTO  orange_user (uname ,upwd,email) VALUES (?,?,?)`;
+  pool.query(sql,[uname,upwd,email],(err,result)=>{
     if(err) throw err;
     else
       res.send('reg_suc');
