@@ -35,23 +35,6 @@ $(document).ready(function(){
 
  })
 
-//  $("input[type=checkbox][name=checkitems]").click(function(){
-//    var flag = true;
-//    $("input[type=checkbox][name=checkitems]").each(function(){
-//      if(!this.checkded){
-//        flag = false
-//      }
-//      if(flag){
-//       $("#CheckedAll").attr("checked",true)
-//      }else{
-//       $("#CheckedAll").attr("checked",false)
-//      }
-//    })
-
-//  })
-
-
-
 })
 
 //加载动画 等待所有加载  
@@ -59,6 +42,8 @@ $(window).load(function() {
   $('body').addClass('loaded');
   $('#loader-wrapper .load_title').remove();
 });
+
+
 
 
 

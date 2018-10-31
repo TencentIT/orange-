@@ -13,6 +13,7 @@ $(function(){
         dataType:"json",
         success:function(data){
           var {pno,pageCount,products}=data;
+          console.log(111,data);
           var html="";
           for(var {md,price,title,lid} of products){
             html+=`<div class="col-md-4 p-1">
@@ -37,34 +38,47 @@ $(function(){
           }
           $("#plist").html(html);
           console.log(111)
-          var html=`<li class="page-item"><a class="page-link bg-transparent" href="#">上一页</a></li>`;
+          var html=`<a href="${pno>=1?pno:1}" class="pn-prev">上一页</a>`;
           for(var i=1;i<=pageCount;i++){
-            html+=`<li class="page-item ${pno==i-1?'active':''}"><a class="page-link ${pno!=i-1?'bg-transparent':'border'}" href="#">${i}</a></li>`;
+            // html+=`<li class="page-item ${pno==i-1?'active':''}">
+            //   <a class="page-link ${pno!=i-1?'bg-transparent':'border'}" href="#">${i}</a>
+            //   </li>`;
+            html+=`<a href="#" class="${pno!=i-1?'':'on'}">${i}</a>`
           }
-          html+=`<li class="page-item"><a class="page-link bg-transparent" href="#">下一页</a></li>`;
-          var $page=$(".pagination")
+          html+=`<a href="${pno<pageCount?parseInt(pno)+1:pno}">下一页</a>`;
+          var $page=$(".Pagination")
           $page.html(html);
           if(pno==0)
-            $page.children(":first").addClass("disabled")
+            $page.children(":first").addClass("page_disabled")
           if(pno==pageCount-1)
-            $page.children(":last").addClass("disabled")
+            $page.children(":last").addClass("page_disabled")
+        },
+        error:function(){
+          alert("网络故障，！！请检查！");
         }
       })
     }
   }
   loadPage();
-  $(".pagination").on("click","a",function(e){
+  $(".Pagination").on("click","a",function(e){
     e.preventDefault();
     var $a=$(this);
-    if(!$a.parent().is(".disabled,.active")){
-      if($a.html()=="上一页"){
-        //var pno=?;
+    // if(!$a.parent().is(".page_disabled,.on")){
+      if($a.html()=="上一页" ){
+        var pno=$(this).attr("href")-1;
+        alert(pno);
       }else if($a.html()=="下一页"){
-        //var pno=?;
+        var pno=parseInt($(this).attr("href"));
+        alert(pno);
+         
       }else{
         var pno=$a.html()-1;
+        alert(pno);
       }
       loadPage(pno);
-    }
+      
+     
   })
+
+  
 })

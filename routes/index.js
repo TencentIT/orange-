@@ -36,7 +36,7 @@ router.post("/register",(req,res)=>{
   var upwd = obj.upwd;
   var email  =obj.email;
   console.log(3,uname,upwd,email);
-if(uname=="" || upwd=="") {
+if(uname=="" || upwd=="" || email == "") {
   console.log("uname_cannot_null_reg");
   res.send("regFail");
   return;
@@ -45,9 +45,10 @@ if(uname=="" || upwd=="") {
   var sql = `INSERT INTO  orange_user (uname ,upwd,email) VALUES (?,?,?)`;
   pool.query(sql,[uname,upwd,email],(err,result)=>{
     if(err) throw err;
-    else
-      res.send('reg_suc');
-    // res.send({code: 200, msg: 'register suc'});
+    else{
+      res.send('regSuc');
+    }
+  
   })	
 })
 // 检查用户名

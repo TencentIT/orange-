@@ -292,9 +292,12 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var res = xhr.responseText;
-                    window.location.href = "login.html";
                     if (res == "regFail") {
                         alert("注册失败,请重新注册哟");
+                        window.location.href = "login.html";
+                    }
+                    if (res == "regSuc") {
+                        alert("注册成功，即将返回登录界面请您登录哦^_^");
                         window.location.href = "login.html";
                     }
                 }

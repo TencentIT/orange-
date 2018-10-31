@@ -2686,6 +2686,10 @@ a.fl-pro-details {
     border: 1px solid #ddd;
 }
 
+.Paging a.page_disabled {
+    color: gainsboro;
+}
+
 .user_style .Paging a:hover,
 .Paging a.on {
     background: #FF4A4A;
