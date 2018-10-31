@@ -257,26 +257,6 @@
 
         }
 
-        // function reg_post_msg() {
-        //     alert(2);
-        //     var xhr = createXhr();
-        //     xhr.onreadystatechange = function() {
-        //         if (xhr.readyState == 4 && xhr.status == 200) {
-        //             // console.log(222)
-        //             var res = xhr.responseText;
-        //             console.log(res);
-        //         }
-        //     }
-        //     xhr.open("post", "/index/register", true);
-        //     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        //     var uname = document.getElementById("reg_uname").value;
-        //     var upwd = document.getElementById("reg_upwd").value;
-
-        //     var formData = "uname=" + uname + "&upwd=" + upwd;
-        //     console.log(formData);
-        //     xhr.send(formData);
-        // }
 
         function check_rpwd() {
             if ($("#reg_rpwd").val() != $("#reg_upwd").val()) {
@@ -313,6 +293,10 @@
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var res = xhr.responseText;
                     window.location.href = "login.html";
+                    if (res == "regFail") {
+                        alert("注册失败,请重新注册哟");
+                        window.location.href = "login.html";
+                    }
                 }
             }
             xhr.open("post", "index/register", true);

@@ -37,7 +37,8 @@ router.post("/register",(req,res)=>{
   var email  =obj.email;
   console.log(3,uname,upwd,email);
 if(uname=="" || upwd=="") {
-  console.log("uname cannot null .reg");
+  console.log("uname_cannot_null_reg");
+  res.send("regFail");
   return;
 }
 
