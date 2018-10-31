@@ -308,15 +308,11 @@
         }
 
         function postregmsg() {
-            alert(111);
             var xhr = createXhr();
-            alert(xhr)
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    // alert(222)
                     var res = xhr.responseText;
                     window.location.href = "login.html";
-                    // alert(res);
                 }
             }
             xhr.open("post", "index/register", true);
@@ -325,12 +321,10 @@
 
             var uname = document.getElementById("reg_uname").value;
             var upwd = document.getElementById("reg_upwd").value;
-
-            var formData = "uname=" + uname + "&upwd=" + upwd;
-            alert(formData);
-            // alert(1);
+            var email = document.getElementById("pass").value;
+            var formData = "uname=" + uname + "&upwd=" + upwd + "&email=" + email;
+            // alert(formData);
             xhr.send(formData);
-            // alert(444)
         }
     </script>
 </body>
