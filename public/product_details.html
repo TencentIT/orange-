@@ -10,13 +10,14 @@
     <link rel="stylesheet" type="text/css" href="fonts/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/show.css" />
+    <link rel="stylesheet" href="css/loading.css">
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.SuperSlide.2.1.1.js"></script>
     <script src="js/jquery.reveal.js"></script>
     <script src="js/vue.js"></script>
     <script src="js/axios.min.js"></script>
-    <link rel="stylesheet" href="css/loading.css">
-    <script src="js/common.js" type="text/javascript"></script>
+
+
 </head>
 
 <body>
@@ -231,11 +232,11 @@
                                 </dl>
                                 <dl>
                                     <dt>规&nbsp;&nbsp;&nbsp;&nbsp;格：</dt>
-                                    <dd>
-                                        <div class="item  selected"><b></b><a href="#none" title="小礼盒">小礼盒</a></div>
-                                        <div class="item"><b></b><a href="#none" title="普通包装">普通包装</a></div>
-                                        <div class="item"><b></b><a href="#none" title="大礼盒">大礼盒</a></div>
-                                        <div class="item"><b></b><a href="#none" title="铁盒装">铁盒装</a></div>
+                                    <dd id="guige">
+                                        <div class="item  selected"><b></b><a href="#" title="小礼盒" data-size="small">小礼盒</a></div>
+                                        <div class="item"><b></b><a href="#" title="普通包装" data-size="normal">普通包装</a></div>
+                                        <div class="item"><b></b><a href="#" title="大礼盒" data-size="big">大礼盒</a></div>
+                                        <div class="item"><b></b><a href="#" title="铁盒装" data-size="tie">铁盒装</a></div>
                                     </dd>
                                 </dl>
                                 <dl><dt>上架时间：</dt>
@@ -250,16 +251,16 @@
                                 <dt>数量</dt>
                                 <dd>
                                     <div class="choose-amount left">
-                                        <a class="btn-reduce" href="javascript:;" onclick="setAmount.reduce('#buy-num')">-</a>
-                                        <a class="btn-add" href="javascript:;" onclick="setAmount.add('#buy-num')">+</a>
-                                        <input class="text" id="buy-num" value="1" onkeyup="setAmount.modify('#buy-num');">
+                                        <a class="btn-reduce jian" href="javascript:;">-</a>
+                                        <a class="btn-add jia" href="javascript:;">+</a>
+                                        <input class="text buy-num" value="1">
                                     </div>
                                     <div class="P_Quantity">剩余：50000件</div>
                                 </dd>
                                 <dd>
                                     <div class="wrap_btn">
-                                        <a href="javascript:addToCart_bak(92)" class="wrap_btn1" title="加入购物车"></a>
-                                        <a href="javascript:addToCart(92)" class="wrap_btn2" title="立即购买"></a>
+                                        <a href="#" class="wrap_btn1 add_cart" title="加入购物车"></a>
+                                        <a href="#" class="wrap_btn2 liji_buy" title="立即购买"></a>
                                     </div>
                                 </dd>
                             </dl>
@@ -567,6 +568,7 @@
         <script type="text/javascript" src="js/fixedBox.js"></script>
         <script type="text/javascript" src="js/menv_Detail.js"></script>
         <script src="js/product_details.js"></script>
+        <script src="js/common.js" type="text/javascript"></script>
 </body>
 
 </html>

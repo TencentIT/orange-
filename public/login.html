@@ -137,10 +137,12 @@
 
             var uname = document.getElementById("username").value;
             var upwd = document.getElementById("password").value;
-            console.log(1, uname, upwd);
+            var loginUid = Math.random() *
+                console.log(1, uname, upwd);
             //session  
             sessionStorage.setItem("uname", uname)
             sessionStorage.setItem("upwd", upwd)
+                // sessionStorage.setItem("loginUid", loginUid)
             var formData = "uname=" + uname + "&upwd=" + upwd;
             // console.log(formData);
             xhr.send(formData);

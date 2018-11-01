@@ -84,3 +84,18 @@ $smask.hover(function(){
       )
 })
 
+//商品信息页面 加入购物车
+var buyCount=$(".buy-num").val();
+var size= $("#guige>.selected>a").data("size");
+var uname = sessionStorage.getItem('uname');
+$(".add_cart").on("click",function(e){
+  e.preventDefault();
+  alert(buyCount+"件商品已加入购物车成功哟^_^");
+})
+$(".liji_buy").on("click",function(e){
+  e.preventDefault();
+  alert("即将跳转到购物订单页面哟^_^");
+  window.location.href="Shop_cart.html";
+})
+
+//数量添加

@@ -1,22 +1,4 @@
-/* =================================================
-//
-// jQuery Fixed Plugins 1.3.1
-// author : 
-// Url: 
-// Data : 2012-03-30
-//
-// ²ÎÊý : float --> Ðü¸¡·½Ïò[left or right]
-//		  minStatue --> ×îÐ¡×´Ì¬£¬Ö»ÓÐshow_btn
-//		  skin      --> Æ¤·ô¿ØÖÆ
-//		  durationTime --> Íê³ÉÊ±¼ä
-//ÊÂÀý  :	
-		  $("#scrollsidebar2").fix({
-		  	float : 'right',	//default.left or right 
-			minStatue : true,	//default.false or true 
-			skin : 'green',		//default.gray or yellow ¡¢blue ¡¢green ¡¢orange ¡¢white 
-		  	durationTime : 1000 //
-		  });
-//
+
 // =================================================*/
 
 ;(function($){
@@ -30,7 +12,7 @@
         var options = $.extend(defaults, options);		
 
         this.each(function(){			
-            //»ñÈ¡¶ÔÏó
+            //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
 			var thisBox = $(this),
 				closeBtn = thisBox.find('.close_btn' ),
 				show_btn = thisBox.find('.show_btn' ),
@@ -38,7 +20,7 @@
 				sideList = thisBox.find('.side_list')
 				sidetitle=thisBox.find('.side_title');
 				scrollsidebar=thisBox.find('.page_right_style');	
-			var defaultTop = thisBox.offset().top;	//¶ÔÏóµÄÄ¬ÈÏtop	
+			var defaultTop = thisBox.offset().top;	//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½top	
 			
 			thisBox.css(options.float, 0);			
 			if(options.minStatue){
@@ -46,11 +28,11 @@
 				sideContent.css('width', 0);
 				show_btn.css('width', 25);
 			}
-			//Æ¤·ô¿ØÖÆ
+			//Æ¤ï¿½ï¿½ï¿½ï¿½ï¿½
 			//if(options.skin) thisBox.addClass('side_'+options.skin);
 				
 						
-			//ºËÐÄscrollÊÂ¼þ			
+			//ï¿½ï¿½ï¿½ï¿½scrollï¿½Â¼ï¿½			
 			//$(window).bind("scroll",function(){
 //				var offsetTop = defaultTop + $(window).clientHeight()+ "px";
 //	            show_btn.animate({
@@ -58,10 +40,10 @@
 //	            },
 //	            {
 //	                duration: options.durationTime,	
-//	                queue: false    //´Ë¶¯»­½«²»½øÈë¶¯»­¶ÓÁÐ
+//	                queue: false    //ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¶¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //	            });
 //			});	
-			//closeÊÂ¼þ
+			//closeï¿½Â¼ï¿½
 			closeBtn.bind("click",function(){
 				sideContent.animate({width: '0px'},"fast").addClass('active');
             	show_btn.stop(true, true).delay(300).animate({ width: '25px'},"fast");
@@ -70,7 +52,7 @@
 				show_btn.css("display","block")
 				scrollsidebar.addClass("Widescreen")
 			});
-			//showÊÂ¼þ
+			//showï¿½Â¼ï¿½
 			 show_btn.click(function() {
 	            $(this).animate({width: '0px'},"fast").css('display','none');
 	            sideContent.stop(true, true).delay(0).animate({ width: '220px'},"fast");

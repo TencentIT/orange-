@@ -20,7 +20,10 @@ $.ajax({
 		}
 		console.log(7,html);
 		// parent.innerHTML = html;
-	}
+  },
+  error:function(){
+    alert("网络故障，请检查！");
+}
 })
 
 

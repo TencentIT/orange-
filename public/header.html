@@ -1,31 +1,31 @@
 <!--header.html -->
-<!--1 顶部样式 -->
-
 <div id="topbox">
     <div class="header_top">
         <div class="top clearfix  margin_auto">
             <div class="collection">
                 <span>下午好，欢迎光临锦宏颜！</span>
                 <em></em>
-                <a href="#">收藏我们</a>
+                <a>收藏我们</a>
             </div>
             <div class="top_menu clearfix">
                 <ul>
                     <li class="text-gray">欢迎光临本店！</li>
-                    <li><a class="login" target="_blank" id="welcome" style="display:none"></a></li>
+                    <li>
+                        <a class="login" target="_blank" id="welcome" style="display:none"></a>
+                    </li>
                     <li><a class="login" href="login.html" target="_blank" id="login">[请登录]</a></li>
                     <li><a class="login" id="logout" onclick="logout1()" style="display:none">[注销]</a></li>
-                    
+
                     <li class="new_user text-gray">新用户</li>
                     <li><a href="login.html" class="login" target="_blank">[免费注册]</a></li>
-                    <li><a href="#" class="my_order">我的订单</a></li>
-                    <li><a href="#" class="gwc">购物车</a></li>
+                    <li><a href="Orders_confirm.html" class="my_order" target="_blank">我的订单</a></li>
+                    <li><a href="Shop_cart.html" target="_blank" class="gwc">购物车</a></li>
 
-                    <li><a href="help.html">联系我们</a></li>
+                    <li><a href="help.html" target="_blank">联系我们</a></li>
 
-                    <li><a href="#">客户服务</a></li>
+                    <li><a>客户服务</a></li>
 
-                    <li><a href="#"><em class="iconfont icon-shouji"></em>手机版</a></li>
+                    <li><a><em class="iconfont icon-shouji"></em>手机版</a></li>
                 </ul>
             </div>
         </div>
@@ -33,7 +33,7 @@
     </div>
     <!-- logo区域  输入框区域 -->
     <div class="logo_box margin_auto  width1200">
-        <a href="index.html"><img src="images/logo.png"></a>
+        <a href="index.html" target="_blank"><img src="images/logo.png"></a>
         <div class="search_box ">
             <p>
                 <input type="text" class="search_input">
@@ -48,56 +48,57 @@
             </p>
             <div class="gwc">
                 <em class="iconfont icon-cart2 "></em>
-                <a href="#">
+                <a href="Shop_cart.html" target="_blank">
 						我的购物车
 					</a>
                 <i class="ci-right">></i>
                 <i class="ci-count ">0</i>
                 <div class="dorpdown-layer">
-                        <div class="spacer"></div>
-                         <!--<div class="prompt"></div><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div>-->
-                         <ul class="p_s_list">	   
-                            <li>
-                                <div class="img"><img src="products/p_7.jpg"></div>
-                                <div class="content"><p><a href="#">产品名称</a></p><p>颜色分类:紫花8255尺码:XL</p></div>
-                                <div class="Operations">
+                    <div class="spacer"></div>
+                    <!--<div class="prompt"></div><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div>-->
+                    <ul class="p_s_list">
+                        <li>
+                            <div class="img"><img src="products/p_7.jpg"></div>
+                            <div class="content">
+                                <p><a>产品名称</a></p>
+                                <p>颜色分类:紫花8255尺码:XL</p>
+                            </div>
+                            <div class="Operations">
                                 <p class="Price">￥55.00</p>
-                                <p><a href="#">删除</a></p></div>
-                              </li>
-                            </ul>		
-                         <div class="Shopping_style">
-                         <div class="p-total">共<b>1</b>件商品　共计<strong>￥ 515.00</strong></div>
-                          <a href="Shop_cart.html" title="去购物车结算" id="btn-payforgoods" class="Shopping">去购物车结算</a>
-                         </div>	 
-                       </div>
+                                <p><a>删除</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="Shopping_style">
+                        <div class="p-total">共<b>1</b>件商品　共计<strong>￥ 515.00</strong></div>
+                        <a href="Shop_cart.html" target="_blank" title="去购物车结算" id="btn-payforgoods" class="Shopping">去购物车结算</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // window.onload = function(){
-            $(".gwc").hover(function(){
+        $(".gwc").hover(function() {
             $(this).find(".dorpdown-layer").show()
-            },function(){
-                $(this).find(".dorpdown-layer").hide()
-            })
-            var welcome =document.getElementById("welcome")
-            var login =document.getElementById("login")
-            var logout =document.getElementById("logout")
+        }, function() {
+            $(this).find(".dorpdown-layer").hide()
+        })
+        var welcome = document.getElementById("welcome")
+        var login = document.getElementById("login")
+        var logout = document.getElementById("logout")
             //session
-            if(sessionStorage.getItem("uname")!==null && sessionStorage.getItem("upwd")!==null){
-                login.style.display = "none"
-                welcome.style.display="block"
-                logout.style.display="block"
-                welcome.innerHTML = "欢迎"+sessionStorage.getItem("uname")
-            }
-            
-            function logout1(){
-                sessionStorage.removeItem("uname")
-                sessionStorage.removeItem("upwd")
-                alert("注销成功！");
-                window.location.href="index.html"
-            }
-            // }
-       
+        if (sessionStorage.getItem("uname") !== null && sessionStorage.getItem("upwd") !== null) {
+            login.style.display = "none"
+            welcome.style.display = "block"
+            logout.style.display = "block"
+            welcome.innerHTML = "欢迎" + sessionStorage.getItem("uname")
+        }
+
+        function logout1() {
+            sessionStorage.removeItem("uname")
+            sessionStorage.removeItem("upwd")
+            alert("注销成功！");
+            window.location.href = "index.html"
+        }
     </script>

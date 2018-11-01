@@ -183,6 +183,18 @@
         <div class="Inside_pages clearfix">
             <div class="shop_carts">
                 <div class="Process"><img src="images/Process_img_01.png" /></div>
+                <div class="Orders_style clearfix">
+                    <!--地址信息样式-->
+                    <div class="Address_info">
+                        <div class="title_name">默认收货地址<a href="#">其他收货地址</a></div>
+                        <ul>
+                            <li><label>收件人姓名：</label>小强</li>
+                            <li><label>收件人地址：</label>四川成都武侯区创业路5号1单元302室</li>
+                            <li><label>收件人电话：</label>12345678987</li>
+                            <li><label>邮&nbsp;编：</label>123456</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="Shopping_list">
                     <div class="title_name">
                         <ul>
@@ -207,12 +219,12 @@
                                         <div class="p_name"><a href="#">金龙鱼 东北大米 蟹稻共生 盘锦大米5KG</a></div>
                                     </td>
                                     <td class="scj sp"><span id="Original_Price_1">￥39.50</span></td>
-                                    <td class="bgj sp"><span id="price_item_1">￥32.40</span></td>
+                                    <td class="bgj sp price_item item1"><span>￥42.80</span></td>
                                     <td class="sl">
                                         <div class="Numbers">
-                                            <a href="javascript:void(0)" class="jian">-</a>
-                                            <input type="text" name="qty_item_" value="1" id="qty_item_1" class="number_text">
-                                            <a href="javascript:void(0)" class="jia">+</a>
+                                            <a href="javascript:void(0)" class="jian1">-</a>
+                                            <input type="text" name="qty_item_" value="1" class="number_text buy-num1">
+                                            <a href="javascript:void(0)" class="jia1">+</a>
                                         </div>
                                     </td>
                                     <td class="xj"><span id="total_item_1"></span><input type="hidden" name="total_price" id="total_price" value=""></td>
@@ -231,12 +243,12 @@
                                         <div class="p_name"><a href="#">金龙鱼 东北大米 蟹稻共生 盘锦大米5KG</a></div>
                                     </td>
                                     <td class="scj sp">￥39.50</td>
-                                    <td class="bgj sp" id="price_item_2">￥32.40</td>
+                                    <td class="bgj sp price_item item2">￥32.40</td>
                                     <td class="sl">
                                         <div class="Numbers">
-                                            <a onClick="setAmount.reduce('#qty_item_')" href="javascript:void(0)" class="jian">-</a>
-                                            <input type="text" name="qty_item_" value="1" id="qty_item_" onkeyup="setAmount.modify('#qty_item_')" class="number_text">
-                                            <a onclick="setAmount.add('#qty_item_')" href="javascript:void(0)" class="jia">+</a>
+                                            <a href="javascript:void(0)" class="jian2">-</a>
+                                            <input type="text" name="qty_item_" value="1" class="number_text buy-num2">
+                                            <a href="javascript:void(0)" class="jia2">+</a>
                                         </div>
                                     </td>
                                     <td class="xj"><span id="total_item_2"></span><input type="hidden" name="total_price" id="total_price" value=""></td>
@@ -255,7 +267,7 @@
                                 <!--结算-->
                                 <div class="toolbar_right">
                                     <ul class="Price_Info">
-                                        <li class="p_Total"><label class="text">商品总价：</label><span class="price sumPrice" id="Total_price"></span></li>
+                                        <li class="p_Total"><label class="text totalPrice">商品总价：</label><span class="price sumPrice" id="Total_price"></span></li>
                                         <li class="Discount"><label class="text">以&nbsp;&nbsp;节&nbsp;&nbsp;省：</label><span class="price" id="Preferential_price"></span></li>
                                         <li class="integral">本次购物可获得<b id="total_points"></b>积分</li>
                                     </ul>
@@ -368,6 +380,7 @@
                     </script>
                 </div>
             </div>
+
         </div>
 
 

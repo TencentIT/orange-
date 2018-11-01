@@ -38,3 +38,75 @@ success:function(data){ var {pno,pageCount,products}=data; console.log(111,data)
     <a href="${pno<pageCount?pno+1:pageCount}">下一页</a>`; var $page=$(".Pagination") $page.html(html); if(pno==0) $page.children(":first").addClass("page_disabled") if(pno==pageCount-1) $page.children(":last").addClass("page_disabled") }, error:function(){
     alert("网络故障，！！请检查！"); } }) } } loadPage(); $(".Pagination").on("click","a",function(e){ e.preventDefault(); var $a=$(this); // if(!$a.parent().is(".page_disabled,.on")){ if($a.html()=="上一页" || $a.html()=="下一页"){ var pno=$(this).attr("href"); }else{
     var pno=$a.html()-1; } loadPage(pno); }) })
+
+
+    <ul class="lunbo_imgs_ul">
+                <li>
+                    <a href="#"> <img class="lunbo_img1" src="images/ad-1.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img class="lunbo_img2" src="images/ad-10.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img class="lunbo_img3" src="images/ad-11.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img class="lunbo_img6" src="images/ad-7.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img class="lunbo_img7" src="images/ad-6.jpg" /> </a>
+                </li>
+            </ul>
+
+
+
+
+             <li>
+                    <a href="#"> <img class="lunbo_img2" src="images/ad-10.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img class="lunbo_img2" src="images/ad-11.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img class="lunbo_img2" src="images/ad-12.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img class="lunbo_img2" src="images/ad-13.jpg" /> </a>
+                </li>
+                <li>
+                    <a href="#"> <img class="lunbo_img2" src="images/ad-14.jpg" /> </a>
+                </li>
+
+                 <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+    <script type="text/javascript" src="js/fixedBox.js"></script>
+    <script type="text/javascript" src="js/menv_Detail.js"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+
+
+购物车
+     <tr class="tr">
+                                    <td class="checkbox"><input name="checkitems" type="checkbox" value="金龙鱼 东北大米 蟹稻共生 盘锦大米5KG" /></td>
+                                    <td class="name">
+                                        <div class="img">
+                                            <a href="#"><img src="products/p_1.jpg" /></a>
+                                        </div>
+                                        <div class="p_name"><a href="#">金龙鱼 东北大米 蟹稻共生 盘锦大米5KG</a></div>
+                                    </td>
+                                    <td class="scj sp"><span id="Original_Price_1">￥39.50</span></td>
+                                    <td class="bgj sp"><span id="price_item_1">￥32.40</span></td>
+                                    <td class="sl">
+                                        <div class="Numbers">
+                                            <a href="javascript:void(0)" class="jian">-</a>
+                                            <input type="text" name="qty_item_" value="1" id="qty_item_1" class="number_text">
+                                            <a href="javascript:void(0)" class="jia">+</a>
+                                        </div>
+                                    </td>
+                                    <td class="xj"><span id="total_item_1"></span><input type="hidden" name="total_price" id="total_price" value=""></td>
+                                    <td class="cz">
+                                        <p><a href="#">删除</a>
+                                            <P>
+                                                <p><a href="#">收藏该商品</a></p>
+                                    </td>
+                                </tr>
