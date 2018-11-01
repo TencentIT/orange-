@@ -41,7 +41,7 @@ new Vue({
       })(this);
     }
   })
-//   产品列表样式
+//   产品列表样式 换成 ajax 传数据 分页
   // new Vue({
   //   el:"#p_list_ul",
   //   data:{
@@ -107,33 +107,33 @@ new Vue({
               html+=`<li class="gl-item"> <em class="icon_special tejia"></em>
               <div class="Borders">
                   <div class="img">
-                      <a href="${href}"><img src="${pic}" style="width:220px;height:220px" /></a>
+                      <a href="${href}" target="_blank" ><img src="${pic}" style="width:220px;height:220px" /></a>
                   </div>
                   <div class="Price">
                       <b>&yen;${price.toFixed(2)}</b>
                       <span>[&yen;49.01/500g]</span>
                   </div>
                   <div class="name">
-                      <a href="${href}">${title}</a>
+                      <a  target="_blank" href="${href}" target="_blank">${title}</a>
                   </div>
                   <div class="Review">
                       已有
-                      <a href="#">${sell}</a>评论
+                      <a  target="_blank" href="#">${sell}</a>评论
                   </div>
                   <div class="p-operate">
-                      <a href="#" class="p-o-btn Collect"><em></em>收藏</a>
-                      <a href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a>
+                      <a  target="_blank" href="#" class="p-o-btn Collect"><em></em>收藏</a>
+                      <a  target="_blank" href="#" class="p-o-btn shop_cart"><em></em>加入购物车</a>
                   </div>
                 </div>
               </li>`
             }
             $("#p_list_ul").html(html);
             //分页
-            var html=`<a href="${pno>=1?pno:1}" class="pn-prev">上一页</a>`;
+            var html=`<a  target="_blank" href="${pno>=1?pno:1}" class="pn-prev">上一页</a>`;
             for(var i=1;i<=pageCount;i++){
-              html+=`<a href="#" class="${pno!=i-1?'':'on'}">${i}</a>`
+              html+=`<a  target="_blank" href="#" class="${pno!=i-1?'':'on'}">${i}</a>`
             }
-            html+=`<a href="${pno<pageCount-1?parseInt(pno)+1:pno}">下一页</a>`;
+            html+=`<a  target="_blank" href="${pno<pageCount-1?parseInt(pno)+1:pno}">下一页</a>`;
             var $page=$(".Pagination")
             $page.html(html);
             if(pno==0)

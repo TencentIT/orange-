@@ -443,11 +443,34 @@ header .bottom_line {
     margin-right: 10px;
 }
 
+.Brands {
+    width: 210px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
 .menv_Detail .cat_pannel .hd_sort_list dl {
     width: 100%;
     overflow: hidden;
     line-height: 2em;
     margin: 5px 0px;
+}
+
+.Brands a.logo_Brands {
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding: 5px 0px;
+    border: 1px solid #ddd;
+    margin: 0px 0px -1px -1px;
+    float: left;
+    margin-right: 100x;
+}
+
+.Brands a.logo_Brands img {
+    width: 100px;
+    height: 40px;
 }
 
 .menv_Detail .cat_pannel .hd_sort_list dt {

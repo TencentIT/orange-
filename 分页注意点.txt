@@ -1,4 +1,4 @@
-分页时候 
+﻿分页时候 
 遇到的问题 
 刚开始 错误的写法  
 <a href="${pno<pageCount?parseInt(pno)+1:pno-1}">下一页</a>
@@ -16,4 +16,3 @@
 <a href="${pno<pageCount-1?parseInt(pno)+1:pno}">下一页</a>
  
 
- res.send({code:1,msg:"ok,pno:"+pno+":pagesize:"+pageSize});
