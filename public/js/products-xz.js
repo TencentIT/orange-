@@ -62,14 +62,14 @@ $(function(){
     var $a=$(this);
     if($a.html()=="上一页" ){
       var pno=$(this).attr("href")-1;
-      alert(pno);
+      // alert(pno);
     }else if($a.html()=="下一页"){
       var pno=parseInt($(this).attr("href"));
-      alert(pno);
+      // alert(pno);
       
     }else{
       var pno=$a.html()-1;
-      alert(pno);
+      // alert(pno);
     }
     loadPage(pno);
     
