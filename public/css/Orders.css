@@ -1588,28 +1588,23 @@ input.labelauty+label>span.labelauty-checked-image {
     line-height: 24px;
 }
 
-.Shopping_list .table_list .Numbers a {
+.Shopping_list .table_list .Numbers::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.Shopping_list .table_list .Numbers button {
     font-size: 20px;
     font-family: "新宋体";
     color: #666666;
-    width: 30px;
-    line-height: 30px;
+    width: 32px;
+    line-height: 32px;
     display: block;
-    height: 30px;
+    height: 32px;
     float: left;
-    background: #EFEFEF
-}
-
-.Shopping_list .table_list .Numbers a.jian {
-    border-left: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-}
-
-.Shopping_list .table_list .Numbers a.jia {
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
+    background: #EFEFEF;
+    border: 0;
 }
 
 .Shopping_list .table_list .Numbers .number_text {

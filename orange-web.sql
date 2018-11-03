@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2018 年 10 月 31 日 10:47
+-- 生成日期: 2018 年 11 月 03 日 04:41
 -- 服务器版本: 5.0.96-community-nt
 -- PHP 版本: 5.4.16
 
@@ -110,7 +110,41 @@ INSERT INTO `orange_index_products` (`pid`, `title`, `price`, `pic`, `sell`, `hr
 (25, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 542, 'Products/p_25.png', 542, 'product_details.html?lid=25'),
 (26, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 224, 'products/p_26.png', 402, 'product_details.html?lid=26'),
 (27, 'Olay玉兰油 新生塑颜金纯活能水', 3532, 'products/p_27.png', 424, 'product_details.html?lid=27'),
-(28, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_28.png', 557, 'product_details.html?lid=28');
+(28, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_28.png', 557, 'product_details.html?lid=28'),
+(29, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_1.png', 124, 'product_details.html?lid=29'),
+(30, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 1024, 'Products/p_2.png', 110, 'product_details.html?lid=30'),
+(31, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_3.png', 1211, 'product_details.html?lid=31'),
+(32, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 1204, 'Products/p_4.png', 5623, 'product_details.html?lid=32'),
+(33, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 162, 'products/p_5.png', 120, 'product_details.html?lid=33'),
+(34, 'Olay玉兰油 新生塑颜金纯活能水', 236, 'products/p_6.png', 130, 'product_details.html?lid=34'),
+(35, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_7.png', 264, 'product_details.html?lid=35'),
+(36, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_8.png', 578, 'product_details.html?lid=36'),
+(37, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 433, 'Products/p_9.png', 865, 'product_details.html?lid=37'),
+(38, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 4510, 'Products/p_10.png', 231, 'product_details.html?lid=38'),
+(39, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 453, 'Products/p_11.png', 462, 'product_details.html?lid=39'),
+(40, 'Orion 好丽友 熊猫派派福巧克力味有4枚 100g/盒', 24, 'products/p_12.png', 4323, 'product_details.html?lid=40'),
+(41, 'Olay玉兰油 新生塑颜金纯活能水', 566, 'products/p_13.png', 543, 'product_details.html?lid=41'),
+(42, '有货潮牌Life After Life/男MA-1飞行夹克', 1124, 'Products/p_14.png', 454, 'product_details.html?lid=42'),
+(43, '有货潮牌Life After Life/男MA-1飞行夹克', 372, 'Products/p_15.png', 375, 'product_details.html?lid=43'),
+(44, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 983, 'Products/p_16.png', 337, 'product_details.html?lid=44'),
+(45, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G有手机 双卡', 387, 'Products/p_17.png', 327, 'product_details.html?lid=45'),
+(46, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 317, 'Products/p_18.png', 362, 'product_details.html?lid=46'),
+(47, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 324, 'products/p_19.png', 312, 'product_details.html?lid=47'),
+(48, 'Olay玉兰油 新生塑颜金纯活能水', 312, 'products/p_20.png', 634, 'product_details.html?lid=48'),
+(49, '有货潮牌Life After Life/男MA-1飞行夹克', 642, 'Products/p_21.png', 242, 'product_details.html?lid=49'),
+(50, '有货潮牌Life After Life/男MA-1飞行夹克', 527, 'Products/p_22.png', 463, 'product_details.html?lid=50'),
+(51, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 312, 'Products/p_23.png', 542, 'product_details.html?lid=51'),
+(52, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 654, 'Products/p_24.png', 410, 'product_details.html?lid=52'),
+(53, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 542, 'Products/p_25.png', 542, 'product_details.html?lid=53'),
+(54, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 224, 'products/p_26.png', 402, 'product_details.html?lid=54'),
+(55, 'Olay玉兰油 新生塑颜金纯活能水', 3532, 'products/p_27.png', 424, 'product_details.html?lid=55'),
+(56, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_28.png', 557, 'product_details.html?lid=56'),
+(57, 'SK-II 肌底晶透护肤礼盒（神仙水 补水保湿 精华液 乳液 套装）', 312, 'Products/p_23.png', 542, 'product_details.html?lid=57'),
+(58, '荣耀 6 Plus (PE-TL10) 3GB内存增强版 金色 移动联通双4G手机 双卡', 654, 'Products/p_24.png', 410, 'product_details.html?lid=58'),
+(59, '陈克明 面条 克明面业 麦禧福面 福伴一生 五福礼盒挂面 399g*5', 542, 'Products/p_25.png', 542, 'product_details.html?lid=59'),
+(60, 'Orion 好丽友 熊猫派派福巧克力味4枚 100g/盒', 224, 'products/p_26.png', 402, 'product_details.html?lid=60'),
+(61, 'Olay玉兰油 新生塑颜金纯活能水', 3532, 'products/p_27.png', 424, 'product_details.html?lid=61'),
+(62, '有货潮牌Life After Life/男MA-1飞行夹克', 471, 'Products/p_28.png', 557, 'product_details.html?lid=62');
 
 -- --------------------------------------------------------
 
@@ -179,7 +213,7 @@ CREATE TABLE IF NOT EXISTS `orange_user` (
   `upwd` varchar(20) NOT NULL,
   `email` varchar(20) default NULL,
   PRIMARY KEY  (`uid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- 转存表中的数据 `orange_user`
@@ -199,7 +233,37 @@ INSERT INTO `orange_user` (`uid`, `uname`, `upwd`, `email`) VALUES
 (11, '556685', '556685', NULL),
 (12, 'admin2', '123456', NULL),
 (13, 'admin3', '123456', '1969368719@qq.com'),
-(14, 'admin4', '123456', '1969368719@qq.com');
+(14, 'admin4', '123456', '1969368719@qq.com'),
+(15, 'a1a1a1', 'a1a1a1', '1969368719@qq.com'),
+(16, 'a121212', 'a121212', '1969368719@qq.com'),
+(17, 'demo1234', '123456', '1969368719@qq.com'),
+(18, 'demo555', 'demo555', '1969368719@qq.com'),
+(19, 'demoa', '123456', '1969368719@qq.com'),
+(20, 'demoao', 'demoao', '1969368719@qq.com'),
+(21, 'demoyaya', '123456', '1969368719@qq.com');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ow_shoppingcart_item`
+--
+
+CREATE TABLE IF NOT EXISTS `ow_shoppingcart_item` (
+  `iid` int(11) NOT NULL auto_increment,
+  `user_id` int(11) default NULL,
+  `product_id` int(11) default NULL,
+  `count` int(11) default NULL,
+  `is_checked` tinyint(1) default NULL,
+  `clothes_size` varchar(10) default NULL,
+  PRIMARY KEY  (`iid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `ow_shoppingcart_item`
+--
+
+INSERT INTO `ow_shoppingcart_item` (`iid`, `user_id`, `product_id`, `count`, `is_checked`, `clothes_size`) VALUES
+(1, 1, 3, 7, 0, 'small');
 
 -- --------------------------------------------------------
 

@@ -13,15 +13,15 @@
                     <li>
                         <a class="login" target="_blank" id="welcome" style="display:none"></a>
                     </li>
-                    <li><a class="login" href="login.html" target="_blank" id="login">[请登录]</a></li>
+                    <li><a class="login" target="_blank" href="login.html" target="_blank" id="login">[请登录]</a></li>
                     <li><a class="login" id="logout" onclick="logout1()" style="display:none">[注销]</a></li>
 
                     <li class="new_user text-gray">新用户</li>
-                    <li><a href="login.html" class="login" target="_blank">[免费注册]</a></li>
-                    <li><a href="Orders_confirm.html" class="my_order" target="_blank">我的订单</a></li>
-                    <li><a href="Shop_cart.html" target="_blank" class="gwc">购物车</a></li>
+                    <li><a target="_blank" href="login.html" class="login" id="register" target="_blank">[免费注册]</a></li>
 
-                    <li><a href="help.html" target="_blank">联系我们</a></li>
+                    <li><a target="_blank" href="Shop_cart.html" target="_blank" class="gwc">购物车</a></li>
+
+                    <li><a target="_blank" href="help.html" target="_blank">联系我们</a></li>
 
                     <li><a>客户服务</a></li>
 
@@ -33,7 +33,7 @@
     </div>
     <!-- logo区域  输入框区域 -->
     <div class="logo_box margin_auto  width1200">
-        <a href="index.html" target="_blank"><img src="images/logo.png"></a>
+        <a target="_blank" href="index.html" target="_blank"><img src="images/logo.png"></a>
         <div class="search_box ">
             <p>
                 <input type="text" class="search_input">
@@ -48,7 +48,7 @@
             </p>
             <div class="gwc">
                 <em class="iconfont icon-cart2 "></em>
-                <a href="Shop_cart.html" target="_blank">
+                <a target="_blank" href="Shop_cart.html" target="_blank">
 						我的购物车
 					</a>
                 <i class="ci-right">></i>
@@ -71,7 +71,7 @@
                     </ul>
                     <div class="Shopping_style">
                         <div class="p-total">共<b>1</b>件商品　共计<strong>￥ 515.00</strong></div>
-                        <a href="Shop_cart.html" target="_blank" title="去购物车结算" id="btn-payforgoods" class="Shopping">去购物车结算</a>
+                        <a target="_blank" href="Shop_cart.html" target="_blank" title="去购物车结算" id="btn-payforgoods" class="Shopping">去购物车结算</a>
                     </div>
                 </div>
             </div>
@@ -87,9 +87,11 @@
         var welcome = document.getElementById("welcome")
         var login = document.getElementById("login")
         var logout = document.getElementById("logout")
+        var register = document.getElementById("register")
             //session
         if (sessionStorage.getItem("uname") !== null && sessionStorage.getItem("upwd") !== null) {
             login.style.display = "none"
+            register.style.display = "none"
             welcome.style.display = "block"
             logout.style.display = "block"
             welcome.innerHTML = "欢迎" + sessionStorage.getItem("uname")
