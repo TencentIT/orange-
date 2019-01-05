@@ -15,8 +15,17 @@ http://39.105.101.78:3002 （阿里云服务器IP直接访问）
 
 账号 orange  密码 （保密）
 
-
 http://39.105.101.78:888/phpmyadmin_2cef0fb4a7a51c4c/index.php?db=orange&lang=zh_CN&collation_connection=utf8mb4_unicode_ci&token=0f5c1229a81f6b24c65b9647c8a088e7
+
+### 运行
+
+####  git clone git@github.com:TencentIT/orange-.git
+
+####  cd orange-
+
+####  npm install
+
+####  npm start
 
 ### 担任职责：
 
